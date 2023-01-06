@@ -102,10 +102,13 @@
          <img src ="Web/Images/changelog.png" height="40">
          <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
       </div>
-      <p class="losection" style="color:Black; text-align: center;">
-        <b>Welcome to the Notes Web!</b><br>
-        Here you can search through the many pages of notes<br>that I have been produced from the<br>Digital Support Services T-Level
+      <pre class="losection" style="color:Black; text-align: center;">
+        Admin Only Page (Data)
+        Password: <input type="password" required id="pwd"><br>
+        <input type="button" onclick="pwd()" value="Submit">
+      </pre>      
       <script>
+              function pwd() {if (document.getElementById("pwd").value=='UbuntuRules') {window.location="Web/changelog.html"}}
          var countDownDate = new Date("Sep 08, 2023 11:00:00").getTime();
          var x = setInterval(function() {
            var now = new Date().getTime();
