@@ -6,10 +6,9 @@
         body {margin: 0;}.navbar {overflow: hidden;background-color: goldenrod;font-family: Arial, Helvetica, sans-serif;}.navbar a {float: left;font-size: 16px;color: white;text-align: center;padding: 14px 16px;text-decoration: none;}
         @media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
         </style></head>
-        <div class="navbar"><a href="../../index.html">Home</a></div>
+        <div class="navbar"><a href="../Main.html">Home</a></div>
 <h2>Protocols/Ports</h2>
-
-<p style="display:inline-table;">
+<pre style="display:inline-table;">
 <table border="2">
 <tr><th>Protocol</th><th>Port</th></tr>
 <tr><td>FTP</td><td>20/21</td></tr>
@@ -27,34 +26,26 @@
 <tr><td>SNMP</td><td>161/162</td></tr>
 <tr><td>FTP over TLS</td><td>989/990</td></tr>
 </table>
-<h4>IP</h4>
-Adding Addressing. Data that is routed to its destination
-<h4>TCP</h4>
-Tracks Network Connections between multiple destinations
-<h4>ICMP</h4>
-Used to send control and error messages on a network
-
+<details>
+    <summary style="font-size:xx-large">Protocol Defs</summary>
+    IP
+    Adding Addressing. Data that is routed to its destination
+    TCP
+    Tracks Network Connections between multiple destinations
+    ICMP
+    Used to send control and error messages on a network
+</details>
 <h1>IP Packets</h1>
-Version - Current version of the IP currently being utilised<br>
-<br>
-IHL - Header Length in 4-byte units<br>
-<br>
-QOS - Quality of Service, makes important packets the priority during transmission<br>
-<br>
-Length - Length of the packet across the network<br>
-<br>
-ID - The packet number<br>
-<br>
-Fragment Offset - Packet is broken down (Fragmented), then it is delivered and reassembled<br>
-<br>
-TTL - Time to live, manages the caching and boosts performance<br>
-<br>
-Protocol - The data in the protocol that the internet uses<br>
-<br>
-Checksum - Detects corruption in the header<br>
-<br>
-Source IP - The starting point of the IP packet<br>
-<br>
-Destination IP - Its targetted end point<br> 
-</p>
+Version - Current version of the IP currently being utilised
+IHL - Header Length in 4-byte units
+QOS - Quality of Service, makes important packets the priority during transmission
+Length - Length of the packet across the network
+ID - The packet number
+Fragment Offset - Packet is broken down (Fragmented), then it is delivered and reassembled
+TTL - Time to live, manages the caching and boosts performance
+Protocol - The data in the protocol that the internet uses
+Checksum - Detects corruption in the header
+Source IP - The starting point of the IP packet
+Destination IP - Its targetted end point 
+</pre>
 </html>
