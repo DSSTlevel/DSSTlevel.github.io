@@ -3,10 +3,12 @@
 <head>
 <title>Main Menu</title>
 <style>
-body {background-color: rgb(255, 202, 24);background-image: url('Web/Images/background.png');background-repeat: no-repeat;}
+body {background-color:burlywood}
 * {box-sizing: border-box;}
 body {margin: 0;}.navbar {overflow: hidden;background-color: goldenrod;font-family: Arial, Helvetica, sans-serif;}.navbar a {float: left;font-size: 16px;color: white;text-align: center;padding: 14px 16px;text-decoration: none;}.dropdown {float: left;overflow: hidden;}.dropdown .dropbtn {font-size: 16px;  border: none;outline: none;color: white;padding: 14px 16px;background-color: inherit;font: inherit;margin: 0;}.navbar a:hover, .dropdown:hover .dropbtn {background-color: black;}.dropdown-content {display: none;position: absolute;background-color: #f9f9f9;width: 100%;left: 0;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}.dropdown:hover .dropdown-content {display: block;}.column {float: left;width: 33.33%;padding: 10px;background-color: #ccc;height: 250px;}.column a {float: none;color: black;padding: 16px;text-decoration: none;display: block;text-align: left;}.column a:hover {background-color: green;}.row:after {content: "";display: table;clear: both;}
 @media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
+.image {display: inline-block;}
+.losection-small {display: block;height: 80px;background-color: rgb(255, 202, 24);object-fit: fill;}
 </style>
 </head>
 <div class="navbar">
@@ -39,32 +41,34 @@ body {margin: 0;}.navbar {overflow: hidden;background-color: goldenrod;font-fami
   <a href="Web/changelog.html">Changelog</a>
 </div>
 <body>
-<pre style="color:Black">
-<h3 style="color:Black">Welcome to the Notes Web!</h3>
-Here you can search through many
-pages of notes that have been
-made over the years of the 
-Digital Support Services T-Level
-Enjoy!
-</pre>
-<p style="color:whitesmoke" id="demo"></p>
+<p class="losection-small" style="color:Black; text-align: center;">
+<b>Welcome to the Notes Web!</b><br>
+Here you can search through the many pages of notes<br>that I have been produced from the<br>Digital Support Services T-Level</td><td></td></tr>
+<table border="0" style="table-layout:fixed; margin-right: auto; margin-left:auto;width:100%">
+  <tr><td><table style="margin-right:auto; margin-left:auto"><tr><td style="text-align:center;font-size: x-large;"><b>Cyber Centurion Training Round</b></td></tr><tr><td style="text-align:center;color:slateblue;font-size:x-large" id="demo"></td></tr></table></td><td><img style="margin-left:auto;margin-right:auto;display:block;max-width:max-content;" src="Images/cycent.png"></td></tr>
+  <tr><td><a href href="changelog.html" src="Images/changelog.png"></a></td><td><table style="margin-right:auto; margin-left:auto"><tr><td style="text-align:center;color:slateblue;font-size:x-large"><u>Quick Links</u></td></tr></table></td></tr>
+</table>
+</p>
+<div class="image" style="max-width: 20%; ">
+  <img src ="Images/changelog.png" height="40">
+  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+</div>
 <script>
-var countDownDate = new Date("Sep 08, 2023 11:00:00").getTime();
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById("demo").innerHTML = `CyCent Training - ${days}Days, ${hours}:${minutes}:${seconds}`
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "CyCent - Possible Training Round begun";
-  }
-}, 1000);
-</script>
+  var countDownDate = new Date("Sep 08, 2023 11:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("demo").innerHTML = `${days} Days, ${hours}:${minutes}:${seconds}`
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "CyCent - Possible Training Round begun";
+    }
+  }, 1000);
+  </script>
 </body>
 </html>
 
-<!--<a href="changelog.html"><img src="Images/changelog.png" width="75" height="50"></a>-->
