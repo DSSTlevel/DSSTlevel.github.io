@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Font Awesome Icons</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+<style>
+    .flip-card {
+        perspective: 1000px;
+        height: 300px;
+        width: 300px;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+      
+      .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+      }
+</style>
 <body>
-
-<p>Some Font Awesome icons:</p>
-<i class="fa fa-cloud"></i>
-<i class="fa fa-heart"></i>
-<i class="fa fa-car"></i>
-<i class="fa fa-file"></i>
-<i class="fa fa-bars"></i>
-
-<p>Styled Font Awesome icons (size, color, and shadow):</p>
-<i class="fa fa-cloud" style="font-size:24px;"></i>
-<i class="fa fa-home" style="font-size:36px;"></i>
-<i class="fa fa-cloud" style="font-size:48px;color:red;"></i>
-<i class="fa fa-cloud" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
-
+    <div class="flip-card" style="display: inline-block;">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Front of Card</h1>
+            <p>Some text</p>
+            <img src="image.jpg" alt="Image">
+          </div>
+          <div class="flip-card-back">
+            <h1>Back of Card</h1>
+            <p>Some more text</p>
+            <a href="#">A link</a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" style="display: inline-block;">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Front of Card</h1>
+            <p>Some text</p>
+            <img src="image.jpg" alt="Image">
+          </div>
+          <div class="flip-card-back">
+            <h1>Back of Card</h1>
+            <p>Some more text</p>
+            <a href="#">A link</a>
+          </div>
+        </div>
+      </div>
+      
 </body>
 </html>
