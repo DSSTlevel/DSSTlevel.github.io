@@ -67,6 +67,7 @@
                   <tr>
                      <td style="text-align:center;font-size:x-large;background-color: rgba(0, 0, 0, 0.7);" class="glowBlue" id="demo"></td>
                   </tr>
+                  <tr><td style="text-align:center;font-size:x-large;background-color:rgba(0, 0, 0, 0.7);" class="glowBlue" id="tuesday"></td></tr>
                </table>
             </td>
             <td><img style="margin-right:auto;display:block;max-width:max-content;" src="Web/Images/cycent.png"></td>
@@ -93,8 +94,8 @@
    </pre>      
 <script>
 function pwd() {if (document.getElementById("pwd").value=='UbuntuRules') {window.location="Web/Admin/secret.html";} else {alert("This password is incorrect. Try again.")}}
-var countDownDate = new Date("Sep 08, 2023 11:00:00").getTime();
 var x = setInterval(function() {
+   var countDownDate = new Date("Sep 08, 2023 11:00:00").getTime();
    var now = new Date().getTime();
    var distance = countDownDate - now;
    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -107,6 +108,21 @@ var x = setInterval(function() {
       document.getElementById("demo").innerHTML = "CyCent - Possible Training Round begun";
    }
 }, 1000);
+var y = setInterval(function() {
+   var countDownDate = new Date("Jan 10, 2023 17:00:00").getTime();
+   var now = new Date().getTime();
+   var distance = countDownDate - now;
+   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   document.getElementById("tuesday").innerHTML = `End of Tue: ${hours}:${minutes}:${seconds}`
+   if (distance < 0) {
+      clearInterval(y);
+      document.getElementById("tuesday").innerHTML = "The Day is over";
+   }
+}, 1000);
+
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 for (i = 0; i < dropdown.length; i++) {
