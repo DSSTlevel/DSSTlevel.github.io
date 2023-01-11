@@ -2,9 +2,9 @@
 document.getElementById("footer").innerHTML =
     '<div class="footer-basic">'
     +'<footer>'
-    +'    <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>'
+    +'    <div class="social"><a href="https://discord.com"><i class="fab fa-discord"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>'
     +'    <ul class="list-inline">'
-    +'        <li class="list-inline-item"><a href="#">Home</a></li>'
+    +'        <li class="list-inline-item"><a href="https://dsstlevel.github.io/index.html">Home</a></li>'
     +'        <li class="list-inline-item"><a href="#">Services</a></li>'
     +'        <li class="list-inline-item"><a href="#">About</a></li>'
     +'        <li class="list-inline-item"><a href="#">Terms</a></li>'
