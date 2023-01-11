@@ -1,7 +1,7 @@
 .footer-basic {
 
 	background-color: #111;
-	color: white;
+	color: #f1f1f1;
 }
 
 .footer-basic ul {
@@ -47,8 +47,6 @@
 .footer-basic .social>a:hover {
 	opacity: 0.9;
 }
-
-
 
 .sidebar {
 	height: 100%;
