@@ -5,53 +5,15 @@
       <title>Main Menu</title>
       <style>
          body {background-color:burlywood;background-image: url("Web/Images/background.png");background-repeat: no-repeat;background-size: cover;text-decoration:none;font-family: "Lato", sans-serif;;}
-         .sidebar {height: 100%;width: 250px;position: fixed;z-index: 1;top: 0;left: 0;background-color: #111;overflow-x: hidden;transition: 0.5s;padding-top: 60px;}.sidebar a {text-align:center;text-decoration: none;font-size: 25px;color: #818181;display: block;transition: 0.3s;}.sidebar a:hover {color: #f1f1f1; background-color: grey;}
-         @media screen and (max-height: 450px) {.sidebar {padding-top: 15px;}.sidebar a {font-size: 18px;}}
-         .sidenav a, .dropdown-btn {text-decoration: none;font-size: 25px;color: #818181;display: block;border: none;background: none;width:100%;}.sidenav a:hover, .dropdown-btn:hover {background-color: green ;color: #f1f1f1;display: block;}.dropdown-container {display: none;background-color: #565656;padding-left: 8px;}.active {background-color: green; color: #f1f1f1}
          .image {display: inline-block;}
          .glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color: white; background-color: rgba(0, 0, 0, 0.4);;border-radius: 5px;}
          .glowBlue {color:darkblue;text-align: center;animation: glowBlue 1s ease-in-out infinite alternate; color: cyan; background-color: rgba(0, 0, 0, 0.4);;border-radius: 5px;}
          @-webkit-keyframes glowWhite {from{text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff}to{text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff}}
          @-webkit-keyframes glowBlue {from{text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue}to{text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue}}
       </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="global/g.css"></link>
    </head>
-   <div id="mySidebar" class="sidebar">
-      <button class="dropdown-btn">Business Context</button>
-      <div class="dropdown-container">
-      </div>
-      <button class="dropdown-btn">Culture</button>
-      <div class="dropdown-container">
-      </div>
-      <button class="dropdown-btn">Data</button>
-      <div class="dropdown-container">
-      </div>
-      <button class="dropdown-btn">Digital Analysis</button>
-      <div class="dropdown-container">
-      </div>
-      <button class="dropdown-btn">Digital Environments</button><div class="dropdown-container"><a href="Web/Computers/Components.html">Components</a><a href="Web/Networking/protocols.html">Protocols</a><a href="Web/Networking/NetworkingComponents.html">NetComponents</a><a href="Web/Computers/OS.html">OS</a></div>
-      <button class="dropdown-btn">Diversity and Inclusion</button>
-      <div class="dropdown-container">
-      </div>
-      <button class="dropdown-btn">Learning</button>
-      <div class="dropdown-container">
-      </div>
-      <button class="dropdown-btn">Legislation</button>
-      <div class="dropdown-container">
-         <a href="Web/Ethics/Laws-Regs.html">Laws & Regs</a>
-      </div>
-      <button class="dropdown-btn">Planning</button>
-      <div class="dropdown-container">
-      </div>
-      <button class="dropdown-btn">Security</button>
-      <div class="dropdown-container">
-         <a href="Web/Computers/Threats.html">Threats</a>
-      </div>
-      <button class="dropdown-btn">Tools</button>
-      <div class="dropdown-container">
-      </div>
-      <button class="dropdown-btn">Sources</button><div class="dropdown-container"><a href="https://www.netacad.com/portal/learning" target="_blank">Cisco</a><a href="https://ncfe.org.uk" target="_blank">NCFE Website</a><a href="https://www.qualhub.co.uk/qualification-search/qualification-detail/t-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034?login=false&originalUrl=https%3A%2F%2Fwww.qualhub.co.uk.mcas.ms%2Fqualification-search%2Fqualification-detail%2Ft-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034%3FMcasTsid%3D20892&McasCSRF=2a04a17a9a924bcc526b4bd772189cf149d6804c98bb8c2c08d559e394f185f9" target="_blank">DSS Past Papers</a></div>
-      <a href="Web/changelog.html">Changelog</a>
-    </div>
+   <div id="asidebar"></div>
    <body style="margin-left:200px">
       <p class="glow">
          <b style="font-size: xx-large;">Welcome to the DSS T-level Website for TMC</b><br>
@@ -90,41 +52,27 @@
         Admin Only Page (Data)
         Password: <input type="password" required id="pwd"><br>
         <input type="button" onclick="pwd()" value="Submit">
-   </pre>      
+   </pre>
+   <footer id="footer"></footer>
+   <script src="global/data.js"></script>
 <script>
 function pwd() {if (document.getElementById("pwd").value=='UbuntuRules') {window.location="Web/Admin/secret.html";} else {alert("This password is incorrect. Try again.")}}
 var x = setInterval(function() {
    var countDownDate = new Date("Sep 08, 2023 11:00:00").getTime();
-   var now = new Date().getTime();
-   var distance = countDownDate - now;
-   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   var now = new Date().getTime();var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);
    document.getElementById("demo").innerHTML = `${days} Days, ${hours}:${minutes}:${seconds}`
    if (distance < 0) {
       clearInterval(x);
       document.getElementById("demo").innerHTML = "CyCent - Possible Training Round begun";
    }
 }, 1000);
-function timeConv(countDownDate, time) {
-   const now = new Date.getTime();
-   var distance = countDownDate - now;
-   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-   return distance,days,hours,minutes,seconds
-}
 var y = setInterval(function() {
-   var startTime = new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate(),9,0,0).getTime();
-   if (new Date().getDay()==2) {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),17,0,0).getTime();}
-   else if (new Date().getDay()==3) {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime();}
-   else if (new Date().getDay()==5) {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime();}
-   else if (new Date().getDay()==4) {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime();}
-   if (newd.getTime()<startTime) {document.getElementById("tuesday").innerHTML="The day hasn't begun yet"}
+   var startTime = new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate(),9,0,0).getTime(),newd=new Date()
+   if (new Date().getDay()==2) {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),17,0,0).getTime()}else if (new Date().getDay()==3) {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime()}else if (new Date().getDay()==5) {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime()}else if (new Date().getDay()==4) {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime()}else {var countDownDate = new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime()}
+   if (newd.getTime()<startTime||newd.getTime()>countDownDate) {document.getElementById("tuesday").innerHTML="The day hasn't begun yet"}
    else {
-      
+      const data = timeConv(startTime)
+      let days=data[0],hours=data[1],minutes=data[2],seconds=data[3]
       document.getElementById("tuesday").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`
       if (distance < 0) {
          clearInterval(y);
@@ -132,19 +80,22 @@ var y = setInterval(function() {
       }
    }
 }, 1000);
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+function timeConv(countDownDate) {
+   const now = new Date.getTime();
+   var distance = countDownDate - now;
+   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   return [days,hours,minutes,seconds]
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn"),i
 for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
+    if (dropdownContent.style.display === "block") {dropdownContent.style.display = "none";} else {dropdownContent.style.display = "block";}});}
       </script>
    </body>
 </html>

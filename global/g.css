@@ -1,0 +1,117 @@
+.footer-basic {
+
+	background-color: #111;
+	color: #f1f1f1;
+}
+
+.footer-basic ul {
+	list-style:disc;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 15px;
+}
+
+.footer-basic li {
+	padding: 0 10px;
+}
+
+.footer-basic ul a {
+	color: inherit;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+	opacity: 1;
+}
+
+.footer-basic .social {
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.footer-basic .social>a {
+	font-size: 24px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	margin: 0 8px;
+	color: inherit;
+	opacity: 0.75;
+}
+
+.footer-basic .social>a:hover {
+	opacity: 0.9;
+}
+
+
+
+.sidebar {
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidebar a {
+	text-align: center;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidebar a:hover {
+	color: #f1f1f1;
+	background-color: grey;
+}
+
+@media screen and (max-height: 450px) {
+	.sidebar {
+		padding-top: 15px;
+	}
+
+	.sidebar a {
+		font-size: 18px;
+	}
+}
+
+.sidenav a,
+.dropdown-btn {
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	border: none;
+	background: none;
+	width: 100%;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+	background-color: green;
+	color: #f1f1f1;
+	display: block;
+}
+
+.dropdown-container {
+	display: none;
+	background-color: #565656;
+	padding-left: 8px;
+}
+
+.active {
+	background-color: green;
+	color: #f1f1f1
+}
