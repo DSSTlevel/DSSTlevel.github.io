@@ -75,6 +75,7 @@ var y = setInterval(function() {
       if (distance < 0) {
          clearInterval(y);
          document.getElementById("tuesday").innerHTML = "The Day is over";
+         setInterval(function() {},5000)
       }
    }
 }, 1000);
