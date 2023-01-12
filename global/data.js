@@ -1,19 +1,18 @@
 
 document.getElementById("footer").innerHTML = 
-
-    '<div class="footer-basic">'
-    +'<footer>'
-    +'    <div class="social"><a href="https://discord.com"><i class="fab fa-discord"></i></a><a href="https://dsstlevel.github.io"><i class="fa-solid fa-rotate-right"></i></a></div>'
-    +'    <ul class="list-inline">'
-    +'        <li class="list-inline-item"><a href="https://dsstlevel.github.io/index.html">Home</a></li>'
-    +'        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/changelog.html">Changelog</a></li>'
-    +'        <li class="list-inline-item"><a href="https://dsstlevel.github.io/README.md">About</a></li>'
-    +'        <li class="list-inline-item"><a href="#">Top of Page</a></li>'
-    +'    </ul>'
-    +'    <p class="copyright">Digital Support Services @ TMC</p>'
-    +'</footer>'
-    +'</div>'
-    +'<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>'
+`<div class="footer-basic">
+  <footer>
+    <div class="social"><a href="https://discord.com"><i class="fab fa-discord"></i></a><a href="https://dsstlevel.github.io"><i class="fa-solid fa-rotate-right"></i></a></div>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/index.html">Home</a></li>
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/changelog.html">Changelog</a></li>
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/README.md">About</a></li>
+        <li class="list-inline-item"><a href="#">Top of Page</a></li>
+    </ul>
+    <p class="copyright">Digital Support Services @ TMC</p>
+  </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>`
 document.getElementById("asidebar").innerHTML =
     '<div class="sidebar">'
     +'<button class="dropdown-btn">Business Context</button>'
