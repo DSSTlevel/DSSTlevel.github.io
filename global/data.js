@@ -1,8 +1,9 @@
 
 document.getElementById("footer").innerHTML = 
+
     '<div class="footer-basic">'
     +'<footer>'
-    +'    <div class="social"><a href="https://discord.com"><i class="fab fa-discord"></i></a><a href="https://dsstlevel.github.io"><i class="fa-solid fa-rotate-right"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>'
+    +'    <div class="social"><a href="https://discord.com"><i class="fab fa-discord"></i></a><a href="https://dsstlevel.github.io"><i class="fa-solid fa-rotate-right"></i></a></div>'
     +'    <ul class="list-inline">'
     +'        <li class="list-inline-item"><a href="https://dsstlevel.github.io/index.html">Home</a></li>'
     +'        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/changelog.html">Changelog</a></li>'
