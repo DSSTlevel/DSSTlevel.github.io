@@ -13,7 +13,6 @@ document.getElementById("footer").innerHTML =
     +'</footer>'
     +'</div>'
     +'<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>'
-    +'<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>';
 document.getElementById("asidebar").innerHTML =
     '<div class="sidebar">'
     +'<button class="dropdown-btn">Business Context</button>'
