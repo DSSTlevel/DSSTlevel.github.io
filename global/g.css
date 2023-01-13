@@ -73,6 +73,7 @@
 	padding-top: 60px;
 	overflow: hidden;
 }
+.sidebar:hover{	overflow-y: scroll;}
 
 .sidebar a {
 	text-align: center;
