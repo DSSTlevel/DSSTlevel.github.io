@@ -55,15 +55,6 @@ Password: <input type="password" required id="pwd"><br>
    <script src="global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
 <script>
 function pwd() {if (document.getElementById("pwd").value=='UbuntuRules') {window.location="Web/Admin/secret.html";} else {alert("This password is incorrect. Try again.")}}
-var x = setInterval(function() {
-   var now = new Date().getTime();var countDownDate = new Date("Sep 08, 2023 11:00:00").getTime();
-   var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-   document.getElementById("demo").innerHTML = `${days} Days, ${hours}:${minutes}:${seconds}`
-   if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("demo").innerHTML = "CyCent - Possible Training Round begun";
-   }
-}, 1000);
 var y = setInterval(function () { 
    var now = new Date().getTime();var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),
       newd = new Date();
