@@ -1,5 +1,7 @@
 .list-unstyled{padding-left:0;list-style:none}.list-inline{padding-left:0;list-style:none}.list-inline-item{display:inline-block}.list-inline-item:not(:last-child){margin-right:.5rem}
 
+* {box-sizing: border-box;}
+
 .footer-basic {
 	padding:8px 0;
 	background-color: #111;
