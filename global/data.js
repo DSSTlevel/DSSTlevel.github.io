@@ -1,6 +1,7 @@
 
 document.getElementById("footer").innerHTML = 
-`<div class="footer-basic">
+`
+<div class="footer-basic">
   <footer>
     <div class="social"><a href="https://discord.gg/w4ZeYYzmUX"><i class="fab fa-discord"></i></a><a href="https://dsstlevel.github.io"><i class="fa-solid fa-rotate-right"></i></a></div>
     <ul class="list-inline">
@@ -100,7 +101,8 @@ document.getElementById("navigbar").innerHTML =
   <a><i class="fa-solid fa-bars"></i>Info</a>
   <ul class="dropdown-content">
     <li class="dropdown-sub">
-      <a href="https://dsstlevel.github.io/Web/impdates.html" target="_blank">Cisco</a>
+      <a href="https://dsstlevel.github.io/Web/impdates.html">Dates/Events</a>
+      <a href="https://dsstlevel.github.io/Web/year1.html">Examination Details</a>
     </li>
   </ul>
   </li>
