@@ -2,7 +2,7 @@
 document.getElementById("footer").innerHTML = 
 `<div class="footer-basic">
   <footer>
-    <div class="social"><a href="https://discord.com"><i class="fab fa-discord"></i></a><a href="https://dsstlevel.github.io"><i class="fa-solid fa-rotate-right"></i></a></div>
+    <div class="social"><a href="https://discord.gg/w4ZeYYzmUX"><i class="fab fa-discord"></i></a><a href="https://dsstlevel.github.io"><i class="fa-solid fa-rotate-right"></i></a></div>
     <ul class="list-inline">
         <li class="list-inline-item"><a href="https://dsstlevel.github.io/index.html">Home</a></li>
         <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/changelog.html">Changelog</a></li>
@@ -87,7 +87,7 @@ document.getElementById("navigbar").innerHTML =
   </ul>
   </li>
   <li class="dropdown">
-  <a><i class="fa-solid fa-bars"></i>Sources</a>
+  <a><i class="fa-solid fa-bars"></i>Resources</a>
   <ul class="dropdown-content">
     <li class="dropdown-sub">
       <a href="https://www.netacad.com/portal/learning" target="_blank">Cisco</a>
@@ -95,5 +95,16 @@ document.getElementById("navigbar").innerHTML =
       <a href="https://www.qualhub.co.uk/qualification-search/qualification-detail/t-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034?login=false&originalUrl=https%3A%2F%2Fwww.qualhub.co.uk.mcas.ms%2Fqualification-search%2Fqualification-detail%2Ft-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034%3FMcasTsid%3D20892&McasCSRF=2a04a17a9a924bcc526b4bd772189cf149d6804c98bb8c2c08d559e394f185f9" target="_blank">DSS Past Papers</a>
     </li>
   </ul>
+  </li>
+  <li class="dropdown">
+  <a><i class="fa-solid fa-bars"></i>Info</a>
+  <ul class="dropdown-content">
+    <li class="dropdown-sub">
+      <a href="https://www.netacad.com/portal/learning" target="_blank">Cisco</a>
+      <a href="https://ncfe.org.uk" target="_blank">NCFE Website</a>
+      <a href="https://www.qualhub.co.uk/qualification-search/qualification-detail/t-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034?login=false&originalUrl=https%3A%2F%2Fwww.qualhub.co.uk.mcas.ms%2Fqualification-search%2Fqualification-detail%2Ft-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034%3FMcasTsid%3D20892&McasCSRF=2a04a17a9a924bcc526b4bd772189cf149d6804c98bb8c2c08d559e394f185f9" target="_blank">DSS Past Papers</a>
+    </li>
+  </ul>
+  </li>
 </div>
 `
