@@ -53,23 +53,3 @@ document.getElementById("asidebar").innerHTML =
   </div>
 </div>`
 
-document.getElementById("navigbar").innerHTML = 
-`
-<nav>
-  <ul id="nav_ul">
-    <li class="dropdown">
-      <a href="../index.html"><i class="fa fa-home" style="font-size:36px;"></i></a>
-      <ul class="dropdown-content">
-        <li class="dropdown-sub">
-          <a href="#GS">Global Shop</a>
-          <ul class="dropdown-sub-list">
-            <li><a href="Inventory.html">Inventory</a></li>
-          </ul>
-        </li>
-        <li><a href="#ND">Ndustrios</a></li>
-      </ul>
-    </li>
-    <a href="../index.html"><i class="fa fa-home" style="font-size:36px;"></i></a>
-  </ul>
-</nav>
-`
