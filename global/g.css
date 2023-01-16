@@ -129,7 +129,7 @@
 }
 
 
-#nav_ul {list-style-type: none; margin: 0;padding: 0;overflow: hidden;background-color: #111;text-align: center;}
+#nav_ul {list-style-type: none; margin: 0;padding: 0;overflow: hidden;background-color: #111;text-align: left;}
 li a,.dropbtn {display: inline-block;color: #f1f1f1;text-align: center;padding: 12px 8px;text-decoration: none;}
 .dropdown {display: inline-block;transition: 0.5s;}
 .dropdown:hover {background-color: silver;}
