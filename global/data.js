@@ -34,8 +34,8 @@ document.getElementById("navigbar").innerHTML =
     <li class="dropdown-sub">
       <a>Digital Environments</a>
       <ul class="dropdown-sub-list">
-        <li><a href="Web/Soft-Hardware.html">Software/Hardware</a></li>
-        <li><a href="Web/Networking.html">Networking</a></li>
+        <li><a href="https://dsstlevel.github.io/Web/html/Soft-Hardware.html">Software/Hardware</a></li>
+        <li><a href="https://dsstlevel.github.io/Web/html/Networking.html">Networking</a></li>
         </ul></li>
     <li class="dropdown-sub">
       <a>Diversity and Inclusion</a>
@@ -67,12 +67,12 @@ document.getElementById("navigbar").innerHTML =
     <li class="dropdown-sub">
       <a>Legislation</a>
       <ul class="dropdown-sub-list">
-        <li><a href="Web/Ethics/Laws-Regs.html">Laws & Regs</a></li>
+        <li><a href="https://dsstlevel.github.io/Web/html/Laws-Regs.html">Laws & Regs</a></li>
         </ul></li>
     <li class="dropdown-sub">
       <a>Security</a>
       <ul class="dropdown-sub-list">
-        <li><a href="Web/Computers/Threats.html">Threats</a></li>
+        <li><a href="https://dsstlevel.github.io/Web/html/Threats.html">Threats</a></li>
         </ul></li>
     <li class="dropdown-sub">
       <a>Data</a>
