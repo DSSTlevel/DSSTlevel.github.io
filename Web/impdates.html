@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="../global/g.css">
 <body>
 <div id="navigbar"></div>
+<div style="overflow:auto">
 <table style="margin-left:auto;margin-right:auto;color:white;font-family: cursive;font-size: x-large;">
 <tr>
 <td>
@@ -30,17 +31,20 @@
 </td>
 </tr>
 </table>
-<table style="margin-left:auto;margin-right:auto;color:white;font-family: cursive;font-size: xx-large;">
+<table style="margin-left:auto;margin-right:auto;color:white;font-family: cursive;font-size: x-large;">
 <tr>
 <td>
 Timetable
+<p id="timetable"></p>
 </td>
 </tr>
 </table>
+</div>
     <footer id="footer"></footer>
     <script src="../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
 </body>
 <script>
+   const dateRN=new Date().getDay()
    var x = setInterval(function() {var now = new Date().getTime();var countDownDate = new Date("Jun 14, 2023 13:00:00").getTime();var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);
    document.getElementById("paperA").innerHTML = `PaperA: ${days} Days, ${hours}:${minutes}:${seconds}`
    if (distance < 0) {clearInterval(x);document.getElementById("paperA").innerHTML = "Exam has begun";}}, 1000);
@@ -58,5 +62,26 @@ Timetable
 
    var x = setInterval(function() {var now = new Date().getTime();var countDownDate = new Date("Sep 09, 2023 11:00:00").getTime();var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);
    document.getElementById("training").innerHTML = `Training Round: ${days} Days, ${hours}:${minutes}:${seconds}`}, 1000);
+   
+   var x = setInterval(function () { 
+   var now = new Date().getTime();var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),
+      newd = new Date();
+    if (new Date().getDay() == 2) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();}
+    else if (new Date().getDay() == 3) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
+    else if (new Date().getDay() == 4) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
+    else if (new Date().getDay() == 5) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();} 
+    else {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
+    if (now<startTime||now>countDownDate) {document.getElementById("timetable").innerHTML="The day hasn't begun yet"}
+    else {
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
+      if (distance < 0) {
+         clearInterval(y);
+         document.getElementById("timetable").innerHTML = "The Day is over";
+         setInterval(function() {}, 5000)
+      }
+    }
+}, 1000);
 </script>
 </html>
