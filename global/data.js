@@ -107,7 +107,7 @@ document.getElementById("navigbar").innerHTML =
       <ul class="dropdown-sub-list">
         <li><a href="https://studenthub.tmc.ac.uk">Student Hub</a></li>
         <li><a href="https://proportal.tmc.ac.uk">ProPortal</a></li>
-        <li><a href="https://grofar.tmc.ac.uk">GroFar</a></li>
+        <li><a href="https://grofar.com/">GroFar</a></li>
         </ul></li>
       </li>
   </ul>
