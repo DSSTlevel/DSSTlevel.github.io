@@ -71,7 +71,7 @@ document.getElementById("navigbar").innerHTML =
     <li class="dropdown-sub">
       <a>Legislation</a>
       <ul class="dropdown-sub-list">
-        <li><a href="https://dsstlevel.github.io/Web/html/Laws-Regs.html">Laws & Regs</a></li>
+        <li><a href="https://dsstlevel.github.io/Web/html/Laws-Regs.html">Data Info</a></li>
         </ul></li>
     <li class="dropdown-sub">
       <a>Security</a>
@@ -81,7 +81,8 @@ document.getElementById("navigbar").innerHTML =
     <li class="dropdown-sub">
       <a>Data</a>
       <ul class="dropdown-sub-list">
-      </ul></li>
+        <li><a href="https://dsstlevel.github.io/Web/html/Data.html">Data Info</a></li>
+        </ul></li>
     <li class="dropdown-sub">
       <a>Data Analysis</a>
       <ul class="dropdown-sub-list">
