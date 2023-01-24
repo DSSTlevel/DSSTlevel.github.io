@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>DSSTlevel | Main Menu</title>
+      <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="global/g.css">
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"> 
+      <style>
+         body {margin:0;background-image: url("Web/Images/background.png");background-repeat: no-repeat;background-size: cover;text-decoration:none;font-family: "Lato", sans-serif;}
+         .image {display: inline-block;}
+         .glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color: white; background-color: rgba(0, 0, 0, 0.4);;border-radius: 5px;}
+         .glowBlue {color:darkblue;text-align: center;animation: glowBlue 1s ease-in-out infinite alternate; color: cyan; background-color: rgba(0, 0, 0, 0.4);;border-radius: 5px;}
+         @keyframes glowWhite {from{text-shadow: 0 0 15px #fff, 0 0 15px #fff}to{text-shadow: 0 0 15px #fff, 0 0 15px #fff}}
+         @keyframes glowBlue {from{text-shadow: 0 0 15px blue, 0 0 15px blue}to{text-shadow: 0 0 15px blue, 0 0 15px blue}}
+      </style>
+   </head>
+<div id="navigbar"></div>
+<body style="overflow:auto">
+      <p class="glow">
+         <b style="font-size: xx-large;">Welcome to the DSS T-level Website for TMC</b><br>
+         Here you can search through the many pages of notes<br>that I have been produced from the<br>Digital Support Services T-Level</p>
+         <table border="0" style="table-layout:fixed; margin-right: auto; margin-left:auto;width:100%">
+         <tr>
+            <td><a href="Web/changelog.html"><img style="margin-left:auto;display:block;max-width:max-content;" src="Web/Images/changelog.png"></a></td>
+            <td>
+               <table border="0" style="margin-right:auto; margin-left:auto">
+                  <tr>
+                     <td style="text-align:center;font-size:x-large" class="glow"><u>Quick Links</u></td>
+                  </tr>
+                  <tr>
+                     <td class="glow" style="font-size:large">Links to the big wesbites used weekly<br><a style="color:white;" href="https://www.netacad.com/portal/learning" target="_blank">Cisco Netacad</a><br><a style="color:white;" href="https://studenthub.tmc.ac.uk" target="_blank">Student Hub</a><br><a style="color:white;" href="https://teams.microsoft.com/" target="_blank">MS Teams</a></td>
+                  </tr>
+               </table>
+            </td>
+            <td>
+               <table>
+                  <tr><td style="text-align:center;font-size: x-large;" class="glow"><b>Timetable</b></td></tr>
+                  <tr><td style="text-align:center;font-size:x-large;background-color:rgba(0, 0, 0, 0.7);" class="glowBlue" id="tuesday"></td></tr>
+                  <tr><td class="glow"><a href="Web/impdates.html" style="text-align:cneter;font-size: x-large; color:white;text-decoration: none;">View full events countdown</a></td></tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+<pre class="glow" style="text-align: center;">
+Admin Only Page (Data)
+Password: <input type="password" required id="pwd"><br>
+<input type="button" onclick="pwd()" value="Submit">
+</pre>
+   <footer id="footer"></footer>
+   <script src="global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+<script>
+function pwd() {if (document.getElementById("pwd").value=='UbuntuRules') {window.location="Web/Admin/secret.html";} else {alert("This password is incorrect. Try again.")}}
+var y = setInterval(function () { 
+   var now = new Date().getTime();var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),
+      newd = new Date();
+    if (new Date().getDay() == 2) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();} else if (new Date().getDay() == 3) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();} else if (new Date().getDay() == 5) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();} else if (new Date().getDay() == 4) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();} else {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
+    if (now<startTime||now>countDownDate) {document.getElementById("tuesday").innerHTML="The day hasn't begun yet"}
+    else {
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("tuesday").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
+      if (distance < 0) {
+         clearInterval(y);
+         document.getElementById("tuesday").innerHTML = "The Day is over";
+         setInterval(function() {}, 5000)
+      }
+    }
+}, 1000);
+function timeConv(countDownDate) {
+    const now = new Date.getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    return [days, hours, minutes, seconds];
+}
+var dropdown = document.getElementsByClassName("dropdown-btn"),i
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {dropdownContent.style.display = "none";} else {dropdownContent.style.display = "block";}})}
+      </script>
+   </body>
+</html>
