@@ -6,10 +6,10 @@
 <body>
 <div id="navigbar"></div>
 <div style="overflow:auto">
-<table style="margin-left:auto;margin-right:auto;color:white;font-family: cursive;font-size: x-large;">
+<table width="100%" style="margin-left:auto;margin-right:auto;color:white;font-family: cursive;font-size: x-large;">
 <tr>
 <td>
-<table style="text-align:left">
+<table style="margin-left:auto;margin-right:auto;">
 <tr><b>Examinations</b></tr>
 <tr id="paperA"></tr>
 <tr id="paperB"></tr>
@@ -17,25 +17,29 @@
 </table>
 </td>
 <td>
-<table>
+<table style="margin-left:auto;margin-right:auto;">
 <tr><b>Term Dates</b></tr>
 <tr id="EoT"></tr>
 <tr id="EoHT"></tr>
 </table>
 </td>
 <td>
-<table>
+<table style="margin-left:auto;margin-right:auto;">
 <tr><b>Cyber Centurion 2023</b></tr>
 <tr id="training"></tr>
 </table>
 </td>
 </tr>
-</table>
+<tr>
+<td>
 <table style="margin-left:auto;margin-right:auto;color:white;font-family: cursive;font-size: x-large;">
 <tr>
 <td>
 Timetable
 <p style="color:blue" id="timetable"></p>
+</td>
+</tr>
+</table>
 </td>
 </tr>
 </table>
@@ -68,14 +72,17 @@ Timetable
       newd = new Date();
     if (new Date().getDay() == 2) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();}
     else if (new Date().getDay() == 3) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
-    else if (new Date().getDay() == 4) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
+    else if (new Date().getDay() == 4) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 12, 0, 0).getTime();}
     else if (new Date().getDay() == 5) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();} 
     else {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
     if (now<startTime||now>countDownDate) {document.getElementById("timetable").innerHTML="The day hasn't begun yet"}
     else {
       var distance = countDownDate - now;
       var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      if (new Date().getDay() == 2) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>L1. 9-10:45<br>B. 10:45-11:00<br>L2. 11:00-12:45<br>L. 12:45-13:15<br>L3. 13:15-15:00<br>B. 15:00-15:15<br>L4. 15:15-17:00`;
+      if (new Date().getDay() == 2) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>L1. 9:00-10:45<br>B. 10:45-11:00<br>L2. 11:00-12:45<br>L. 12:45-13:15<br>L3. 13:15-15:00<br>B. 15:00-15:15<br>L4. 15:15-17:00`;
+      else if (new Date().getDay()==2) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>L1. 9:00-10:45<br>B. 10:45-11:00<br>L2. 11:00-12:45<br>L. 12:45-13:15<br>L3. 13:15-15:00`;
+      else if (new Date().getDay()==4) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>Online. 9:00-12:00`;
+      else if (new Date().getDay()==3) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>L1. 9:00-10:00<br>B. 10:00-11:15<br>L2. 11:15-12:15<br>L. 12:15-13:00<br>L3. 13:00-15:00`; 
       if (distance < 0) {
          clearInterval(y);
          document.getElementById("timetable").innerHTML = "The Day is over";
