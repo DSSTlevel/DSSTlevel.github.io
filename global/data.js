@@ -9,6 +9,7 @@ document.getElementById("footer").innerHTML =
         <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/changelog.html">Changelog</a></li>
         <li class="list-inline-item"><a href="https://dsstlevel.github.io/README.md">About</a></li>
         <li class="list-inline-item"><a href="#">Top of Page</a></li>
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/Sitemap.html">Sitemap</a></li>
     </ul>
     <p class="copyright">Digital Support Services @ TMC</p>
   </footer>
