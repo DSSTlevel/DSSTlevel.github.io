@@ -6,3 +6,4 @@
 
 .news-card {background-color:rgb(57, 57, 128);max-width: 200px;margin:auto;text-align: center;color: rgb(209, 216, 240);}
 a {text-decoration: none;font-size: 22px;color:rgb(209, 216, 240);}
+.news-card:hover {background-color: rgb(69, 69, 144); box-shadow: 1px 1px beige, -1px -1px beige;transition: 0.3s;}
