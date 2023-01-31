@@ -95,6 +95,7 @@ document.getElementById("navigbar").innerHTML =
   <ul class="dropdown-content">
     <li class="dropdown-sub">
       <a href="https://www.netacad.com/portal/learning" target="_blank">Cisco</a>
+      <a href="https://dsstlevel.github.io/Web/html/codingScripts" target="_blank">Cisco</a>
       <li class="dropdown-sub">
       <a>NCFE</a>
       <ul class="dropdown-sub-list">
