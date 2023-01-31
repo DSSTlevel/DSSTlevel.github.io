@@ -8,7 +8,7 @@ document.getElementById("footer").innerHTML =
         <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/changelog.html">Changelog</a></li>
         <li class="list-inline-item"><a href="https://dsstlevel.github.io/README.md">About</a></li>
         <li class="list-inline-item"><a href="#">Top of Page</a></li>
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/Sitemap.html">Sitemap</a></li>
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/html/Sitemap.html">Sitemap</a></li>
     </ul>
     <p class="copyright">Digital Support Services @ TMC</p>
   </footer>
@@ -117,8 +117,8 @@ document.getElementById("navigbar").innerHTML =
   <a><i class="fa-solid fa-bars"></i>Info</a>
   <ul class="dropdown-content">
     <li class="dropdown-sub">
-      <a href="https://dsstlevel.github.io/Web/impdates.html">Dates/Events</a>
-      <a href="https://dsstlevel.github.io/Web/year1.html">Examination Details</a>
+      <a href="https://dsstlevel.github.io/Web/html/impdates.html">Dates/Events</a>
+      <a href="https://dsstlevel.github.io/Web/html/year1.html">Examination Details</a>
     </li>
   </ul>
   </li>
