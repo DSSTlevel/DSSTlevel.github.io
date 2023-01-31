@@ -74,10 +74,17 @@ Here you can search through the many pages of notes<br>that I have been produced
       <p>Updated the content and text/background decorations for more legibility<br><br></p>
    </div>
    </td>
+   <td>
+      <div class="news-card">
+         <img src="Images/News/tlvl.png" style="width:100%;">
+         <h1><a href="html/Sitemap.html">Website Refresh</a></h1>
+         <p>The website automatically refreshes every 10 minutes to stay up-to-date!<br><br><br></p>
+      </div>
+      </td>
    </tr>
 </table>
 </section>
-<pre class="glow" style="text-align: center;">
+<pre class="glow" style="text-align: center;font-size: larger;">
 Admin Only Page (Data)
 Password: <input type="password" required id="pwd"><br>
 <input type="button" onclick="pwd()" value="Submit">
@@ -119,5 +126,11 @@ for (i = 0; i < dropdown.length; i++) {
     var dropdownContent = this.nextElementSibling;
     if (dropdownContent.style.display === "block") {dropdownContent.style.display = "none";} else {dropdownContent.style.display = "block";}})}
       </script>
+      <script>
+         function autoRefresh() {
+             window.location = window.location.href;
+         }
+         setInterval('autoRefresh()', 600000);
+     </script>
    </body>
 </html>
