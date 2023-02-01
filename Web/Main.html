@@ -49,7 +49,7 @@ Here you can search through the many pages of notes<br>that I have been produced
 <td>
 <table>
 <tr><td style="text-align:center;font-size: x-large;" class="glow"><b>Timetable</b></td></tr>
-<tr><td style="text-align:center;font-size:x-large;background-color:rgba(0, 0, 0, 0.7);" class="glowBlue" id="tuesday"></td></tr>
+<tr><td style="text-align:center;font-size:x-large;background-color:rgba(0, 0, 0, 0.7);" class="glowBlue" id="timetableCountdown"></td></tr>
 <tr><td class="glow"><a href="impdates.html" style="text-align:center;font-size: x-large; color:white;text-decoration: none;">View full timetable</a></td></tr>
 </table>
 </td>
@@ -103,15 +103,15 @@ var y = setInterval(function () {
       case 5: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
       case 2: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();break;
    }
-    if (new Date().getDay()==6||0) document.getElementById("tuesday").innerHTML="Its the weekend!😄"
-    else if (now<startTime||now>countDownDate) {document.getElementById("tuesday").innerHTML="The day hasn't begun yet"}
+    if (new Date().getDay()==6||0) document.getElementById("timetableCountdown").innerHTML="Its the weekend!😄"
+    else if (now<startTime||now>countDownDate) {document.getElementById("timetableCountdown").innerHTML="The day hasn't begun yet"}
     else {
       var distance = countDownDate - now;
       var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("tuesday").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
+      document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
       if (distance < 0) {
          clearInterval(y);
-         document.getElementById("tuesday").innerHTML = "The Day is over";
+         document.getElementById("timetableCountdown").innerHTML = "The Day is over";
          setInterval(function() {}, 5000)
       }
     }
