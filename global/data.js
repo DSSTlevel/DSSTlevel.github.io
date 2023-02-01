@@ -31,6 +31,7 @@ document.getElementById("navigbar").innerHTML =
       <a>Business Context</a>
       <ul class="dropdown-sub-list">
       <li><a href="https://dsstlevel.github.io/Web/html/BusinessContext.html">Context</a></li>
+      <li><a href="https://dsstlevel.github.io/Web/html/Bus-Terminology.html">Terminology</a></li>
       </ul></li>
     <li class="dropdown-sub">  
       <a>Culture</a>
