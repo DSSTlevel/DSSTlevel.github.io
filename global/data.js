@@ -25,7 +25,7 @@ document.getElementById("navigbar").innerHTML =
   <ul id="nav_ul">
   <a href="https://dsstlevel.github.io/index.html"><i class="fa fa-home" style="font-size:20px;color:white"></i></a>
   <li class="dropdown">
-  <a><i class="fa-solid fa-bars"></i><i class="fa-regular fa-file-lines"> </i><i class="fa-solid fa-a"></i></a>
+  <a><i class="fa-solid fa-bars"> </i><i class="fa-solid fa-a"></i></a>
   <ul class="dropdown-content">
     <li class="dropdown-sub">
       <a>Business Context</a>
@@ -61,7 +61,7 @@ document.getElementById("navigbar").innerHTML =
   </ul>
   </li>
   <li class="dropdown">
-  <a><i class="fa-solid fa-bars"></i><i class="fa-regular fa-file-lines"></i> <i class="fa-solid fa-b"></i></a>
+  <a><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-b"></i></a>
   <ul class="dropdown-content">
     <li class="dropdown-sub">
       <a>Testing</a>
