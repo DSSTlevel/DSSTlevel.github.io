@@ -97,13 +97,14 @@ function pwd() {if (document.getElementById("pwd").value=='GoHome') {window.loca
 var y = setInterval(function () { 
    var now = new Date().getTime();var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),newd = new Date();
    switch (new Date().getDay()) {
-      case 2:var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();break;
-      case 3: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
+      case 1:
+      case 3:
+      case 4:
       case 5: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
-      case 4:var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
-      default:var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
+      case 2: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();break;
    }
-    if (now<startTime||now>countDownDate) {document.getElementById("tuesday").innerHTML="The day hasn't begun yet"}
+    if (new Date().getDay()==6||0) document.getElementById("tuesday").innerHTML="Its the weekend!😄"
+    else if (now<startTime||now>countDownDate) {document.getElementById("tuesday").innerHTML="The day hasn't begun yet"}
     else {
       var distance = countDownDate - now;
       var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
