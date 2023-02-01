@@ -1,7 +1,6 @@
 
 document.getElementById("footer").innerHTML = 
 `
-<head><link rel="icon" type="image/x-icon" href="https://dsstlevel.github.io/Web/Images/favicon.ico"></head>
 <style>body {background-color: #111;}</style>
 <div class="footer-basic">
   <footer>
