@@ -125,3 +125,13 @@ document.getElementById("navigbar").innerHTML =
   </li>
 </div>
 `
+
+/*
+   switch (new Date.getDay()) {
+    case 2: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();break;
+    case 3: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
+    case 5: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
+    case 4: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
+    default: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
+   }
+   */
