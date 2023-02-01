@@ -86,15 +86,34 @@ Here you can search through the many pages of notes<br>that I have been produced
 </table>
 </section>
 <pre class="glow" style="text-align: center;font-size: larger;">
-Admin Only Page (Data)
+<form>
+<label for="cars">Choose a Location</label>
+   <select name="cars" id="loc">
+      <option value="priv">Priv</option>
+      <option value="admin">Admin</option>
+   </select>
+</form>
 Password: <input type="password" required id="pwd"><br>
-<input type="button" onclick="pwd()" value="Submit">
+<input type="button" onclick="pwd()" value="Submit" id="sbmt">
 </pre>
    </div>
    <footer id="footer"></footer>
    <script src="../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
 <script>
-function pwd() {if (document.getElementById("pwd").value=='GoHome') {window.location="Admin/secret.html";} else {alert("This password is incorrect. Try again.")}}
+document.getElementById("pwd").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("sbmt").click();
+  }
+});
+
+function pwd() {
+   if (document.getElementById("pwd").value=='SqL1n') {
+      if (document.getElementById("loc").value=="admin") window.location="Admin/secret.html"
+      else if (document.getElementById("loc").value=="priv") window.location="Priv/p.html"
+   }
+   else alert("This password is incorrect. Try again.")}
+
 var y = setInterval(function () { 
    var now = new Date().getTime();var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),newd = new Date();
    switch (new Date().getDay()) {
