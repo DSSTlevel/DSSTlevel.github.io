@@ -7,6 +7,3 @@
 .news-card {background-color:rgb(57, 57, 128);max-width: 200px;margin:auto;text-align: center;color: rgb(209, 216, 240);}
 a {text-decoration: none;font-size: 22px;color:rgb(209, 216, 240);}
 .news-card:hover {background-color: rgb(69, 69, 144); box-shadow: 1px 1px beige, -1px -1px beige;transition: 0.3s;}
-
-.priv-dropbtn {background-color:rgb(168, 178, 211);color:aliceblue;padding: 16px;font-size: xx-large;border: none;}.priv-dropdown {position: relative;display: inline-block;}.priv-dropdown-content {display: none;position: absolute;background-color: rgb(176, 180, 194);min-width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
-.priv-dropdown-content a {font-family:Arial, Helvetica, sans-serif;color:sienna;padding: 12px 16px;text-decoration: none;display: block;}.priv-dropdown-content a:hover {background-color: GREY;}.priv-dropdown:hover .priv-dropdown-content {display: block;}.priv-dropdown:hover .dropbtn {background-color: rgb(131, 142, 177);}
