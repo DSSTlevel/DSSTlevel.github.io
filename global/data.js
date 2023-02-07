@@ -1,7 +1,5 @@
-
 document.getElementById("footer").innerHTML = 
 `
-<script type="text/javascript" src="https://dsstlevel.github.io/global/settings.js"></script>
 <style>body {background-color: #111;}</style>
 <div class="footer-basic">
   <footer>
@@ -17,8 +15,6 @@ document.getElementById("footer").innerHTML =
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>function autoRefresh() {window.location = window.location.href;}setInterval('autoRefresh()', 600000);</script>`
-
-
 
 document.getElementById("navigbar").innerHTML = 
 `

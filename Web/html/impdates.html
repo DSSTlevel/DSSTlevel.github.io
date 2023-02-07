@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <title>DSSTlevel | Dates/Events</title>
+<script type="text/javascript" src="../../global/settings.js"></script>
 <style>body {margin:0;background-color: black}</style>
 <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="../../global/g.css">
 <link rel="icon" type="image/x-icon" href="https://dsstlevel.github.io/Web/Images/favicon.ico">
@@ -80,10 +81,10 @@ Timetable
     else {
       var distance = countDownDate - now;
       var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      if (new Date().getDay() == 2) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>L1. 9:00-10:45<br>B. 10:45-11:00<br>L2. 11:00-12:45<br>L. 12:45-13:15<br>L3. 13:15-15:00<br>B. 15:00-15:15<br>L4. 15:15-17:00`;
-      else if (new Date().getDay()==3) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>L1. 9:00-10:45<br>B. 10:45-11:00<br>L2. 11:00-12:45<br>L. 12:45-13:15<br>L3. 13:15-15:00`;
-      else if (new Date().getDay()==4) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>Online. 9:00-12:00`;
-      else if (new Date().getDay()==5) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>L1. 9:00-10:00<br>B. 10:00-11:15<br>L2. 11:15-12:15<br>L. 12:15-13:00<br>L3. 13:00-15:00`; 
+      if (new Date().getDay() == 2) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>${timetable.tuesday}`;
+      else if (new Date().getDay()==3) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>${timetable.wednesday}`;
+      else if (new Date().getDay()==4) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>${timetable.thursday}`;
+      else if (new Date().getDay()==5) document.getElementById("timetable").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}<br>${timetable.friday}`; 
       if (distance < 0) {
          clearInterval(y);
          document.getElementById("timetable").innerHTML = "The Day is over";
