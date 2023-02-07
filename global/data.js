@@ -1,6 +1,7 @@
 
 document.getElementById("footer").innerHTML = 
 `
+<script type="text/javascript" src="https://dsstlevel.github.io/global/settings.js"></script>
 <style>body {background-color: #111;}</style>
 <div class="footer-basic">
   <footer>
