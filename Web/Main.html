@@ -42,7 +42,7 @@ Here you can search through the many pages of notes<br>that I have been produced
 </td>
 <td>
 <table>
-<tr><td style="text-align:center;font-size: x-large;" class="glow"><b>Timetable</b></td></tr>
+<tr><td style="text-align:center;font-size: x-large;" class="glow"><b>End Of Day</b></td></tr>
 <tr><td style="text-align:center;font-size:xx-large" class="glowBlue" id="timetableCountdown"></td></tr>
 <tr><td class="glow"><a href="html/impdates.html" style="text-align:center;font-size: x-large; color:white;text-decoration: none;">View full timetable</a></td></tr>
 </table>
@@ -121,10 +121,10 @@ var x = setInterval(function () {
     else {
       var distance = countDownDate - now;
       var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      if (new Date().getDay() == 2) document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
-      else if (new Date().getDay()==3) document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
-      else if (new Date().getDay()==4) document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
-      else if (new Date().getDay()==5) document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`; 
+      if (new Date().getDay() == 2) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+      else if (new Date().getDay()==3) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+      else if (new Date().getDay()==4) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+      else if (new Date().getDay()==5) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`; 
       if (distance < 0) {
          clearInterval(y);
          document.getElementById("timetable").innerHTML = "The Day is over";
