@@ -63,7 +63,7 @@ document.getElementById("navigbar").innerHTML =
     <li class="dropdown-sub">
       <a>Testing</a>
       <ul class="dropdown-sub-list">
-      <li><a href="https://dsstlevel.github.io/Web/html/RouteCauseAnalysiss.html">Route Cause Analysis</a></li>
+      <li><a href="https://dsstlevel.github.io/Web/html/RouteCauseAnalysis.html">Route Cause Analysis</a></li>
       </ul></li>
     <li class="dropdown-sub">  
       <a>Tools</a>
