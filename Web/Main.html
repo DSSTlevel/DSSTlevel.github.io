@@ -26,20 +26,6 @@ Here you can search through the many pages of notes<br>that I have been produced
 <td>
 <table border="0" style="margin-right:auto; margin-left:auto">
 <tr>
-<td style="text-align:center;font-size:x-large" class="glow"><u>News</u></td>
-</tr>
-<tr>
-<td>
-<div class="glow" style="font-size:large">
--Created Context in Paper A<br>
-</div>
-</td>
-</tr>
-</table>
-</td>
-<td>
-<table border="0" style="margin-right:auto; margin-left:auto">
-<tr>
 <td style="text-align:center;font-size:x-large" class="glow"><u>Quick Links</u></td>
 </tr>
 <tr>
@@ -50,7 +36,14 @@ Here you can search through the many pages of notes<br>that I have been produced
 <td>
 <table>
 <tr><td style="text-align:center;font-size: x-large;" class="glow"><b>Timetable</b></td></tr>
-<tr><td style="text-align:center;font-size:x-large;" class="glowBlue" id="timetableCountdown"></td></tr>
+<tr><td style="text-align:center;font:medium" class="glowBlue" id="timetable"></td></tr>
+<tr><td class="glow"><a href="html/impdates.html" style="text-align:center;font-size: x-large; color:white;text-decoration: none;">View full timetable</a></td></tr>
+</table>
+</td>
+<td>
+<table>
+<tr><td style="text-align:center;font-size: x-large;" class="glow"><b>Timetable</b></td></tr>
+<tr><td style="text-align:center;font-size:xx-large" class="glowBlue" id="timetableCountdown"></td></tr>
 <tr><td class="glow"><a href="html/impdates.html" style="text-align:center;font-size: x-large; color:white;text-decoration: none;">View full timetable</a></td></tr>
 </table>
 </td>
@@ -116,28 +109,36 @@ document.getElementById("pwd").addEventListener("keypress", function(event) {
 });
 
 var _0x5837=["\x76\x61\x6C\x75\x65","\x70\x77\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x53\x71\x4C\x31\x6E","\x6C\x6F\x63","\x61\x64\x6D\x69\x6E","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x41\x64\x6D\x69\x6E\x2F\x73\x65\x63\x72\x65\x74\x2E\x68\x74\x6D\x6C","\x70\x72\x69\x76","\x50\x72\x69\x76\x2F\x70\x2E\x68\x74\x6D\x6C","\x54\x68\x69\x73\x20\x70\x61\x73\x73\x77\x6F\x72\x64\x20\x69\x73\x20\x69\x6E\x63\x6F\x72\x72\x65\x63\x74\x2E\x20\x54\x72\x79\x20\x61\x67\x61\x69\x6E\x2E"];function pwd(){if(document[_0x5837[2]](_0x5837[1])[_0x5837[0]]== _0x5837[3]){if(document[_0x5837[2]](_0x5837[4])[_0x5837[0]]== _0x5837[5]){window[_0x5837[6]]= _0x5837[7]}else {if(document[_0x5837[2]](_0x5837[4])[_0x5837[0]]== _0x5837[8]){window[_0x5837[6]]= _0x5837[9]}}}else {alert(_0x5837[10])}}
-var y = setInterval(function () { 
-   var now = new Date().getTime();var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),newd = new Date();
-   switch (new Date().getDay()) {
-      case 1:
-      case 3:
-      case 4:
-      case 5: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();break;
-      case 2: var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();break;
-   }
-    if (new Date().getDay()==6||0) document.getElementById("timetableCountdown").innerHTML="Its the weekend!😄"
-    else if (now<startTime||now>countDownDate) {document.getElementById("timetableCountdown").innerHTML="The day hasn't begun yet"}
+var x = setInterval(function () { 
+   var now = new Date().getTime();var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),
+      newd = new Date();
+    if (new Date().getDay() == 2) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();}
+    else if (new Date().getDay() == 3) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
+    else if (new Date().getDay() == 4) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 12, 0, 0).getTime();}
+    else if (new Date().getDay() == 5) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();} 
+    else {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
+    if (now<startTime||now>countDownDate) {document.getElementById("timetableCountdown").innerHTML="The day hasn't begun yet"}
     else {
       var distance = countDownDate - now;
       var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
+      if (new Date().getDay() == 2) document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
+      else if (new Date().getDay()==3) document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
+      else if (new Date().getDay()==4) document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`;
+      else if (new Date().getDay()==5) document.getElementById("timetableCountdown").innerHTML = `End of Day: ${hours}:${minutes}:${seconds}`; 
       if (distance < 0) {
          clearInterval(y);
-         document.getElementById("timetableCountdown").innerHTML = "The Day is over";
+         document.getElementById("timetable").innerHTML = "The Day is over";
          setInterval(function() {}, 5000)
       }
     }
 }, 1000);
+var x = setInterval(function () { 
+      if (new Date().getDay() == 2) document.getElementById("timetable").innerHTML = `L1. 9:00-10:45<br>B. 10:45-11:00<br>L2. 11:00-12:45<br>L. 12:45-13:15<br>L3. 13:15-15:00<br>B. 15:00-15:15<br>L4. 15:15-17:00`;
+      else if (new Date().getDay()==3) document.getElementById("timetable").innerHTML = `L1. 9:00-10:45<br>B. 10:45-11:00<br>L2. 11:00-12:45<br>L. 12:45-13:15<br>L3. 13:15-15:00`;
+      else if (new Date().getDay()==4) document.getElementById("timetable").innerHTML = `Online. 9:00-12:00`;
+      else if (new Date().getDay()==5) document.getElementById("timetable").innerHTML = `L1. 9:00-10:00<br>B. 10:00-11:15<br>L2. 11:15-12:15<br>L. 12:15-13:00<br>L3. 13:00-15:00`; 
+      else document.getElementById("timetable").innerHTML = `Happy Weekend!`;
+   }, 1000);
 var dropdown = document.getElementsByClassName("dropdown-btn"),i
 for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function() {
