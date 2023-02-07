@@ -1,5 +1,5 @@
 //Config
-var PrivAdmin_pwd="S"
+var PrivAdmin_pwd="SqL1n"
 
 
 //Times and Dates
