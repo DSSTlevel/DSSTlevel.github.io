@@ -125,4 +125,3 @@ document.getElementById("navigbar").innerHTML =
   </li>
 </div>
 `
-
