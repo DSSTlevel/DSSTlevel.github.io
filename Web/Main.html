@@ -20,7 +20,6 @@
 <body>
 <div style="overflow:auto;">
 <section>
-<p id="liveCount" style="color:black;font-size:larger"></p>
 <p class="glow">
 <b style="font-size: xx-large;">Welcome to the DSS T-level website for TMC</b><br>
 Here you can search through the many pages of notes<br>that I have been produced from the<br>Digital Support Services T-Level</p>
@@ -106,12 +105,11 @@ Here you can search through the many pages of notes<br>that I have been produced
 Password: <input type="password" required id="pwd"><br>
 <input type="button" onclick="pwd()" value="Submit" id="sbmt">
 </pre>
-   </div>
-   <footer id="footer"></footer>
-   <script src="../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+ </div>
+<footer id="footer"></footer>
+<script src="../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
 <!--onclick="window.open('https://youtube.com/changelog.html','name','width=600,height=400')"-->
 <script>
-document.getElementById('liveCount').innerHTML=`${Math.round(Math.random()*50)} People Watching`
 document.getElementById("pwd").addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
