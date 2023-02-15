@@ -14,7 +14,8 @@ document.getElementById("footer").innerHTML =
   </footer>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>function autoRefresh() {window.location = window.location.href;}setInterval('autoRefresh()', 600000);</script>`
+<script>function autoRefresh() {window.location = window.location.href;}setInterval('autoRefresh()', 600000);</script>
+`
 
 document.getElementById("navigbar").innerHTML = 
 `
