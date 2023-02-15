@@ -20,92 +20,139 @@
       </style>
    </head>
 <div id="navigbar"></div>
-
 <body>
-<div style="overflow:auto;">
-<section>
-<p class="glow">
-<b style="font-size: xx-large;">Welcome to the DSS T-level website for TMC</b><br>
-Here you can search through the many pages of notes<br>that I have been produced from the<br>Digital Support Services T-Level</p>
-
-<table border="0" style="table-layout:fixed; margin-right: auto; margin-left:auto;width:100%">
-<tr>
-<td>
-   <div style="text-align: center; background-color: rgba(0, 0, 0, 0.02);">
-      <canvas id="canvas" width="200"></canvas>
-   </div>
-</td>
-<td>
-<table border="0" style="margin-right:auto; margin-left:auto">
-<tr>
-<td style="text-align:center;font-size:x-large" class="glow"><u>Quick Links</u></td>
-</tr>
-<tr>
-<td class="glow" style="font-size:large">Links to the big websites used weekly<br><a style="color:white;text-decoration: none;" href="https://www.netacad.com/portal/learning" target="_blank">Cisco Netacad</a><br><a style="color:white;text-decoration: none;" href="https://studenthub.tmc.ac.uk" target="_blank">Student Hub</a><br><a style="color:white;text-decoration: none;" href="https://teams.microsoft.com/" target="_blank">MS Teams</a></td>
-</tr>
-</table>
-</td>
-<td>
-<table style="margin-right:auto; margin-left:auto">
-<tr><td style="text-align:center;font-size: x-large;" class="glow"><b>End Of Day</b></td></tr>
-<tr><td style="text-align:center;font-size:xx-large" class="glowBlue" id="timetableCountdown"></td></tr>
-<tr><td class="glow"><a href="html/impdates.html" style="text-align:center;font-size: x-large; color:white;text-decoration: none;">View full timetable</a></td></tr>
-</table>
-</td>
-</tr>
-</table>
-</section>
-<section>
-<h2 style="padding-left:50px;color:white"><u><b>News</b></u></h2>
-<table style="margin-left:auto;margin-right:auto">
-   <tr>
-      <td>
-   <div class="news-card">
-      <img src="Images/News/python.png" style="width:100%;">
-      <h1><a href="html/codingScripts.html">Scripts</a></h1>
-      <p>Introducing coding scripts. These are designed to help learn with revision and develop your interaction skills aswell!</p>
-   </div>
-   </td>
-   <td>
-      <div class="news-card">
-         <img src="Images/News/security.png" style="width:100%;">
-         <h1><a href="#security">Security</a></h1>
-         <p>The Passwords, Page URL's and More in the security section are now encoded and no longer visible!<br></p>
-      </div>
-   </td>
-   <td>
-      <div class="news-card">
-         <img src="Images/News/tlvl.png" style="width:100%;">
-         <h1><a href="changelog.html">Changelog</a></h1>
-         <p>Redecorated the changelog page to allow for more legibility<br><br><br></p>
-      </div>
-   </td>
-   </tr>
-</table>
-</section>
-<section>
-   <div style="overflow:auto">
-      <table width="100%" style="text-align:center;margin-left:auto;margin-right:auto;color:white;font-family: cursive;font-size: x-large;">
-      <tr><th>Term Dates</th><th>Examinations</th><th>Cyber Centurion</th></tr>
-      <tr><td id="EoT"></td><td id="paperA"></td><td id="training"></td></tr>
-      <tr><td id="EoHT"></td><td id="paperB"></td></tr>
-      <tr><td></td><td id="ESP"></td></tr>
-      </table>
-   </div>
-</section>
-<pre class="glow" style="text-align: center;font-size: larger;">
-<form id="security">
-<label for="cars">Choose a Location</label>
-   <select name="cars" id="loc">
-      <option value="priv">Priv</option>
-      <option value="admin">Admin</option>
-   </select>
-</form>
-Password: <input type="password" required id="pwd"><br>
-<input type="button" onclick="pwd()" value="Submit" id="sbmt">
-</pre>
- </div>
-<footer id="footer"></footer>
+   <div style="overflow:auto;">
+      <section>
+        <p class="glow">
+          <b style="font-size: xx-large;">Welcome to the DSS T-level website for TMC</b>
+          <br> Here you can search through the many pages of notes <br>that I have been produced from the <br>Digital Support Services T-Level
+        </p>
+        <table border="0" style="table-layout:fixed; margin-right: auto; margin-left:auto;width:100%">
+          <tr>
+            <td>
+              <div style="text-align: center; background-color: rgba(0, 0, 0, 0.02);">
+                <canvas id="canvas" width="200"></canvas>
+              </div>
+            </td>
+            <td>
+              <table border="0" style="margin-right:auto; margin-left:auto">
+                <tr>
+                  <td style="text-align:center;font-size:x-large" class="glow">
+                    <u>Quick Links</u>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="glow" style="font-size:large">Links to the big websites used weekly <br>
+                    <a style="color:white;text-decoration: none;" href="https://www.netacad.com/portal/learning" target="_blank">Cisco Netacad</a>
+                    <br>
+                    <a style="color:white;text-decoration: none;" href="https://studenthub.tmc.ac.uk" target="_blank">Student Hub</a>
+                    <br>
+                    <a style="color:white;text-decoration: none;" href="https://teams.microsoft.com/" target="_blank">MS Teams</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table style="margin-right:auto; margin-left:auto">
+                <tr>
+                  <td style="text-align:center;font-size: x-large;" class="glow">
+                    <b>End Of Day</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;font-size:xx-large" class="glowBlue" id="timetableCountdown"></td>
+                </tr>
+                <tr>
+                  <td class="glow">
+                    <a href="html/impdates.html" style="text-align:center;font-size: x-large; color:white;text-decoration: none;">View full timetable</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2 style="padding-left:50px;color:white">
+          <u>
+            <b>News</b>
+          </u>
+        </h2>
+        <table style="margin-left:auto;margin-right:auto">
+          <tr>
+            <td>
+              <div class="news-card">
+                <img src="Images/News/python.png" style="width:100%;">
+                <h1>
+                  <a href="html/codingScripts.html">Scripts</a>
+                </h1>
+                <p>Introducing coding scripts. These are designed to help learn with revision and develop your interaction skills aswell!</p>
+              </div>
+            </td>
+            <td>
+              <div class="news-card">
+                <img src="Images/News/security.png" style="width:100%;">
+                <h1>
+                  <a href="#security">Security</a>
+                </h1>
+                <p>The Passwords, Page URL's and More in the security section are now encoded and no longer visible! <br>
+                </p>
+              </div>
+            </td>
+            <td>
+              <div class="news-card">
+                <img src="Images/News/tlvl.png" style="width:100%;">
+                <h1>
+                  <a href="changelog.html">Changelog</a>
+                </h1>
+                <p>Redecorated the changelog page to allow for more legibility <br>
+                  <br>
+                  <br>
+                </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <div style="overflow:auto">
+          <table width="100%" style="text-align:center;margin-left:auto;margin-right:auto;color:white;font-family: cursive;font-size: large;">
+            <tr>
+              <th>Term Dates</th>
+              <th>Examinations</th>
+              <th>Cyber Centurion</th>
+            </tr>
+            <tr>
+              <td id="EoT"></td>
+              <td id="paperA"></td>
+              <td id="training"></td>
+            </tr>
+            <tr>
+              <td id="EoHT"></td>
+              <td id="paperB"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="ESP"></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <pre class="glow" style="text-align: center;font-size: larger;">
+         <form id="security">
+            <label for="cars">Choose a Location</label>
+            <select name="cars" id="loc">
+               <option value="priv">Priv</option>
+               <option value="admin">Admin</option>
+            </select>
+         </form>
+         Password: 
+         <input type="password" required id="pwd">
+            <br>
+               <input type="button" onclick="pwd()" value="Submit" id="sbmt">
+               </pre>
+    </div>
+    <footer id="footer"></footer>
 <script src="../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
 <!--<button onclick="window.open('https:\/\/dsstlevel.github.io/Web/changelog.html','name','width=600,height=400')">Hi</button>
 onclick="window.open('https://youtube.com/changelog.html','name','width=1000,height=1000')"-->
