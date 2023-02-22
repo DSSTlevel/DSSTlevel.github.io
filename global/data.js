@@ -1,6 +1,10 @@
 document.getElementById("footer").innerHTML = 
 `
-<style>body {background-color: #111;}</style>
+<style>
+body {background-color: #111;}
+::-webkit-scrollbar {width:1px}
+@media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
+</style>
 <div class="footer-basic">
   <footer>
     <ul class="list-inline">
