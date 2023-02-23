@@ -2,7 +2,7 @@ document.getElementById("footer").innerHTML =
 `
 <style>
 body {background-color: #111;}
-::-webkit-scrollbar {width:1px}
+/*::-webkit-scrollbar {width:1px}*/
 @media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
 </style>
 <div class="footer-basic">
@@ -23,6 +23,12 @@ body {background-color: #111;}
 
 document.getElementById("navigbar").innerHTML = 
 `
+<style>
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {background: black;}
+::-webkit-scrollbar-thumb {background: rgb(0, 51, 128);}
+::-webkit-scrollbar-thumb:hover {background: rgb(0, 53, 96);}
+</style>
 <div class="nav_ul">
   <ul id="nav_ul">
   <a href="https://dsstlevel.github.io/index.html"><i class="fa fa-home" style="font-size:20px;color:white"></i></a>
