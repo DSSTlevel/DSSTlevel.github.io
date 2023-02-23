@@ -140,5 +140,5 @@ if (WebsiteStatus===false) {
   `
 }
 else {
- //location='https://dsstlevel.github.io/Web/WebsiteClose.html'
+ location='https://dsstlevel.github.io/Web/WebsiteClose.html'
 }
