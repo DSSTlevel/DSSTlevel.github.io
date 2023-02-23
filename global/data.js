@@ -50,6 +50,7 @@ document.getElementById("navigbar").innerHTML =
       <ul class="dropdown-sub-list">
         <li></li>
           <a href="https://dsstlevel.github.io/Web/html/EqualityAct.html">Equality Act</a>
+          <a href="https://dsstlevel.github.io/Web/html/InclusionStandards.html">Inclusion Standards</a>
         </ul></li>
     <li class="dropdown-sub">
       <a>Learning</a>
