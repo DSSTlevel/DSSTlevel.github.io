@@ -1,7 +1,6 @@
 //Config
 var PrivAdmin_pwd="SqL1n"
 
-
 //Times and Dates
 var timetable={
     monday: `NaN`,
