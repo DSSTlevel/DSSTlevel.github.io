@@ -21,7 +21,7 @@ body {background-color: #111;}
 <script>function autoRefresh() {window.location = window.location.href;}setInterval('autoRefresh()', 600000);</script>
 `
 
-var WebsiteStatus=true //False = Open, True = Closed
+var WebsiteStatus=false //False = Open, True = Closed
 if (WebsiteStatus===false) {
   document.getElementById("navigbar").innerHTML = `
   <style>
