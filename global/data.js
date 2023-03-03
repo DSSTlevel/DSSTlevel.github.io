@@ -55,13 +55,13 @@ if (WebsiteStatus===false) {
       <li class="dropdown-sub">
         <a>Diversity and Inclusion</a>
         <ul class="dropdown-sub-list">
-          <li></li>
-            <a href="https://dsstlevel.github.io/Web/html/EqualityAct.html">Equality Act</a>
-            <a href="https://dsstlevel.github.io/Web/html/InclusionStandards.html">Inclusion Standards</a>
+          <li><a href="https://dsstlevel.github.io/Web/html/EqualityAct.html">Equality Act</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/html/InclusionStandards.html">Inclusion Standards</a></li>
           </ul></li>
       <li class="dropdown-sub">
         <a>Learning</a>
         <ul class="dropdown-sub-list">
+        <li><a href="https://dsstlevel.github.io/Web/html/SourcesOfKnowledge.html">Knowledge Sources</a></li>
         </ul></li>
       <li class="dropdown-sub">
         <a>Planning</a>
@@ -91,6 +91,7 @@ if (WebsiteStatus===false) {
         <a>Security</a>
         <ul class="dropdown-sub-list">
           <li><a href="https://dsstlevel.github.io/Web/html/Threats.html">Threats</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/html/Defences.html">Defences</a></li>
           </ul></li>
       <li class="dropdown-sub">
         <a>Data</a>
