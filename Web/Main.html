@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"> 
       <meta http-equiv="refresh" content="500">
       <style>
-         body {background-color: #111;margin:0;background-image: url("Images/background1.png");background-repeat: no-repeat;background-size: cover;text-decoration:none;font-family: "Lato", sans-serif;}
+         body {background-color: #111;margin:0;text-decoration:none;font-family: "Lato", sans-serif;}
          .image {display: inline-block;}
          .glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color: rgb(182, 239, 255); background-color: rgba(0, 0, 0, 0.02);border-radius: 5px;}
          .glowBlue {color:darkblue;text-align: center;animation: glowBlue 1s ease-in-out infinite alternate; color: cyan; background-color: rgba(0, 0, 0, 0.02);border-radius: 5px;}
@@ -19,10 +19,11 @@
 <div id="navigbar"></div>
 <body>
    <div style="overflow:auto;">
-      <section>
+    <div class="inlinetext-padding backImage1">
+      <div class="inlinetext-padding-content">
         <p class="glow">
           <b style="font-size: xx-large;">Welcome to the DSS T-level website for TMC</b>
-          <br> Here you can search through the many pages of notes <br>that I have been produced from the <br>Digital Support Services T-Level
+          <br>Here you can search through the many pages of notes <br>that I have been produced from the <br>Digital Support Services T-Level
         </p>
         <table border="0" style="table-layout:fixed; margin-right: auto; margin-left:auto;width:100%">
           <tr>
@@ -68,51 +69,54 @@
             </td>
           </tr>
         </table>
-      </section>
-      <section>
-        <h2 style="text-align:center;color:white">
-          <u>
-            <b>News</b>
-          </u>
-        </h2>
-        <table style="margin-left:auto;margin-right:auto">
-          <tr>
-            <td>
-              <div class="news-card">
-                <img src="Images/News/python.png" style="width:100%;">
-                <h1>
-                  <a href="html/codingScripts.html">Scripts</a>
-                </h1>
-                <p>Introducing coding scripts. These are designed to help learn with revision and develop your interaction skills aswell!</p>
-              </div>
-            </td>
-            <td>
-              <div class="news-card">
-                <img src="Images/News/security.png" style="width:100%;">
-                <h1>
-                  <a href="#security">Security</a>
-                </h1>
-                <p>The Passwords, Page URL's and More in the security section are now encoded and no longer visible! <br>
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="news-card">
-                <img src="Images/News/tlvl.png" style="width:100%;">
-                <h1>
-                  <a href="changelog.html">Changelog</a>
-                </h1>
-                <p>Redecorated the changelog page to allow for more legibility <br>
-                  <br>
-                  <br>
-                </p>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </section>
-      <section>
-        <div style="overflow:auto">
+        </div>
+      </div>
+      <div class="inlinetext-padding sec1-colour">
+        <div class="inlinetext-padding-content">
+          <h2 style="text-align:center;color:white">
+            <u>
+              <b>News</b>
+            </u>
+          </h2>
+          <table style="margin-left:auto;margin-right:auto">
+            <tr>
+              <td>
+                <div class="news-card">
+                  <img src="Images/News/python.png" style="width:100%;">
+                  <h1>
+                    <a href="html/codingScripts.html">Scripts</a>
+                  </h1>
+                  <p>Introducing coding scripts. These are designed to help learn with revision and develop your interaction skills aswell!</p>
+                </div>
+              </td>
+              <td>
+                <div class="news-card">
+                  <img src="Images/News/security.png" style="width:100%;">
+                  <h1>
+                    <a href="#security">Security</a>
+                  </h1>
+                  <p>The Passwords, Page URL's and More in the security section are now encoded and no longer visible! <br>
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="news-card">
+                  <img src="Images/News/tlvl.png" style="width:100%;">
+                  <h1>
+                    <a href="changelog.html">Changelog</a>
+                  </h1>
+                  <p>Redecorated the changelog page to allow for more legibility <br>
+                    <br>
+                    <br>
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="inlinetext-padding sec2-colour">
+        <div class="inlinetext-padding-content">
           <h2 style="text-align:center;color:white">
             <u>
               <b>Dates and Times</b>
@@ -139,7 +143,7 @@
             </tr>
           </table>
         </div>
-      </section>
+      </div>
          <form id="security" class="glow" style="text-align: center;font-size: larger;">
             <label for="cars">Choose a Location: </label>
             <select name="cars" id="loc">
@@ -154,6 +158,7 @@
   </div>
 </div>
 <footer id="footer"></footer>
+<script id="importantDates"></script>
 <script src="../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
 <!--<button onclick="window.open('https:\/\/dsstlevel.github.io/Web/changelog.html','name','width=600,height=400')">Hi</button>
 onclick="window.open('https://youtube.com/changelog.html','name','width=1000,height=1000')"-->
@@ -181,23 +186,16 @@ var x = setInterval(function () {
       else if (new Date().getDay()==3) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
       else if (new Date().getDay()==4) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
       else if (new Date().getDay()==5) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`; 
+      else document.getElementById('timetableCountdown').innerHTML='Its the Weekend! 😃'
       if (distance < 0) {
          clearInterval(y);
-         document.getElementById("timetable").innerHTML = "The Day is over";
+         document.getElementById("timetableCountdown").innerHTML = "The Day is over";
          setInterval(function() {}, 5000)
       }
     }
 }, 1000);
-var x = setInterval(function () { 
-      if (new Date().getDay() == 2) document.getElementById("timetable").innerHTML = timetable.tuesday;
-      else if (new Date().getDay()==3) document.getElementById("timetable").innerHTML = timetable.wednesday;
-      else if (new Date().getDay()==4) document.getElementById("timetable").innerHTML = timetable.thursday;
-      else if (new Date().getDay()==5) document.getElementById("timetable").innerHTML = timetable.friday; 
-      else document.getElementById("timetable").innerHTML = timetable.weekend;
-   }, 1000);
 var dropdown = document.getElementsByClassName("dropdown-btn"),i;for (i = 0; i < dropdown.length; i++) {dropdown[i].addEventListener("click", function() {this.classList.toggle("active");var dropdownContent = this.nextElementSibling;if (dropdownContent.style.display === "block") {dropdownContent.style.display = "none";} else {dropdownContent.style.display = "block";}})}
 var canvas=document.getElementById("canvas");var ctx=canvas.getContext("2d");var radius=canvas.height/2;ctx.translate(radius,radius);radius=radius*0.90;setInterval(drawClock,1000);function drawClock(){drawFace(ctx,radius);drawNumbers(ctx,radius);drawTime(ctx,radius)}function drawFace(ctx,radius){var grad;ctx.beginPath();ctx.arc(0,0,radius,0,2*Math.PI);ctx.fillStyle='#9BCBA1';ctx.fill();grad=ctx.createRadialGradient(0,0,radius*0.9,0,0,radius*1.05);grad.addColorStop(0,'rgb(36, 63, 70)');grad.addColorStop(0.5,'rgb(36, 63, 70)');grad.addColorStop(1,'lime');ctx.strokeStyle=grad;ctx.lineWidth=radius*0.1;ctx.stroke();ctx.beginPath();ctx.arc(0,0,radius*0.1,0,2*Math.PI);ctx.fillStyle='#333';ctx.fill()}function drawNumbers(ctx,radius){var ang;var num;ctx.font=radius*0.15+"Comic Sans MS";ctx.textBaseline="middle";ctx.textAlign="center";for(num=1;num<13;num++){ang=num*Math.PI/6;ctx.rotate(ang);ctx.translate(0,-radius*0.85);ctx.rotate(-ang);ctx.fillText(num.toString(),0,0);ctx.rotate(ang);ctx.translate(0,radius*0.85);ctx.rotate(-ang)}}function drawTime(ctx,radius){var now=new Date();var hour=now.getHours();var minute=now.getMinutes();var second=now.getSeconds();hour=hour%12;hour=(hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));drawHand(ctx,hour,radius*0.5,radius*0.07);minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));drawHand(ctx,minute,radius*0.8,radius*0.07);second=(second*Math.PI/30);drawHand(ctx,second,radius*0.9,radius*0.02)}function drawHand(ctx,pos,length,width){ctx.beginPath();ctx.lineWidth=width;ctx.lineCap="round";ctx.moveTo(0,0);ctx.rotate(pos);ctx.lineTo(0,-length);ctx.stroke();ctx.rotate(-pos)}
-const dateRN=new Date().getDay();var x=setInterval(function(){var now=new Date().getTime();var countDownDate=new Date("Jun 14, 2023 13:00:00").getTime();var distance=countDownDate-now;var days=Math.floor(distance/(1000*60*60*24));var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));var minutes=Math.floor((distance%(1000*60*60))/(1000*60));var seconds=Math.floor((distance%(1000*60))/1000);document.getElementById("paperA").innerHTML=`PaperA:${days}Days,${hours}:${minutes}:${seconds}`;if(distance<0){clearInterval(x);document.getElementById("paperA").innerHTML="Exam has begun"}},1000);var x=setInterval(function(){var now=new Date().getTime();var countDownDate=new Date("Jun 21, 2023 13:00:00").getTime();var distance=countDownDate-now;var days=Math.floor(distance/(1000*60*60*24));var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));var minutes=Math.floor((distance%(1000*60*60))/(1000*60));var seconds=Math.floor((distance%(1000*60))/1000);document.getElementById("paperB").innerHTML=`PaperB:${days}Days,${hours}:${minutes}:${seconds}`;if(distance<0){clearInterval(x);document.getElementById("paperB").innerHTML="Exam has begun"}},1000);var x=setInterval(function(){var now=new Date().getTime();var countDownDate=new Date("May 08, 2023 9:00:00").getTime();var distance=countDownDate-now;var days=Math.floor(distance/(1000*60*60*24));var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));var minutes=Math.floor((distance%(1000*60*60))/(1000*60));var seconds=Math.floor((distance%(1000*60))/1000);document.getElementById("ESP").innerHTML=`ESP:${days}Days,${hours}:${minutes}:${seconds}`;if(distance<0){clearInterval(x);document.getElementById("ESP").innerHTML="ESP has begun"}},1000);var x=setInterval(function(){var now=new Date().getTime();var countDownDate=new Date("Mar 30, 2023 15:00:00").getTime();var distance=countDownDate-now;var days=Math.floor(distance/(1000*60*60*24));var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));var minutes=Math.floor((distance%(1000*60*60))/(1000*60));var seconds=Math.floor((distance%(1000*60))/1000);document.getElementById("EoT").innerHTML=`End of Term:${days}Days,${hours}:${minutes}:${seconds}`},1000);var x=setInterval(function(){var now=new Date().getTime();var countDownDate=new Date("Apr 18, 2023 9:00:00").getTime();var distance=countDownDate-now;var days=Math.floor(distance/(1000*60*60*24));var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));var minutes=Math.floor((distance%(1000*60*60))/(1000*60));var seconds=Math.floor((distance%(1000*60))/1000);document.getElementById("EoHT").innerHTML=`End of Half Term:${days}Days,${hours}:${minutes}:${seconds}`},1000);var x=setInterval(function(){var now=new Date().getTime();var countDownDate=new Date("Sep 09, 2023 11:00:00").getTime();var distance=countDownDate-now;var days=Math.floor(distance/(1000*60*60*24));var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));var minutes=Math.floor((distance%(1000*60*60))/(1000*60));var seconds=Math.floor((distance%(1000*60))/1000);document.getElementById("training").innerHTML=`Training Round:${days}Days,${hours}:${minutes}:${seconds}`},1000);var x=setInterval(function(){var now=new Date().getTime();var startTime=new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate(),9,0,0).getTime(),newd=new Date();if(new Date().getDay()==2){var countDownDate=new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),17,0,0).getTime()}else if(new Date().getDay()==3){var countDownDate=new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime()}else if(new Date().getDay()==4){var countDownDate=new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),12,0,0).getTime()}else if(new Date().getDay()==5){var countDownDate=new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime()}else{var countDownDate=new Date(newd.getFullYear(),newd.getMonth(),newd.getDate(),15,0,0).getTime()}if(now<startTime||now>countDownDate){document.getElementById("timetable").innerHTML="The day hasn't begun yet"}else{var distance=countDownDate-now;var days=Math.floor(distance/(1000*60*60*24)),hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60)),minutes=Math.floor((distance%(1000*60*60))/(1000*60)),seconds=Math.floor((distance%(1000*60))/1000);if(new Date().getDay()==2)document.getElementById("timetable").innerHTML=`End of Day:${hours}:${minutes}:${seconds}<br>${timetable.tuesday}`;else if(new Date().getDay()==3)document.getElementById("timetable").innerHTML=`End of Day:${hours}:${minutes}:${seconds}<br>${timetable.wednesday}`;else if(new Date().getDay()==4)document.getElementById("timetable").innerHTML=`End of Day:${hours}:${minutes}:${seconds}<br>${timetable.thursday}`;else if(new Date().getDay()==5)document.getElementById("timetable").innerHTML=`End of Day:${hours}:${minutes}:${seconds}<br>${timetable.friday}`;if(distance<0){clearInterval(y);document.getElementById("timetable").innerHTML="The Day is over";setInterval(function(){},5000)}}},1000);
 </script>
    </body>
 </html>
