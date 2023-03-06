@@ -1,82 +1,129 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>DSSTlevel | Main Menu</title>
-      <script type="text/javascript" src="../global/settings.js"></script>
-      <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="../global/g.css">
-      <link rel="icon" type="image/x-icon" href="https://dsstlevel.github.io/Web/Images/favicon.ico">
-      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"> 
-      <meta http-equiv="refresh" content="500">
-      <style>
-         body {background-color: #111;margin:0;text-decoration:none;font-family: "Lato", sans-serif;}
-         .image {display: inline-block;}
-         .glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color: rgb(182, 239, 255); background-color: rgba(0, 0, 0, 0.02);border-radius: 5px;}
-         .glowBlue {color:darkblue;text-align: center;animation: glowBlue 1s ease-in-out infinite alternate; color: cyan; background-color: rgba(0, 0, 0, 0.02);border-radius: 5px;}
-         @keyframes glowWhite {from{text-shadow: 0 0 15px rgb(182, 239, 255), 0 0 15px rgb(36, 63, 70)}to{text-shadow: 0 0 15px rgb(182, 239, 255), 0 0 15px rgb(36, 63, 70)}}
-         @keyframes glowBlue {from{text-shadow: 0 0 15px blue, 0 0 15px blue}to{text-shadow: 0 0 15px blue, 0 0 15px blue}}
-      </style>
-   </head>
-<div id="navigbar"></div>
-<body>
-   <div style="overflow:auto;">
-    <div class="inlinetext-padding backImage1">
-      <div class="inlinetext-padding-content">
-        <p class="glow">
-          <b style="font-size: xx-large;">Welcome to the DSS T-level website for TMC</b>
-          <br>Here you can search through the many pages of notes <br>that I have been produced from the <br>Digital Support Services T-Level
-        </p>
-        <table border="0" style="table-layout:fixed; margin-right: auto; margin-left:auto;width:100%">
-          <tr>
-            <td>
-              <div style="text-align: center; background-color: rgba(0, 0, 0, 0.02);">
-                <canvas id="canvas" width="200"></canvas>
-              </div>
-            </td>
-            <td>
-              <table border="0" style="margin-right:auto; margin-left:auto">
-                <tr>
-                  <td style="text-align:center;font-size:x-large" class="glow">
-                    <u>Quick Links</u>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="glow" style="font-size:large">Links to the big websites used weekly <br>
-                    <a style="color:white;text-decoration: none;" href="https://www.netacad.com/portal/learning" target="_blank">Cisco Netacad</a>
-                    <br>
-                    <a style="color:white;text-decoration: none;" href="https://studenthub.tmc.ac.uk" target="_blank">Student Hub</a>
-                    <br>
-                    <a style="color:white;text-decoration: none;" href="https://teams.microsoft.com/" target="_blank">MS Teams</a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-            <td>
-              <table style="margin-right:auto; margin-left:auto">
-                <tr>
-                  <td style="text-align:center;font-size: x-large;" class="glow">
-                    <b>End Of Day</b>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="text-align:center;font-size:xx-large" class="glowBlue" id="timetableCountdown"></td>
-                </tr>
-                <tr>
-                  <td class="glow">
-                    <a href="html/impdates.html" style="text-align:center;font-size: x-large; color:white;text-decoration: none;">View full timetable</a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
+  <head>
+    <title>DSSTlevel | Main Menu</title>
+    <script type="text/javascript" src="../global/settings.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../global/g.css">
+    <link rel="icon" type="image/x-icon" href="https://dsstlevel.github.io/Web/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="refresh" content="500">
+    <style>
+      body {
+        background-color: #111;
+        margin: 0;
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+      }
+
+      .image {
+        display: inline-block;
+      }
+
+      .glow {
+        color: #fff;
+        text-align: center;
+        animation: glowWhite 1s ease-in-out infinite alternate;
+        color: rgb(182, 239, 255);
+        background-color: rgba(0, 0, 0, 0.02);
+        border-radius: 5px;
+      }
+
+      .glowBlue {
+        color: darkblue;
+        text-align: center;
+        animation: glowBlue 1s ease-in-out infinite alternate;
+        color: cyan;
+        background-color: rgba(0, 0, 0, 0.02);
+        border-radius: 5px;
+      }
+
+      @keyframes glowWhite {
+        from {
+          text-shadow: 0 0 15px rgb(182, 239, 255), 0 0 15px rgb(36, 63, 70)
+        }
+
+        to {
+          text-shadow: 0 0 15px rgb(182, 239, 255), 0 0 15px rgb(36, 63, 70)
+        }
+      }
+
+      @keyframes glowBlue {
+        from {
+          text-shadow: 0 0 15px blue, 0 0 15px blue
+        }
+
+        to {
+          text-shadow: 0 0 15px blue, 0 0 15px blue
+        }
+      }
+    </style>
+  </head>
+  <div id="navigbar"></div>
+  <body>
+    <div style="overflow:auto;">
+      <div class="inlinetext-padding backImage1">
+        <div class="inlinetext-padding-content">
+          <p class="glow">
+            <b style="font-size: xx-large;">Welcome to the DSS T-level website for TMC</b>
+            <br>Here you can search through the many pages of notes <br>that I have been produced from the <br>Digital Support Services T-Level
+          </p>
+          <table border="0" style="table-layout:fixed; margin-right: auto; margin-left:auto;width:100%">
+            <tr>
+              <td>
+                <div style="text-align: center; background-color: rgba(0, 0, 0, 0.02);">
+                  <canvas id="canvas" width="200"></canvas>
+                </div>
+              </td>
+              <td>
+                <table border="0" style="margin-right:auto; margin-left:auto">
+                  <tr>
+                    <td style="text-align:center;font-size:x-large" class="glow">
+                      <u>Quick Links</u>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="glow" style="font-size:large">Links to the big websites used weekly <br>
+                      <a style="color:white;text-decoration: none;" href="https://www.netacad.com/portal/learning" target="_blank">Cisco Netacad</a>
+                      <br>
+                      <a style="color:white;text-decoration: none;" href="https://studenthub.tmc.ac.uk" target="_blank">Student Hub</a>
+                      <br>
+                      <a style="color:white;text-decoration: none;" href="https://teams.microsoft.com/" target="_blank">MS Teams</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td>
+                <table style="margin-right:auto; margin-left:auto">
+                  <tr>
+                    <td style="text-align:center;font-size: x-large;" class="glow">
+                      <b>End Of Day</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:center;font-size:xx-large" class="glowBlue" id="timetableCountdown"></td>
+                  </tr>
+                  <tr>
+                    <td class="glow">
+                      <a href="html/impdates.html" style="text-align:center;font-size: x-large; color:white;text-decoration: none;">View full timetable</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
       <div class="inlinetext-padding sec1-colour">
         <div class="inlinetext-padding-content">
           <table style="margin-left: auto;margin-right: auto;" width="100%">
             <tr>
-              <td width="80%"><h1>What is this?</h1>A website that is dedicated to the Digital Support Services T-Level at The Manchester College.<br>Based from notes and books.</td>
-              <td width="20%"><img src="Images/News/tlvl.png" height="250"></td>
+              <td width="80%">
+                <h1>What is this?</h1>A website that is dedicated to the Digital Support Services T-Level at The Manchester College. <br>Based from notes and books.
+              </td>
+              <td width="20%">
+                <img src="Images/News/tlvl.png" height="250">
+              </td>
             </tr>
           </table>
         </div>
@@ -85,8 +132,12 @@
         <div class="inlinetext-padding-content">
           <table style="margin-left: auto;margin-right: auto;" width="100%">
             <tr>
-              <td width="20%"><img src="Images/News/python.png" height="250"></td>
-              <td width="80%"><h1>Need help with revision?</h1>Well now you can take a look at our scripts! With more in production, you can enjoy your revision with interactive games (mainly in Python). These can be from quizzes to some future experiences to be announced!<br>View more <a href="html/codingScripts.html">here</a>.</td>
+              <td width="20%">
+                <img src="Images/News/python.png" height="250">
+              </td>
+              <td width="80%">
+                <h1>Need help with revision?</h1>Well now you can take a look at our scripts! With more in production, you can enjoy your revision with interactive games (mainly in Python). These can be from quizzes to some future experiences to be announced! <br>View more <a href="html/codingScripts.html">here</a>.
+              </td>
             </tr>
           </table>
         </div>
@@ -95,8 +146,14 @@
         <div class="inlinetext-padding-content">
           <table style="margin-left: auto;margin-right: auto;" width="100%">
             <tr>
-              <td width="80%"><h1>Examination Information</h1><br>Need some up-to-date information on Paper A and B? Want to know how many marks there are in total? Want to know how long the examinations last? Well... Did you know you can find the answer to these questions on this website!<br><a href="html/year1.html">here</a>.</td>
-              <td width="20%"><i class="fa-solid fa-scroll" style="font-size: 300px;"></i></td>
+              <td width="80%">
+                <h1>Examination Information</h1>
+                <br>Need some up-to-date information on Paper A and B? Want to know how many marks there are in total? Want to know how long the examinations last? Well... Did you know you can find the answer to these questions on this website! <br>
+                <a href="html/year1.html">here</a>.
+              </td>
+              <td width="20%">
+                <i class="fa-solid fa-scroll" style="font-size: 300px;"></i>
+              </td>
             </tr>
           </table>
         </div>
@@ -105,8 +162,14 @@
         <div class="inlinetext-padding-content">
           <table style="margin-left: auto;margin-right: auto;" width="100%">
             <tr>
-              <td width="20%"><img src="Images/book.png" height="250"></td>
-              <td width="80%"><h1>Insufficient amount of revision resources?</h1><br>You can find the link to the amazon link below that is dedicated to the<br>Digital Support Services and Digital Business Services T-Levels<br><a href="https://www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3P5ROKL5A1OLE">here</a>.</td>
+              <td width="20%">
+                <img src="Images/book.png" height="250">
+              </td>
+              <td width="80%">
+                <h1>Insufficient amount of revision resources?</h1>
+                <br>You can find the link to the amazon link below that is dedicated to the <br>Digital Support Services and Digital Business Services T-Levels <br>
+                <a href="https://www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3P5ROKL5A1OLE">here</a>.
+              </td>
             </tr>
           </table>
         </div>
@@ -187,57 +250,170 @@
       <div class="inlinetext-padding sec1-colour">
         <div class="inlinetext-padding-content">
           <form id="security" class="glow" style="text-align: center;font-size: larger;">
-              <label for="cars">Choose a Location: </label>
-              <select name="cars" id="loc">
-                <option value="priv">Priv</option>
-                <option value="admin">Admin</option>
-              </select>
+            <label for="cars">Choose a Location: </label>
+            <select name="cars" id="loc">
+              <option value="priv">Priv</option>
+              <option value="admin">Admin</option>
+            </select>
           </form>
           <div class="glow" style="text-align: center;font-size: larger;">
-            <span class="glow">Password: </span><input type="password" required id="pwd"><input type="button" onclick="pwd()" value="Submit" id="sbmt">
+            <span class="glow">Password: </span>
+            <input type="password" required id="pwd">
+            <input type="button" onclick="pwd()" value="Submit" id="sbmt">
           </div>
         </div>
       </div>
-   </div>
-<footer id="footer"></footer>
-<script id="importantDates"></script>
-<script src="../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
-<!--<button onclick="window.open('https:\/\/dsstlevel.github.io/Web/changelog.html','name','width=600,height=400')">Hi</button>
+      <footer id="footer"></footer>
+    </div>
+    <script id="importantDates"></script>
+    <script src="../global/data.js"></script>
+    <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+    <!--<button onclick="window.open('https:\/\/dsstlevel.github.io/Web/changelog.html','name','width=600,height=400')">Hi</button>
 onclick="window.open('https://youtube.com/changelog.html','name','width=1000,height=1000')"-->
-<script>
-document.getElementById("pwd").addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("sbmt").click();
-  }
-});
-var _0x5c4f=["\x76\x61\x6C\x75\x65","\x70\x77\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x53\x71\x4C\x31\x6E","\x6C\x6F\x63","\x61\x64\x6D\x69\x6E","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x41\x64\x6D\x69\x6E\x2F\x73\x65\x63\x72\x65\x74\x2E\x68\x74\x6D\x6C","\x70\x72\x69\x76","\x50\x72\x69\x76\x2F\x70\x2E\x68\x74\x6D\x6C","\x6E\x61\x6D\x65","\x77\x69\x64\x74\x68\x3D\x31\x30\x30\x30\x2C\x68\x65\x69\x67\x68\x74\x3D\x31\x30\x30\x30","\x6F\x70\x65\x6E","\x54\x68\x69\x73\x20\x70\x61\x73\x73\x77\x6F\x72\x64\x20\x69\x73\x20\x69\x6E\x63\x6F\x72\x72\x65\x63\x74\x2E\x20\x54\x72\x79\x20\x61\x67\x61\x69\x6E\x2E"];function pwd(){if(document[_0x5c4f[2]](_0x5c4f[1])[_0x5c4f[0]]== _0x5c4f[3]){if(document[_0x5c4f[2]](_0x5c4f[4])[_0x5c4f[0]]== _0x5c4f[5]){window[_0x5c4f[6]]= _0x5c4f[7]}else {if(document[_0x5c4f[2]](_0x5c4f[4])[_0x5c4f[0]]== _0x5c4f[8]){window[_0x5c4f[12]](_0x5c4f[9],_0x5c4f[10],_0x5c4f[11])}}}else {alert(_0x5c4f[13])}}
-var x = setInterval(function () { 
-   var now = new Date().getTime();var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),
-      newd = new Date();
-    if (new Date().getDay() == 2) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();}
-    else if (new Date().getDay() == 3) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
-    else if (new Date().getDay() == 4) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 12, 0, 0).getTime();}
-    else if (new Date().getDay() == 5) {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();} 
-    else {var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();}
-    if (now<startTime||now>countDownDate) {document.getElementById("timetableCountdown").innerHTML="The day hasn't begun yet"}
-    else {
-      var distance = countDownDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24)),hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)), minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      if (new Date().getDay() == 2) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`; 
-      else if (new Date().getDay()==3) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
-      else if (new Date().getDay()==4) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
-      else if (new Date().getDay()==5) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`; 
-      else document.getElementById('timetableCountdown').innerHTML='Its the Weekend! 😃'
-      if (distance < 0) {
-         clearInterval(y);
-         document.getElementById("timetableCountdown").innerHTML = "The Day is over";
-         setInterval(function() {}, 5000)
+    <script>
+      document.getElementById("pwd").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("sbmt").click();
+        }
+      });
+      var _0x5c4f = ["\x76\x61\x6C\x75\x65", "\x70\x77\x64", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64", "\x53\x71\x4C\x31\x6E", "\x6C\x6F\x63", "\x61\x64\x6D\x69\x6E", "\x6C\x6F\x63\x61\x74\x69\x6F\x6E", "\x41\x64\x6D\x69\x6E\x2F\x73\x65\x63\x72\x65\x74\x2E\x68\x74\x6D\x6C", "\x70\x72\x69\x76", "\x50\x72\x69\x76\x2F\x70\x2E\x68\x74\x6D\x6C", "\x6E\x61\x6D\x65", "\x77\x69\x64\x74\x68\x3D\x31\x30\x30\x30\x2C\x68\x65\x69\x67\x68\x74\x3D\x31\x30\x30\x30", "\x6F\x70\x65\x6E", "\x54\x68\x69\x73\x20\x70\x61\x73\x73\x77\x6F\x72\x64\x20\x69\x73\x20\x69\x6E\x63\x6F\x72\x72\x65\x63\x74\x2E\x20\x54\x72\x79\x20\x61\x67\x61\x69\x6E\x2E"];
+
+      function pwd() {
+        if (document[_0x5c4f[2]](_0x5c4f[1])[_0x5c4f[0]] == _0x5c4f[3]) {
+          if (document[_0x5c4f[2]](_0x5c4f[4])[_0x5c4f[0]] == _0x5c4f[5]) {
+            window[_0x5c4f[6]] = _0x5c4f[7]
+          } else {
+            if (document[_0x5c4f[2]](_0x5c4f[4])[_0x5c4f[0]] == _0x5c4f[8]) {
+              window[_0x5c4f[12]](_0x5c4f[9], _0x5c4f[10], _0x5c4f[11])
+            }
+          }
+        } else {
+          alert(_0x5c4f[13])
+        }
       }
-    }
-}, 1000);
-var dropdown = document.getElementsByClassName("dropdown-btn"),i;for (i = 0; i < dropdown.length; i++) {dropdown[i].addEventListener("click", function() {this.classList.toggle("active");var dropdownContent = this.nextElementSibling;if (dropdownContent.style.display === "block") {dropdownContent.style.display = "none";} else {dropdownContent.style.display = "block";}})}
-var canvas=document.getElementById("canvas");var ctx=canvas.getContext("2d");var radius=canvas.height/2;ctx.translate(radius,radius);radius=radius*0.90;setInterval(drawClock,1000);function drawClock(){drawFace(ctx,radius);drawNumbers(ctx,radius);drawTime(ctx,radius)}function drawFace(ctx,radius){var grad;ctx.beginPath();ctx.arc(0,0,radius,0,2*Math.PI);ctx.fillStyle='#9BCBA1';ctx.fill();grad=ctx.createRadialGradient(0,0,radius*0.9,0,0,radius*1.05);grad.addColorStop(0,'rgb(36, 63, 70)');grad.addColorStop(0.5,'rgb(36, 63, 70)');grad.addColorStop(1,'lime');ctx.strokeStyle=grad;ctx.lineWidth=radius*0.1;ctx.stroke();ctx.beginPath();ctx.arc(0,0,radius*0.1,0,2*Math.PI);ctx.fillStyle='#333';ctx.fill()}function drawNumbers(ctx,radius){var ang;var num;ctx.font=radius*0.15+"Comic Sans MS";ctx.textBaseline="middle";ctx.textAlign="center";for(num=1;num<13;num++){ang=num*Math.PI/6;ctx.rotate(ang);ctx.translate(0,-radius*0.85);ctx.rotate(-ang);ctx.fillText(num.toString(),0,0);ctx.rotate(ang);ctx.translate(0,radius*0.85);ctx.rotate(-ang)}}function drawTime(ctx,radius){var now=new Date();var hour=now.getHours();var minute=now.getMinutes();var second=now.getSeconds();hour=hour%12;hour=(hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));drawHand(ctx,hour,radius*0.5,radius*0.07);minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));drawHand(ctx,minute,radius*0.8,radius*0.07);second=(second*Math.PI/30);drawHand(ctx,second,radius*0.9,radius*0.02)}function drawHand(ctx,pos,length,width){ctx.beginPath();ctx.lineWidth=width;ctx.lineCap="round";ctx.moveTo(0,0);ctx.rotate(pos);ctx.lineTo(0,-length);ctx.stroke();ctx.rotate(-pos)}
-</script>
-   </body>
+      var x = setInterval(function() {
+        var now = new Date().getTime();
+        var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),
+          newd = new Date();
+        if (new Date().getDay() == 2) {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();
+        } else if (new Date().getDay() == 3) {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();
+        } else if (new Date().getDay() == 4) {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 12, 0, 0).getTime();
+        } else if (new Date().getDay() == 5) {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();
+        } else {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();
+        }
+        if (now < startTime || now > countDownDate) {
+          document.getElementById("timetableCountdown").innerHTML = "The day hasn't begun yet"
+        } else {
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24)),
+            hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+            seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          if (new Date().getDay() == 2) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+          else if (new Date().getDay() == 3) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+          else if (new Date().getDay() == 4) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+          else if (new Date().getDay() == 5) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+          else document.getElementById('timetableCountdown').innerHTML = 'Its the Weekend! 😃'
+          if (distance < 0) {
+            clearInterval(y);
+            document.getElementById("timetableCountdown").innerHTML = "The Day is over";
+            setInterval(function() {}, 5000)
+          }
+        }
+      }, 1000);
+      var dropdown = document.getElementsByClassName("dropdown-btn"),
+        i;
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        })
+      }
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      var radius = canvas.height / 2;
+      ctx.translate(radius, radius);
+      radius = radius * 0.90;
+      setInterval(drawClock, 1000);
+
+      function drawClock() {
+        drawFace(ctx, radius);
+        drawNumbers(ctx, radius);
+        drawTime(ctx, radius)
+      }
+
+      function drawFace(ctx, radius) {
+        var grad;
+        ctx.beginPath();
+        ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = '#9BCBA1';
+        ctx.fill();
+        grad = ctx.createRadialGradient(0, 0, radius * 0.9, 0, 0, radius * 1.05);
+        grad.addColorStop(0, 'rgb(36, 63, 70)');
+        grad.addColorStop(0.5, 'rgb(36, 63, 70)');
+        grad.addColorStop(1, 'lime');
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = radius * 0.1;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+        ctx.fillStyle = '#333';
+        ctx.fill()
+      }
+
+      function drawNumbers(ctx, radius) {
+        var ang;
+        var num;
+        ctx.font = radius * 0.15 + "Comic Sans MS";
+        ctx.textBaseline = "middle";
+        ctx.textAlign = "center";
+        for (num = 1; num < 13; num++) {
+          ang = num * Math.PI / 6;
+          ctx.rotate(ang);
+          ctx.translate(0, -radius * 0.85);
+          ctx.rotate(-ang);
+          ctx.fillText(num.toString(), 0, 0);
+          ctx.rotate(ang);
+          ctx.translate(0, radius * 0.85);
+          ctx.rotate(-ang)
+        }
+      }
+
+      function drawTime(ctx, radius) {
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        hour = hour % 12;
+        hour = (hour * Math.PI / 6) + (minute * Math.PI / (6 * 60)) + (second * Math.PI / (360 * 60));
+        drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+        minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+        drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+        second = (second * Math.PI / 30);
+        drawHand(ctx, second, radius * 0.9, radius * 0.02)
+      }
+
+      function drawHand(ctx, pos, length, width) {
+        ctx.beginPath();
+        ctx.lineWidth = width;
+        ctx.lineCap = "round";
+        ctx.moveTo(0, 0);
+        ctx.rotate(pos);
+        ctx.lineTo(0, -length);
+        ctx.stroke();
+        ctx.rotate(-pos)
+      }
+    </script>
+  </body>
 </html>
