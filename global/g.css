@@ -9,8 +9,9 @@ a {text-decoration: none;font-size: 22px;color:rgb(209, 216, 240);}
 .news-card:hover {background-color: rgb(69, 69, 144); box-shadow: 1px 1px beige, -1px -1px beige;transition: 0.3s;}
 
 /*Sections*/
-.inlinetext-padding{padding-top:32px!important;padding-bottom:32px!important}
-.inlinetext-padding-content{margin-left:auto;margin-right:auto;max-width:980px}
+.inlinetext-padding{padding-top:16px!important;padding-bottom:16px!important}
+.inlinetext-padding-content{margin-left:auto;margin-right:auto;max-width: 1150px;text-align: center;}
+.inlinetext-padding-content h1{text-decoration: underline;text-decoration-thickness: 5px;}
 .sec1-colour{background-color: rgb(33, 33, 45);color:white;text-decoration:none;}
-.sec2-colour{background-color: rgb(90, 116, 139);}
+.sec2-colour{background-color: rgb(90, 116, 139);color:gainsboro}
 .backImage1{background-image: url('../Web/Images/background1.png');background-repeat: no-repeat;background-size: cover;}
