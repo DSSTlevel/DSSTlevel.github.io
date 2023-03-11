@@ -37,32 +37,15 @@ if (WebsiteStatus===false) {
     <a><i class="fa-solid fa-bars"> </i><i class="fa-solid fa-a"></i></a>
     <ul class="dropdown-content">
       <li class="dropdown-sub">
-        <a>Business Context</a>
-        <ul class="dropdown-sub-list">
-        <li><a href="https://dsstlevel.github.io/Web/html/BusinessContext.html">Context</a></li>
-        <li><a href="https://dsstlevel.github.io/Web/html/Bus-Terminology.html">Terminology</a></li>
-        </ul></li>
+        <a href="https://dsstlevel.github.io/Web/html/BusinessContext.html">Business Context</a>
       <li class="dropdown-sub">  
         <a>Culture</a>
-        <ul class="dropdown-sub-list">
-        </ul></li>
       <li class="dropdown-sub">
-        <a>Digital Environments</a>
-        <ul class="dropdown-sub-list">
-          <li><a href="https://dsstlevel.github.io/Web/html/Soft-Hardware.html">Software/Hardware</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/Networking.html">Networking</a></li>
-          </ul></li>
+        <a href="https://dsstlevel.github.io/Web/html/DigitalEnvironments.html">Digital Environments</a>
       <li class="dropdown-sub">
-        <a>Diversity and Inclusion</a>
-        <ul class="dropdown-sub-list">
-          <li><a href="https://dsstlevel.github.io/Web/html/EqualityAct.html">Equality Act</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/InclusionStandards.html">Inclusion Standards</a></li>
-          </ul></li>
+        <a href="https://dsstlevel.github.io/Web/html/DiversityandInclusion.html">Diversity and Inclusion</a>
       <li class="dropdown-sub">
-        <a>Learning</a>
-        <ul class="dropdown-sub-list">
-        <li><a href="https://dsstlevel.github.io/Web/html/SourcesOfKnowledge.html">Knowledge Sources</a></li>
-        </ul></li>
+        <a href="https://dsstlevel.github.io/Web/html/Learning.html">Learning</a>
       <li class="dropdown-sub">
         <a>Planning</a>
         <ul class="dropdown-sub-list">
@@ -74,30 +57,15 @@ if (WebsiteStatus===false) {
     <a><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-b"></i></a>
     <ul class="dropdown-content">
       <li class="dropdown-sub">
-        <a>Testing</a>
-        <ul class="dropdown-sub-list">
-        <li><a href="https://dsstlevel.github.io/Web/html/RouteCauseAnalysis.html">Route Cause Analysis</a></li>
-        </ul></li>
+        <a href="https://dsstlevel.github.io/Web/html/RouteCauseAnalysis.html">Testing</a>
       <li class="dropdown-sub">  
         <a>Tools</a>
-        <ul class="dropdown-sub-list">
-        </ul></li>
       <li class="dropdown-sub">
-        <a>Legislation</a>
-        <ul class="dropdown-sub-list">
-          <li><a href="https://dsstlevel.github.io/Web/html/Laws-Regs.html">Laws&Regs</a></li>
-          </ul></li>
+        <a href="https://dsstlevel.github.io/Web/html/Legislation.html">Legislation</a>
       <li class="dropdown-sub">
-        <a>Security</a>
-        <ul class="dropdown-sub-list">
-          <li><a href="https://dsstlevel.github.io/Web/html/Threats.html">Threats</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/Defences.html">Defences</a></li>
-          </ul></li>
+        <a href="https://dsstlevel.github.io/Web/html/Security.html">Security</a>
       <li class="dropdown-sub">
-        <a>Data</a>
-        <ul class="dropdown-sub-list">
-          <li><a href="https://dsstlevel.github.io/Web/html/Data.html">Data Info</a></li>
-          </ul></li>
+        <a href="https://dsstlevel.github.io/Web/html/Data.html">Data</a>
       <li class="dropdown-sub">
         <a>Data Analysis</a>
         <ul class="dropdown-sub-list">

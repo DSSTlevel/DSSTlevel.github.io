@@ -1,22 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>DSSTlevel | Soft/Hardware</title>
-  <meta http-equiv="refresh" content="500">
-  <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="../../global/g.css">
-  <link rel="icon" type="image/x-icon" href="https://dsstlevel.github.io/Web/Images/favicon.ico">
+    <title>DSSTlevel | Inclusion Standards</title>
+    <meta http-equiv="refresh" content="500">
+    <link rel="icon" type="image/x-icon" href="https://dsstlevel.github.io/Web/Images/favicon.ico">
 <style>
-body {margin:0;text-align:center;background-color: rgb(15, 13, 13);}
-.glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color:snow; background-color: rgba(0, 0, 0, 0.1);;border-radius: 5px;}
-@keyframes glowWhite {from{text-shadow: 0 0 15px #fff, 0 0 15px #fff}to{text-shadow: 0 0 15px #fff, 0 0 15px #fff}}
-:root {--bgClrFront: grey;--txtClrFront: black; --bgClrBack: darkgrey; --txtClrBack: black;}
-.flip-card {perspective: 1000px;height: 300px;width: 250px;}.flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.6s;transform-style: preserve-3d;}.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}.flip-card-front, .flip-card-back {position: absolute;width: 100%;height: 100%;backface-visibility: hidden;}.flip-card-front {background-color: var(--bgClrFront);color: var(--txtClrFront);}.flip-card-back {background-color: var(--bgClrBack);color: var(--txtClrBack);transform: rotateY(180deg);}
-</style></head>
+    body {font-family:'Times New Roman', Times, serif;margin:0;background-color:black;color:rgb(246, 255, 217);background-image: url('../Images/background3.png');background-repeat: no-repeat;background-size:cover;}
+        @media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
+        * {box-sizing: border-box;}.row {display: flex;flex-wrap: wrap;}.side {flex: 1%;background-color: rgb(159, 123, 135);color:azure;padding: 15px;}.main {flex: 70%;padding: 20px;}
+        .side a {color: black;text-decoration: none;}.side a:hover {color:palegoldenrod;transition:0.2s;}
+        .glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color:snow; /*background-color: rgba(0, 0, 0,0.1);*/;border-radius: 5px;}
+        @keyframes glowWhite {from{text-shadow: 0 0 15px #fff, 0 0 15px #fff}to{text-shadow: 0 0 15px #fff, 0 0 15px #fff}}
+        :root {--bgClrFront: grey;--txtClrFront: black; --bgClrBack: darkgrey; --txtClrBack: black;}
+        .flip-card {perspective: 1000px;height: 300px;width: 250px;}.flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.6s;transform-style: preserve-3d;}.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}.flip-card-front, .flip-card-back {position: absolute;width: 100%;height: 100%;backface-visibility: hidden;}.flip-card-front {background-color: var(--bgClrFront);color: var(--txtClrFront);}.flip-card-back {background-color: var(--bgClrBack);color: var(--txtClrBack);transform: rotateY(180deg);}
+        </style></head>
+<link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="../../global/g.css">
 <div id="navigbar"></div>
-<body style="overflow:auto">
-<h1 style="font-size:xxx-large;color:blue">Software</h1>
+<div style="overflow: auto";>
+<body style="font-size:larger;">
+<div class="row">
+<div class="side">
+<h3>Content</h3>
+<a href="#ProtocolsAndPorts">Protocols and Ports</a><br>
+<a href="#NetComponents">Networking Components</a><br>
+<a href="#Troubleshooting">Troubleshooting</a><br>
+<a href="#ReferenceTools">Reference Tools</a><br>
+<a href="#Hardware">Hardware</a><br>
+<a href="#WiresandCables">Wires & Cables</a><br>
+</div>
+<div class="main">
+    <h1 id="ProtocolsAndPorts">Networking</h1>
+    <table class="glow" border="0" style="margin-left: auto;margin-right: auto;">
+        <tr><td style="text-align: center;">
+        <details>
+        <summary style="font-size:xx-large; color: blue;">Protocol Defs</summary>
+        IP<br>
+        Adding Addressing. Data that is routed to its destination<br>
+        TCP<br>
+        Tracks Network Connections between multiple destinations<br>
+        ICMP<br>
+        Used to send control and error messages on a network<br>
+        </details>
+        <pre>
+        <h1>IP Packets</h1>
+        Version - Current version of the IP currently being utilised
+        IHL - Header Length in 4-byte units
+        QOS - Quality of Service, makes important packets the priority during transmission
+        Length - Length of the packet across the network
+        ID - The packet number
+        Fragment Offset - Packet is broken down (Fragmented), then it is delivered and reassembled
+        TTL - Time to live, manages the caching and boosts performance
+        Protocol - The data in the protocol that the internet uses
+        Checksum - Detects corruption in the header
+        Source IP - The starting point of the IP packet
+        Destination IP - Its targetted end point 
+        </pre>
+        </td>
+        <td style="margin-left: auto;margin-right: auto;">
+        <h2>Protocols/Ports</h2>
+        <table border="2">
+        <tr><th>Protocol</th><th>Port</th></tr>
+        <tr><td>FTP</td><td>20/21</td></tr>
+        <tr><td>SSH</td><td>22</td></tr>
+        <tr><td>Telnet</td><td>23</td></tr>
+        <tr><td>SMTP</td><td>25</td></tr>
+        <tr><td>DNS</td><td>53</td></tr>
+        <tr><td>DHCP</td><td>67/68</td></tr>
+        <tr><td>TFTP</td><td>69</td></tr>
+        <tr><td>HTTP</td><td>80</td></tr>
+        <tr><td>HTTPS</td><td>443</td></tr>
+        <tr><td>POP3</td><td>110</td></tr>
+        <tr><td>NTP</td><td>123</td></tr>
+        <tr><td>IMAP</td><td>143</td></tr>
+        <tr><td>SNMP</td><td>161/162</td></tr>
+        <tr><td>FTP over TLS</td><td>989/990</td>
+        </tr>
+        </table>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <h1 id="NetComponents">Networking Components</h1>
+        <body>
+        <p>
+        <table border="1">
+        <tr><th>Word</th><th>Definition</th></tr>
+        <tr><td>Repeater</td><td>A hardware device that extends (regenerates) the signal strength</td></tr>
+        <tr><td>Bridge</td><td>The division of LANs into segments.<br>It keeps a record of all devices on each segment</td></tr>
+        <tr><td>Switch</td><td>Hardware component that sends data to its connected ports from what it receives</td></tr>
+        <tr><td>WAP</td><td>Wireless Access Point. Uses Radio Waves to communicate<br>with the local devices on the network</td></tr>
+        <tr><td>IDS</td><td>Monitors traffic on the network</td></tr>
+        <tr><td>IPS</td><td>Monitors traffic but must pass through for processing</td></tr>
+        <tr><td>UTM</td><td>Unified Threat Management. Generic all-in-one security appliance</td></tr>
+        <tr><td>Server</td><td>Centralised component on the network that acts as a service to the client</td></tr>
+        </table>
+        </p>
+        </td>
+        </tr>
+    </table>
+    <h1 style="font-size:xxx-large;color:blue">Software</h1>
 <section class="glow" style="font-size:larger">
-<h1>Troubleshooting</h1>
+<h1 id="Troubleshooting">Troubleshooting</h1>
 <table style="margin-left:auto;margin-right:auto;">
 <tr><td><h3>Process</h3>
 <pre>
@@ -29,7 +112,7 @@ body {margin:0;text-align:center;background-color: rgb(15, 13, 13);}
 </pre>
 </td>
 <td>
-<h3>Online Reference Tools</h3>
+<h3 id="ReferenceTools">Online Reference Tools</h3>
 <pre>
 -Search Engines
 -News groups
@@ -50,7 +133,7 @@ body {margin:0;text-align:center;background-color: rgb(15, 13, 13);}
 </tr>
 </table>
 </section>
-<h1 style="font-size:xxx-large;color:blue">Hardware</h1>
+<h1 id="Hardware" style="font-size:xxx-large;color:blue">Hardware</h1>
 <section class="glow" style="overflow:auto">
     <table style="margin-left: auto;margin-right: auto;overflow-x: auto;">
         <tr>
@@ -77,13 +160,13 @@ Address Bus - Carries address numbers to a memory controller circuit<br>
 The motherboard's speed is referenced from the bus' speed<br>
 </div></td></tr></table>
 </section>
-<section class="glow">
+<section id="WiresandCables" class="glow">
   <h1>Different Cables and Wires</h1>
     <h2>Connectors</h2>
       <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/20-24pin_slot_con.png" alt="Image" width="250px">
+              <img src="../Images/Wires/20-24pin_slot_con.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>A 20/24-pin slotted connector</h1>
@@ -94,7 +177,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/sata.png" alt="Image" width="250px">
+              <img src="../Images/Wires/sata.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>SATA Keys Connector</h1>
@@ -106,7 +189,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/molex.png" alt="Image" width="250px">
+              <img src="../Images/Wires/molex.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Molex Keyed Connector</h1>
@@ -117,7 +200,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/berg.png" alt="Image" width="250px">
+              <img src="../Images/Wires/berg.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Berg Keyed Connector</h1>
@@ -129,7 +212,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/auxpower.png" alt="Image" width="250px">
+              <img src="../Images/Wires/auxpower.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>4/8pin auxillary power connector</h1>
@@ -141,7 +224,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/pcie.png" alt="Image" width="250px">
+              <img src="../Images/Wires/pcie.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>6/8pin PCIe power connector</h1>
@@ -156,7 +239,7 @@ The motherboard's speed is referenced from the bus' speed<br>
       <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/dvi.png" alt="Image" width="250px">
+              <img src="../Images/Wires/dvi.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Digital Visual Interface (DVI)</h1>
@@ -167,7 +250,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/displayport.png" alt="Image" width="250px">
+              <img src="../Images/Wires/displayport.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Display Port</h1>
@@ -179,7 +262,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/hdmicable.png" alt="Image" width="250px">
+              <img src="../Images/Wires/hdmicable.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>High-Definition Multimedia Interface (HDMI)</h1>
@@ -190,7 +273,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/thunderbolt.png" alt="Image" width="250px">
+              <img src="../Images/Wires/thunderbolt.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back" style="line-height: 130%">
               <h1>Thunderbolt 1/2</h1>
@@ -205,7 +288,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/vga.png" alt="Image" width="250px">
+              <img src="../Images/Wires/vga.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Video Graphics Array (VGA)</h1>
@@ -217,7 +300,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/rca.png" alt="Image" width="250px">
+              <img src="../Images/Wires/rca.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Radio Corporation of America (RCA)</h1>
@@ -232,7 +315,7 @@ The motherboard's speed is referenced from the bus' speed<br>
       <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/ps2.png" alt="Image" width="250px">
+              <img src="../Images/Wires/ps2.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Personal System 2 (PS/2)</h1>
@@ -243,7 +326,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/videoandaudio.png" alt="Image" width="250px">
+              <img src="../Images/Wires/videoandaudio.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Audio and Game Port</h1>
@@ -255,7 +338,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/ethernet.png" alt="Image" width="250px">
+              <img src="../Images/Wires/ethernet.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Network Port</h1>
@@ -266,7 +349,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/sata2.png" alt="Image" width="250px">
+              <img src="../Images/Wires/sata2.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back" style="line-height: 130%">
               <h1>Serial AT Attachment (SATA)</h1>
@@ -278,7 +361,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/ide.png" alt="Image" width="250px">
+              <img src="../Images/Wires/ide.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Integrated Drive Electronics (IDE)</h1>
@@ -290,7 +373,7 @@ The motherboard's speed is referenced from the bus' speed<br>
         <div class="flip-card" style="display: inline-block;">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="https://dsstlevel.github.io/Web/Images/Wires/usb.png" alt="Image" width="250px">
+              <img src="../Images/Wires/usb.png" alt="Image" width="250px">
             </div>
             <div class="flip-card-back">
               <h1>Universal Serial Bus (USB)</h1>
@@ -299,7 +382,10 @@ The motherboard's speed is referenced from the bus' speed<br>
           </div>
         </div>
   </section>
-<footer id="footer"></footer>
-<script src="https://dsstlevel.github.io/global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+</div>
+</div>
 </body>
+</div>
+<footer id="footer"></footer>
+<script src="../../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
 </html>
