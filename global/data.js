@@ -22,7 +22,7 @@ body {background-color: #111;}
 `
 
 var WebsiteStatus=true//False = Open, True = Closed
-console.log(window.location)
+alert(window.location)
 if (WebsiteStatus===false||(window.location==="https://dsstlevel.github.io/Web/Main.html"||window.location==="https://dsstlevel.github.io/index.html")) {
   document.getElementById("navigbar").innerHTML = `
   <style>
