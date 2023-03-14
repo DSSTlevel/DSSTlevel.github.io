@@ -22,7 +22,7 @@ body {background-color: #111;}
 `
 
 var WebsiteStatus=true//False = Open, True = Closed
-if (WebsiteStatus===false&&window.location==="https://dsstlevel.github.io/Web/Main.html") {
+if (WebsiteStatus===false||window.location==="https://dsstlevel.github.io/Web/Main.html") {
   document.getElementById("navigbar").innerHTML = `
   <style>
   ::-webkit-scrollbar {width: 5px;}
