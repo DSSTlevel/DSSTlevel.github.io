@@ -21,7 +21,7 @@ body {background-color: #111;}
 <script>function autoRefresh() {window.location = window.location.href;}setInterval('autoRefresh()', 600000);</script>
 `
 
-var WebsiteStatus=true//False = Open, True = Closed
+var WebsiteStatus=false//False = Open, True = Closed
 alert(window.location)
 if (WebsiteStatus===false||(window.location==="https://dsstlevel.github.io/Web/Main.html"||window.location==="https://dsstlevel.github.io/index.html")) {
   document.getElementById("navigbar").innerHTML = `
