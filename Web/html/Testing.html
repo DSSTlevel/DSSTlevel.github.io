@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <title>DSSTlevel | Testing</title>
+    <meta http-equiv="refresh" content="500">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+<style>
+    body {font-family:'Times New Roman', Times, serif;margin:0;background-color:black;color:rgb(246, 255, 217);background-image: url('../Images/background3.png');background-repeat: no-repeat;background-size:cover;}
+        @media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
+        * {box-sizing: border-box;}.row {display: flex;flex-wrap: wrap;}.side {flex: 1%;background-color: rgb(159, 123, 135);color:azure;padding: 15px;}.main {flex: 70%;padding: 20px;}
+        .side a {color: black;text-decoration: none;}.side a:hover {color:palegoldenrod;transition:0.2s;}
+        .glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color:snow; /*background-color: rgba(0, 0, 0,0.1);*/;border-radius: 5px;}
+        @keyframes glowWhite {from{text-shadow: 0 0 15px #fff, 0 0 15px #fff}to{text-shadow: 0 0 15px #fff, 0 0 15px #fff}}
+        :root {--bgClrFront: grey;--txtClrFront: black; --bgClrBack: darkgrey; --txtClrBack: black;}
+        .flip-card {perspective: 1000px;height: 300px;width: 250px;}.flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.6s;transform-style: preserve-3d;}.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}.flip-card-front, .flip-card-back {position: absolute;width: 100%;height: 100%;backface-visibility: hidden;}.flip-card-front {background-color: var(--bgClrFront);color: var(--txtClrFront);}.flip-card-back {background-color: var(--bgClrBack);color: var(--txtClrBack);transform: rotateY(180deg);}
+        </style></head>
+<link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="../../global/g.css">
+<div id="navigbar"></div>
+<div style="overflow: auto";>
+<body style="font-size:larger;">
+<div class="row">
+<div class="side">
+<h3>Content</h3>
+<a href="#RCA">Route Cause Analysis</a><br>
+<a href="#TestingTypes">Testing Types</a><br>
+<a href="#DigitalComponents">Digital Components</a><br>
+</div>
+<div class="main">
+    <h2 id="RCA">Route Cause Analysis</h2>
+    <p>
+        Route Cause Analysis - The process of identifying the original fauilt through analysising factors that had followed on from the original issue<br>
+        Fish Bone Diagram - Visual understanding of the root cause analysis route. Assorting ideas into categories<br>
+        <br>
+        <b>How to create a Fishbone Diagram?</b><br>
+        Agree on a problem statement<br>
+        Idenfity the main categories to be inserted into the diagram<br>
+        Write the main categories to be decomposed down into small problems<br>
+        Identify all the possibilities that had originally caused the issue.<br>
+        Final analysis of the problem to see if the search matches<br>
+        <br>
+        <b>Example</b><br>
+        An example of this would be to understand the original cause of a data leakage found from a database through identifying an alternative solution and decomposing it down to see if the route matches the issue.<br>
+        </p>
+    Concept Testing - Understand the advantages and drawbacks of potential improvement for a particular concept<br>
+    Five Whys - Repetition of 5 "why" questions to delve further into the issue, to try and find the root cause<br>
+    <h2 id="TestingTypes">Testing Types</h2>
+    Functionality Testing - Confirming of component functionality and readiness against requirements<br>
+    Usability Testing - Verification of component functionality and readiness to release<br>
+    Compatability Testing - Confirm that components can work alongside with software and hardware<br>
+    Accessibility Testing - Form of usability testing that checks the inclusion of the services/products to the end user<br>
+    Customer/End User Satisfaction Survey -  Confirm the experience mood of the end user, whether this be positive or negative<br>
+    Fault Finding and Debugging - Finding to search for the bugs and errors, then debug/fix these bugs and errors<br>
+    Impact Assessment - Implications for a business, the environments and people of the implementation of components<br>
+    Efficiency of individual components - Tests the performance of a component and its resources required for its function<br>
+    Review accuracy of data - Review of data to test if there is bad data in the business<br>
+    Ensuring desired outcomes - Making sure the service/product meets the needs of the end user, business, and employees<br>
+    Performance monitoring - Acts as a warning system that reports to the IT team when something has "gone wrong"<br>
+    <h2 id="DigitalComponents">Digital Componenents</h2>
+    Software - Points out any defects and errors for the software<br>
+    Hardware - Ensure that all components perform, function and operate correctly<br>
+    Data - Relates to Review accuracy of data, and check feasability of the data.<br>
+    <li>Valid Data - Data that is accepted and can be used</li>
+    <li>Extreme/Borderline - Border data from a range of data</li>
+    <li>Erroneous - Invalid or unaccetable data that can not be used</li>
+    Interfaces - Ensures that each component works in collaboration with other components<br>
+    Test Scripts - Descriptions that contain information about the transactions of the system<br>
+    
+    Usability/Audience Testing - Understand how end users interact with the product or service and whether it meets their requirements<br>
+    Stress Testting - Whether a system can function with expected demand by replicated a real world experience
+    <li>Load Testing - Performance test that is used to check the system performance</li>
+    <li>Stress Testing - Performance test that is used to check the limits of the system performance</li>
+    Penetration Testing - An authorised attack on a system to test its vulnerability<br>
+    Black Box Testing - Penetration testing without having any background information about the system<br>
+    White box Testing - Penetration testing but has information about the system<br> 
+</div>
+</div>
+</body>
+</div>
+<footer id="footer"></footer>
+<script src="../../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+</html>
