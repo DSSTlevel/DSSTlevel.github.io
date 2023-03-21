@@ -38,7 +38,7 @@ if (WebsiteStatus===false||(window.location=="https://dsstlevel.github.io/Web/Ma
       <li class="dropdown-sub">
         <a href="https://dsstlevel.github.io/Web/html/BusinessContext.html">Business Context</a>
       <li class="dropdown-sub">  
-      <a href="https://dsstlevel.github.io/Web/html/Culture.html">Culture</a>
+        <a href="https://dsstlevel.github.io/Web/html/Culture.html">Culture</a>
       <li class="dropdown-sub">
         <a href="https://dsstlevel.github.io/Web/html/DigitalEnvironments.html">Digital Environments</a>
       <li class="dropdown-sub">
