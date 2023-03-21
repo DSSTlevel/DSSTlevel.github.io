@@ -26,7 +26,6 @@ def help1():
 #Contains: Begin, Help
 def mainmenu():
     tk=Tk()
-    tk.iconbitmap('./media/pyicon.ico')
     tk.title('Main Menu')
     label=Label(text='Welcome to the Flash Card Quiz',font=('Comic Sans MS', 25))
     b1=Button(text='Begin',command=lambda:[tk.destroy()],height=5,width=40,fg='black',bg='PeachPuff2',font=("Calibri", 15))
