@@ -66,7 +66,7 @@ if (WebsiteStatus===false||(window.location=="https://dsstlevel.github.io/Web/Ma
       <li class="dropdown-sub">
         <a href="https://dsstlevel.github.io/Web/html/Data.html">Data</a>
       <li class="dropdown-sub">
-        <a>Data Analysis</a>
+      <a href="https://dsstlevel.github.io/Web/html/DigitalAnalysis.html">Digital Analysis</a>
         <ul class="dropdown-sub-list">
         </ul></li>
       </li>
