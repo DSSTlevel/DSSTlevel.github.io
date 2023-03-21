@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DSSTlevel | Main Menu</title>
     <script type="text/javascript" src="../global/settings.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="../global/g.css">
@@ -331,7 +330,7 @@ onclick="window.open('https://youtube.com/changelog.html','name','width=1000,hei
             hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
             minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
             seconds = Math.floor((distance % (1000 * 60)) / 1000);
-          if (new Date().getDay() == 2) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+          if (new Date().getDay() == 2) {document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;document.title=`DSSTlevel | ${hours}hr ${minutes}m ${seconds}s`}
           else if (new Date().getDay() == 3) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
           else if (new Date().getDay() == 4) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
           else if (new Date().getDay() == 5) document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
