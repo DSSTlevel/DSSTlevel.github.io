@@ -333,7 +333,7 @@ onclick="window.open('https://youtube.com/changelog.html','name','width=1000,hei
           const num1 = document.getElementById("num1").value
           const num2 = document.getElementById("num2").value
           const output=document.getElementById("value1")
-          percentage = Math.ceil((num1/num2)*100)
+          percentage = Math.round((num1/num2)*100)
           output.value=`${percentage}%`
       }
       document.getElementById("pwd").addEventListener("keypress", function(event) {
