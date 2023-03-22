@@ -36,7 +36,7 @@
           width:fit-content;
           font-size: 18px;
           background-color: rgba(0, 0, 0, 0);
-          border-color:greenyellow
+          border-color:greenyellow;
       }
 
       .image {
@@ -297,11 +297,11 @@
             <h2>
                 <table>
                 <tr style="margin-left:auto;margin-right: auto;"><td>Marks Awarded</td><td><b>/</b></td><td>Total Marks</td></tr>
-                <tr><td><input type="number" id="num1"></td><td><b>/</b></td><td><input type="number" id="num2"></td></tr>
+                <tr><td><input type="number" id="num1" style="color:white"></td><td><b>/</b></td><td><input type="number" id="num2" style="color:white"></td></tr>
                 </table>
             </h2>
             <button onclick="percentage_1()">Calculate</button><br>
-            Output: <input type="text" id="value1" readonly>
+            Output: <input type="text" id="value1" readonly style="color:white">
           </div>
         </div>
       </div>
@@ -333,7 +333,7 @@ onclick="window.open('https://youtube.com/changelog.html','name','width=1000,hei
           const num1 = document.getElementById("num1").value
           const num2 = document.getElementById("num2").value
           const output=document.getElementById("value1")
-          percentage = (num1/num2)*100
+          percentage = Math.ceil((num1/num2)*100)
           output.value=`${percentage}%`
       }
       document.getElementById("pwd").addEventListener("keypress", function(event) {
