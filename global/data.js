@@ -28,6 +28,8 @@ if (WebsiteStatus===false||(window.location=="https://dsstlevel.github.io/Web/Ma
   ::-webkit-scrollbar-track {background: black;}
   ::-webkit-scrollbar-thumb {background: rgb(0, 51, 128);}
   ::-webkit-scrollbar-thumb:hover {background: rgb(0, 53, 96);}
+  * {box-sizing: border-box;}.row {display: flex;flex-wrap: wrap;}.side {flex: 1%;background-color: rgb(159, 123, 135);color:azure;padding: 15px;}.main {flex: 70%;padding: 20px;}
+  .side a {color: black;text-decoration: none;}.side a:hover {color:palegoldenrod;transition:0.2s;}
   </style>
   <div class="nav_ul">
     <ul id="nav_ul">
@@ -99,7 +101,6 @@ if (WebsiteStatus===false||(window.location=="https://dsstlevel.github.io/Web/Ma
     <a><i class="fa-solid fa-bars"></i>Info</a>
     <ul class="dropdown-content">
       <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/impdates.html">Dates/Events</a>
         <a href="https://dsstlevel.github.io/Web/html/year1.html">Examination Details</a>
       </li>
     </ul>
