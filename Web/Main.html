@@ -14,6 +14,30 @@
         text-decoration: none;
         font-family: "Lato", sans-serif;
       }
+      .onion {
+          width: 480px;
+          background-color: #1c5f7e;
+          margin: 12px 0;
+          padding: 24px;
+          text-align: center;
+          box-shadow: 2px 2px 8px 2px #386176;
+          margin-left: auto;
+          margin-right: auto;
+          color:white
+      }
+      
+      input[type=number] {
+          width:75%;
+          font-size: 18px;
+          background-color: rgba(0, 0, 0, 0);
+          border-color:white
+      }
+      input[type=text] {
+          width:fit-content;
+          font-size: 18px;
+          background-color: rgba(0, 0, 0, 0);
+          border-color:greenyellow
+      }
 
       .image {
         display: inline-block;
@@ -62,7 +86,7 @@
   </head>
   <div class="newsbar">
     <div class="newsbar-content">
-      First official educational page has been completed! Diversity and Inclusion <a style="font-size: large;color:white" href="html/DiversityandInclusion.html">| here</a>
+      Percentage Calculator Out Now!<a style="font-size: large;color:white" href="#PercentageCalc">| here</a>
     </div>
   </div>
   <div id="navigbar"></div>
@@ -264,6 +288,25 @@
       </div>
       <div class="inlinetext-padding sec1-colour">
         <div class="inlinetext-padding-content">
+          <h2 style="text-align:center;color:white">
+            <u>
+              <b>Percentage Calculator</b>
+            </u>
+          </h2>
+          <div id="PercentageCalc" class="onion">
+            <h2>
+                <table>
+                <tr style="margin-left:auto;margin-right: auto;"><td>Marks Awarded</td><td><b>/</b></td><td>Total Marks</td></tr>
+                <tr><td><input type="number" id="num1"></td><td><b>/</b></td><td><input type="number" id="num2"></td></tr>
+                </table>
+            </h2>
+            <button onclick="percentage_1()">Calculate</button><br>
+            Output: <input type="text" id="value1" readonly>
+          </div>
+        </div>
+      </div>
+      <div class="inlinetext-padding sec2-colour">
+        <div class="inlinetext-padding-content">
           <form id="security" class="glow" style="text-align: center;font-size: larger;">
             <label for="cars">Choose a Location: </label>
             <select name="cars" id="loc">
@@ -286,6 +329,13 @@
     <!--<button onclick="window.open('https:\/\/dsstlevel.github.io/Web/changelog.html','name','width=600,height=400')">Hi</button>
 onclick="window.open('https://youtube.com/changelog.html','name','width=1000,height=1000')"-->
     <script>
+      function percentage_1() {
+          const num1 = document.getElementById("num1").value
+          const num2 = document.getElementById("num2").value
+          const output=document.getElementById("value1")
+          percentage = (num1/num2)*100
+          output.value=`${percentage}%`
+      }
       document.getElementById("pwd").addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
           event.preventDefault();
