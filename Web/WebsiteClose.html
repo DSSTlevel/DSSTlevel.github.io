@@ -7,13 +7,39 @@
         Website is closed.
     </title>
     <style>
-        body {padding:50px 50px;text-align:center;font-size:xxx-large;color:aliceblue;background-image: url('Images/background3.png');background-size: cover;background-repeat: no-repeat;}
+        body {padding:50px 50px;text-align:center;font-size:xxx-large;color:aliceblue;background-color:rgb(19, 32, 32);background-size: cover;background-repeat: no-repeat;}
+        .box {
+        background-color: #b72200;
+        color: rgb(255, 255, 255);
+        padding: 50px 50px;
+        margin:0px 0px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 15px;
+        }
     </style>
 </head>
 <html>
     <div style="overflow:auto">
+        <h1 style="color:yellow">⚠ Closed ⚠</h1>
         This website is closed for the duration of the examination time.<br>
-        These include:<br>
-        DSS ESP
+        This includes:<br>
+        DSS ESP<br>
+        <br>
+        The website will reopen at 15:10pm BST.
+    </div><br>
+    <div style="font-size:200px">
+        <p id='countdown' class="box"></p>
     </div>
+    <script>
+        var x = setInterval(function() {var now = new Date().getTime();
+            var countDownDate = new Date('May 10, 2023 15:10:00').getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById('countdown').innerHTML = `${hours}:${minutes}:${seconds}`}, 1000)
+
+    </script>
 </html>

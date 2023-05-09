@@ -23,14 +23,14 @@ body {background-color: #111;}
 
 function closeTime() {
   var isTrue=false
-  if (new Date().getTime() > new Date('May 09, 2023 10:00:00').getTime()&&new Date().getTime() < new Date('May 09, 2023 12:30:00').getTime()) var isTrue=true
-  else if (new Date().getTime() > new Date('May 10, 2023 9:00:00').getTime()&&new Date().getTime() < new Date('May 10, 2023 12:10:00').getTime()) var isTrue=true
+  if (new Date().getTime() > new Date('May 09, 2023 10:00:00').getTime()&&new Date().getTime() < new Date('May 09, 2023 00:00:00').getTime()) var isTrue=true
+  else if (new Date().getTime() > new Date('May 10, 2023 9:00:00').getTime()&&new Date().getTime() < new Date('May 10, 2023 15:10:00').getTime()) var isTrue=true
   alert(isTrue)
   return isTrue
 }
 
 var WebsiteStatus=false//False = Open, True = Closed
-if (closeTime()===false&&WebsiteStatus===false||(window.location=="https://dsstlevel.github.io/Web/Main.html"||window.location=="https://dsstlevel.github.io/index.html")) {
+if ((closeTime()===false&&WebsiteStatus===false)|(window.location=="https://dsstlevel.github.io/Web/Main.html"||window.location=="https://dsstlevel.github.io/index.html")) {
   document.getElementById("navigbar").innerHTML = `
   <style>
   ::-webkit-scrollbar {width: 5px;}
