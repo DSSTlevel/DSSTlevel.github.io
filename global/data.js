@@ -25,7 +25,6 @@ function closeTime() {
   var isTrue=false
   if (new Date().getTime() > new Date('May 09, 2023 10:00:00').getTime()&&new Date().getTime() < new Date('May 09, 2023 12:30:00').getTime()) var isTrue=true
   else if (new Date().getTime() > new Date('May 10, 2023 9:00:00').getTime()&&new Date().getTime() < new Date('May 10, 2023 15:10:00').getTime()) var isTrue=true
-  alert(isTrue)
   return isTrue
 }
 
