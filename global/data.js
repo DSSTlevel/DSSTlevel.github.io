@@ -29,7 +29,7 @@ function closeTime() {
 }
 
 var WebsiteStatus=false//False = Open, True = Closed
-if ((closeTime()===false&&WebsiteStatus===false)||(window.location=="https://dsstlevel.github.io/Web/Main.html"||window.location=="https://dsstlevel.github.io/index.html")) {
+if ((closeTime()===false&&WebsiteStatus===false)/*||(window.location=="https://dsstlevel.github.io/Web/Main.html"||window.location=="https://dsstlevel.github.io/index.html")*/) {
   document.getElementById("navigbar").innerHTML = `
   <style>
   ::-webkit-scrollbar {width: 5px;}
