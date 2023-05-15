@@ -23,8 +23,8 @@ body {background-color: #111;}
 
 function closeTime() {
   var isTrue=false
-  if (new Date().getTime() > new Date('May 09, 2023 10:00:00').getTime()&&new Date().getTime() < new Date('May 09, 2023 12:30:00').getTime()) var isTrue=true
-  else if (new Date().getTime() > new Date('May 10, 2023 9:00:00').getTime()&&new Date().getTime() < new Date('May 10, 2023 15:10:00').getTime()) var isTrue=true
+  if (new Date().getTime() > new Date('May 15, 2023 9:00:00').getTime()&&new Date().getTime() < new Date('May 15, 2023 13:20:00').getTime()) var isTrue=true
+  else if (new Date().getTime() > new Date('May 16, 2023 9:00:00').getTime()&&new Date().getTime() < new Date('May 16, 2023 12:50:00').getTime()) var isTrue=true
   return isTrue
 }
 
