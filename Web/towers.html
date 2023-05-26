@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Queue Times</title>
+    <p id="oklol"></p>
+    <script>
+      req=fetch("https://queue-times.com/parks.json").json()
+      document.getElementById("oklol").innerHTML=req.response()
+    </script>
+</html>
