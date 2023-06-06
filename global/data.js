@@ -122,7 +122,7 @@ else {
 
 document.getElementById('importantDates').innerHTML=["const dateRN=new Date().getDay()",
 "var x = setInterval(function() {var now = new Date().getTime();var countDownDate = new Date('Jun 14, 2023 13:00:00').getTime();var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);",
-"document.getElementById('paperA').innerHTML = `PaperA: ${days} Days, ${hours}:${minutes}:${seconds}`","document.getElementById('paperA1').innerHTML = `PaperA: ${days} Days, ${hours}:${minutes}:${seconds}`", "if (distance < 0) {clearInterval(x);document.getElementById('paperA').innerHTML = 'Exam has begun';}}, 1000);",
+"document.getElementById('paperA').innerHTML = `PaperA: ${days} Days, ${hours}:${minutes}:${seconds}`", "if (distance < 0) {clearInterval(x);document.getElementById('paperA').innerHTML = 'Exam has begun';}}, 1000);",
 "var x = setInterval(function() {var now = new Date().getTime();var countDownDate = new Date('Jun 21, 2023 13:00:00').getTime();var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);",
 "document.getElementById('paperB').innerHTML = `PaperB: ${days} Days, ${hours}:${minutes}:${seconds}`",
 "if (distance < 0) {clearInterval(x);document.getElementById('paperB').innerHTML = 'Exam has begun';}}, 1000);",
