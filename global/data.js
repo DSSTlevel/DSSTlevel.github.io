@@ -36,84 +36,57 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
   ::-webkit-scrollbar-track {background: black;}
   ::-webkit-scrollbar-thumb {background: rgb(0, 51, 128);}
   ::-webkit-scrollbar-thumb:hover {background: rgb(0, 53, 96);}
-  * {box-sizing: border-box;}.row {display: flex;flex-wrap: wrap;}.side {flex: 1%;background-color: rgb(159, 123, 135);color:azure;padding: 15px;}.main {flex: 70%;padding: 20px;}
-  .side a {color: black;text-decoration: none;}.side a:hover {color:palegoldenrod;transition:0.2s;}
+  * {box-sizing: border-box;}
+  
   </style>
-  <div class="nav_ul">
-    <ul id="nav_ul">
-    <a href="https://dsstlevel.github.io/index.html"><i class="fa fa-home" style="font-size:20px;color:white"></i></a>
-    <li class="dropdown">
-    <a><i class="fa-solid fa-bars"> </i><i class="fa-solid fa-a"></i></a>
-    <ul class="dropdown-content">
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/BusinessContext.html">Business Context</a>
-      <li class="dropdown-sub">  
-        <a href="https://dsstlevel.github.io/Web/html/Culture.html">Culture</a>
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/DigitalEnvironments.html">Digital Environments</a>
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/DiversityandInclusion.html">Diversity and Inclusion</a>
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/Learning.html">Learning</a>
-      <li class="dropdown-sub">
-        <a>Planning</a>
-        <ul class="dropdown-sub-list">
-        </ul></li>
-      </li>
-    </ul>
-    </li>
-    <li class="dropdown">
-    <a><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-b"></i></a>
-    <ul class="dropdown-content">
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/Testing.html">Testing</a>
-      <li class="dropdown-sub">  
-        <a>Tools</a>
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/Legislation.html">Legislation</a>
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/Security.html">Security</a>
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/Data.html">Data</a>
-      <li class="dropdown-sub">
-      <a href="https://dsstlevel.github.io/Web/html/DigitalAnalysis.html">Digital Analysis</a>
-        <ul class="dropdown-sub-list">
-        </ul></li>
-      </li>
-    </ul>
-    </li>
-    <li class="dropdown">
-    <a><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-newspaper"></i></a>
-    <ul class="dropdown-content">
-      <li class="dropdown-sub">
-        <a href="https://www.netacad.com/portal/learning" target="_blank">Cisco</a>
-        <a href="https://dsstlevel.github.io/Web/html/codingScripts">Scripts (Quizzes)</a>
-        <li class="dropdown-sub">
-        <a>NCFE</a>
-        <ul class="dropdown-sub-list">
-          <li><a href="https://ncfe.org.uk" target="_blank">NCFE Website</a></a>
-          <li><a href="https://www.qualhub.co.uk/qualification-search/qualification-detail/t-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034?login=false&originalUrl=https%3A%2F%2Fwww.qualhub.co.uk.mcas.ms%2Fqualification-search%2Fqualification-detail%2Ft-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034%3FMcasTsid%3D20892&McasCSRF=2a04a17a9a924bcc526b4bd772189cf149d6804c98bb8c2c08d559e394f185f9" target="_blank">DSS Past Papers</a></li>
-          </ul></li>
-        <a href="https://www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3P5ROKL5A1OLE">Revision Book</a>
-        <li class="dropdown-sub">
-        <a>TMC</a>
-        <ul class="dropdown-sub-list">
-          <li><a href="https://studenthub.tmc.ac.uk">Student Hub</a></li>
-          <li><a href="https://proportal.tmc.ac.uk">ProPortal</a></li>
-          <li><a href="https://grofar.com/">GroFar</a></li>
-          </ul></li>
+  <nav class="navbar">
+    <ul class="navbar-list">
+        <li class="navbar-item">
+            <a href="#" class="navbar-link"><i class="fa-solid fa-bars"> </i><i class="fa-solid fa-a"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://dsstlevel.github.io/Web/html/BusinessContext" class="dropdown-link">Business Context</a></li>
+              <li><a href="https://dsstlevel.github.io/Web/html/Culture" class="dropdown-link">Culture</a></li>
+              <li><a href="https://dsstlevel.github.io/Web/html/DigitalEnvironments" class="dropdown-link">Digital Environments</a></li>
+              <li><a href="https://dsstlevel.github.io/Web/html/DiversityandInclusion" class="dropdown-link">Diversity and Inclusion</a></li>
+              <li><a href="https://dsstlevel.github.io/Web/html/BusinessContext" class="dropdown-link">Learning</a></li>
+              <li><a href="#" class="dropdown-link">Planning</a></li>
+            </ul>
         </li>
-    </ul>
-    </li>
-    <li class="dropdown">
-    <a><i class="fa-solid fa-bars"></i>Info</a>
-    <ul class="dropdown-content">
-      <li class="dropdown-sub">
-        <a href="https://dsstlevel.github.io/Web/html/year1.html">Examination Details</a>
+      <li class="navbar-item">
+        <a href="#" class="navbar-link"><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-b"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="https://dsstlevel.github.io/Web/html/Testing" class="dropdown-link">Testing</a></li>
+          <li><a href="#" class="dropdown-link">Tools</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/html/Legislation" class="dropdown-link">Legislation</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/html/Security" class="dropdown-link">Security</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/html/Data" class="dropdown-link">Data</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/html/DigitalAnalysis" class="dropdown-link">Digital Analysis</a></li>
+        </ul>
+      </li>
+      <li class="navbar-item">
+        <a href="https://dsstlevel.github.io" class="navbar-link"><i class="fa fa-home" style="font-size:20px;color:rgb(0, 0, 0)"></i></a>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="navbar-link"><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-newspaper"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="https://www.netacad.com/portal/learning" target="_blank" class="dropdown-link">Cisco</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/html/codingScripts" class="dropdown-link">Scripts (Quizzes)</a></li>
+          <li><a href="https://ncfe.org.uk" target="_blank" class="dropdown-link">NCFE Website</a></li>
+          <li><a href="https://www.qualhub.co.uk/qualification-search/qualification-detail/t-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034?login=false&originalUrl=https%3A%2F%2Fwww.qualhub.co.uk.mcas.ms%2Fqualification-search%2Fqualification-detail%2Ft-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034%3FMcasTsid%3D20892&McasCSRF=2a04a17a9a924bcc526b4bd772189cf149d6804c98bb8c2c08d559e394f185f9" target="_blank" class="dropdown-link">DSS Past Papers</a></li>
+          <li><a href="https://www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3P5ROKL5A1OLE" target="_blank" class="dropdown-link">Revision Book</a></li>
+          <li><a href="https://studenthub.tmc.ac.uk" class="dropdown-link">Student Hub</a></li>
+          <li><a href="https://proportal.tmc.ac.uk" class="dropdown-link">ProPortal</a></li>
+          <li><a href="https://grofar.com/" class="dropdown-link">GroFar</a></li>
+        </ul>
+      </li>
+      <li class="navbar-item">
+        <a href="#" class="navbar-link">Info</a>
+        <ul class="dropdown-menu">
+          <li><a href="https://dsstlevel.github.io/Web/html/year1" class="dropdown-link">Examination Details</a></li>
+        </ul>
       </li>
     </ul>
-    </li>
-  </div>
+  </nav>
   `
 }
 else {
