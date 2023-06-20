@@ -10,8 +10,6 @@
   .navbar-list {
     display: inline-flex;
     list-style-type:none;
-    margin: 0;
-    padding: 0;
   }
   
   .navbar-item {
@@ -21,7 +19,8 @@
   .navbar-link {
     color: #333;
     display: block;
-    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
     text-decoration: none;
   }
   
