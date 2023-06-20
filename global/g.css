@@ -19,6 +19,7 @@
   .navbar-link {
     color: #333;
     display: block;
+    padding:0;
     padding-left: 40px;
     padding-right: 40px;
     text-decoration: none;
