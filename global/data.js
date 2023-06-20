@@ -83,6 +83,7 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
         <a href="#" class="navbar-link">Info</a>
         <ul class="dropdown-menu">
           <li><a href="https://dsstlevel.github.io/Web/html/year1" class="dropdown-link">Examination Details</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/altontowers" class="dropdown-link">Alton Towers</a></li>
         </ul>
       </li>
     </ul>

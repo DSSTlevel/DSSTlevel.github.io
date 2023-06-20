@@ -4,12 +4,12 @@
 .footer-basic {padding:8px 0;background-color: #111;color: #f1f1f1;}.footer-basic ul {padding:0;list-style:none;text-align:center;font-size:18px;line-height:1;bottom:0;}.footer-basic li {padding:0 10px;}.footer-basic ul a {color:inherit;text-decoration:none;opacity:0.8;}.footer-basic ul a:hover {opacity:1;}.footer-basic .copyright {margin-top:11px;text-align:center;font-size:13px;color:#aaa;margin-bottom: 15px;}
 .navbar {
     background-color: #f1f1f1;
+    text-align: center;
   }
   
   .navbar-list {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+    display: inline-flex;
+    list-style-type:none;
     margin: 0;
     padding: 0;
   }
