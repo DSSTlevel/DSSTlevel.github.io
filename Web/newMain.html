@@ -14,7 +14,7 @@
         text-decoration: none;
         font-family: "Lato", sans-serif;
       }
-      .onion {
+      .percentageCalc {
           width: 480px;
           background-color: #1c5f7e;
           margin: 12px 0;
@@ -25,48 +25,28 @@
           margin-right: auto;
           color:white
       }
+      .title {
+          width: 90%;
+          background-color: #2c0ca1;
+          margin: 12px 0;
+          padding: 24px;
+          text-align: center;
+          box-shadow: 2px 2px 8px 2px #4a5155;
+          margin-left: auto;
+          margin-right: auto;
+          color:white
+      }
       
-      input[type=number] {
-          width:75%;
-          font-size: 18px;
-          background-color: rgba(0, 0, 0, 0);
-          border-color:white
-      }
-      input[type=text] {
-          width:fit-content;
-          font-size: 18px;
-          background-color: rgba(0, 0, 0, 0);
-          border-color:greenyellow;
-      }
+      input[type=number] {width:75%;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:white}
+      input[type=text] {width:fit-content;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:greenyellow;}
 
-      .image {
-        display: inline-block;
-      }
-      /*
-      .glowWhite {
-        color: #fff;
-        text-align: center;
-        animation: glowWhite 1s ease-in-out infinite alternate;
-        color: rgb(182, 239, 255);
-        background-color: rgba(0, 0, 0, 0.02);
-        border-radius: 5px;
-      }
-      @keyframes glowWhite {
-        from {
-          text-shadow: 0 0 15px rgb(0, 0, 0), 0 0 15px rgb(0, 0, 0)
-        }
-
-        to {
-          text-shadow: 0 0 15px rgb(0, 128, 255), 0 0 15px rgb(0, 217, 255)
-        }
-      }*/
       .newsbar{padding-top:10px!important;padding-bottom:10px!important;background-color: rgb(104, 0, 152);color:white;text-decoration:none;}
       .newsbar1{padding-top:10px!important;padding-bottom:10px!important;background-color: rgb(104, 0, 152);color:white;text-decoration:none;font-family: 'Arial Narrow Bold';font-size: x-large;}
       .newsbar-content{margin-left:auto;margin-right:auto;max-width: 1150px;text-align: center;}
       .sidecontent{width: 17%;text-align: center;overflow-y: scroll;background-color: rgb(223, 219, 219);color:black}
       .sidecontent a{color:black}
       .sidecontent-seperator{background-color:rgb(76, 80, 90);width:95%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
-      .maincontent{width: 83%;}
+      .maincontent{width: 83%; background-image:linear-gradient(45deg, rgb(28, 29, 31) 30%, rgb(46, 26, 26));}
     </style>
   </head>
   <div class="newsbar1">
@@ -79,17 +59,23 @@
   <body style="color:white;background-color: rgb(0, 0, 0);">
     <div style="display: flex; height: 100vh;">
       <div class="sidecontent">
-        <h1>DSS T-Level Website</h1>
+        <h2>DSS T-Level Website</h2>
         <div style="text-align:center;font-size:x-large;color:rgb(38, 0, 255)"><b>End Of Day</b></div>
         <div style="text-align:center;font-size:x-large;color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</div>
         <div style="width:100%;margin-left: auto;margin-right: auto;"><canvas id="canvas" width="150"></canvas></div>
+        <div class="sidecontent-seperator"></div>
         <div id="EoT">Loading...</div>
         <div id="EoHT">Loading...</div>
         <div id="training">Loading...</div>
         <div class="sidecontent-seperator"></div>
+
       </div>
       <div class="maincontent">
-        <div id="PercentageCalc" class="onion">
+        <div class="title">
+          <b style="font-size: xx-large;">Welcome to the DSS T-level website for TMC</b>
+          <br>Here you can search through the many pages of notes <br>that I have been produced from the <br>Digital Support Services T-Level
+        </div>
+        <div id="PercentageCalc" class="percentageCalc">
           <h2>
               <table>
               <tr style="margin-left:auto;margin-right: auto;"><td>Marks Awarded</td><td><b>/</b></td><td>Total Marks</td></tr>
@@ -173,18 +159,18 @@
         var grad;
         ctx.beginPath();
         ctx.arc(0, 0, radius, 0, 2 * Math.PI);
-        ctx.fillStyle = '#9BCBA1';
+        ctx.fillStyle = "lightgray"; //Background
         ctx.fill();
         grad = ctx.createRadialGradient(0, 0, radius * 0.9, 0, 0, radius * 1.05);
-        grad.addColorStop(0, 'rgb(36, 63, 70)');
-        grad.addColorStop(0.5, 'rgb(36, 63, 70)');
-        grad.addColorStop(1, 'lime');
+        grad.addColorStop(0, 'black'); //Hands
+        grad.addColorStop(0.5, 'grey'); //InnerRing
+        grad.addColorStop(1, 'black'); //OuterRing
         ctx.strokeStyle = grad;
         ctx.lineWidth = radius * 0.1;
         ctx.stroke();
         ctx.beginPath();
         ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
-        ctx.fillStyle = '#333';
+        ctx.fillStyle = 'black'; //Text
         ctx.fill()
       }
 
