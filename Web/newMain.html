@@ -14,27 +14,43 @@
         text-decoration: none;
         font-family: "Lato", sans-serif;
       }
-      .percentageCalc {
-          width: 480px;
-          background-color: #1c5f7e;
+      .percentageCalc {width: 480px;background-color: #1c5f7e;padding: 24px;text-align: center;box-shadow: 2px 2px 8px 2px #386176;margin-left: auto;margin-right: auto;color:white
+      }
+      .title {
+          width: 90%;
+          background-image:linear-gradient(45deg, rgb(243, 122, 122),rgb(46, 59, 86));
+          padding: 15px;
+          box-shadow: 2px 2px 8px 2px #4a5155;
           margin: 12px 0;
-          padding: 24px;
-          text-align: center;
-          box-shadow: 2px 2px 8px 2px #386176;
           margin-left: auto;
           margin-right: auto;
           color:white
       }
-      .title {
+      
+      .contentbox {
           width: 90%;
-          background-color: #2c0ca1;
-          margin: 12px 0;
-          padding: 24px;
-          text-align: center;
-          box-shadow: 2px 2px 8px 2px #4a5155;
+          margin: 20px 0;
+          background-color:#16181a;
+          border-radius: 35px;
+          border-style: inset;
+          border-color:greenyellow;
+          padding-top:10px;
+          padding-bottom:26px;
+          box-shadow: 1px 2px 24px 2px #2db860;
           margin-left: auto;
           margin-right: auto;
-          color:white
+          color:white;
+          min-height:0vh;
+      }
+      .contentbox h1{
+        padding-left:50px;
+        font-size:x-large;
+        text-align:left;
+        color:gold;
+      }
+      .contentbox .content{
+        text-align: center;
+        font-size:medium
       }
       
       input[type=number] {width:75%;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:white}
@@ -43,9 +59,9 @@
       .newsbar{padding-top:10px!important;padding-bottom:10px!important;background-color: rgb(104, 0, 152);color:white;text-decoration:none;}
       .newsbar1{padding-top:10px!important;padding-bottom:10px!important;background-color: rgb(104, 0, 152);color:white;text-decoration:none;font-family: 'Arial Narrow Bold';font-size: x-large;}
       .newsbar-content{margin-left:auto;margin-right:auto;max-width: 1150px;text-align: center;}
-      .sidecontent{width: 17%;text-align: center;overflow-y: scroll;background-color: rgb(223, 219, 219);color:black}
+      .sidecontent{width: 17%;text-align: center;overflow-y: scroll;background-color: rgb(219, 226, 253);color:black}
       .sidecontent a{color:black}
-      .sidecontent-seperator{background-color:rgb(76, 80, 90);width:95%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
+      .sidecontent-seperator{background-color:rgb(46, 47, 50);width:95%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
       .maincontent{width: 83%; background-image:linear-gradient(45deg, rgb(28, 29, 31) 30%, rgb(46, 26, 26));}
     </style>
   </head>
@@ -56,44 +72,67 @@
   </div>
   <div id="navigbar"></div>
   <div style="overflow: auto;">
-  <body style="color:white;background-color: rgb(0, 0, 0);">
-    <div style="display: flex; height: 100vh;">
-      <div class="sidecontent">
-        <h2>DSS T-Level Website</h2>
-        <div style="text-align:center;font-size:x-large;color:rgb(38, 0, 255)"><b>End Of Day</b></div>
-        <div style="text-align:center;font-size:x-large;color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</div>
-        <div style="width:100%;margin-left: auto;margin-right: auto;"><canvas id="canvas" width="150"></canvas></div>
-        <div class="sidecontent-seperator"></div>
-        <div id="EoT">Loading...</div>
-        <div id="EoHT">Loading...</div>
-        <div id="training">Loading...</div>
-        <div class="sidecontent-seperator"></div>
-
-      </div>
-      <div class="maincontent">
-        <div class="title">
-          <b style="font-size: xx-large;">Welcome to the DSS T-level website for TMC</b>
-          <br>Here you can search through the many pages of notes <br>that I have been produced from the <br>Digital Support Services T-Level
+     <body style="color:white;background-color: rgb(0, 0, 0);">
+        <div style="display: flex">
+           <div class="sidecontent">
+              <h2>DSS T-Level Website</h2>
+              <div style="text-align:center;font-size:x-large;color:rgb(38, 0, 255)"><b>End Of Day</b></div>
+              <div style="text-align:center;font-size:x-large;color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</div>
+              <div style="width:100%;margin-left: auto;margin-right: auto;">
+                 <canvas id="canvas" width="150"></canvas>
+              </div>
+              <div class="sidecontent-seperator"></div>
+              <div id="EoT">Loading...</div>
+              <div id="EoHT">Loading...</div>
+              <div id="training">Loading...</div>
+              <div class="sidecontent-seperator"></div>
+              <button onclick="toggleSideContent()">Toggle Side Content</button>
+           </div>
+           <div class="maincontent">
+              <div class="title">
+                 <h1 style="text-align: left;">Digital Support Services T-Level</h1>
+              </div>
+              <div class="contentbox">
+                <h1>Lol</h1>
+                <div class="content">
+                  box
+                </div>
+              </div>
+              <div id="PercentageCalc" class="percentageCalc">
+                 <h2>
+                    <table>
+                       <tr style="margin-left:auto;margin-right: auto;">
+                          <td>Marks Awarded</td>
+                          <td><b>/</b></td>
+                          <td>Total Marks</td>
+                       </tr>
+                       <tr>
+                          <td><input type="number" id="num1" style="color:white"></td>
+                          <td><b>/</b></td>
+                          <td><input type="number" id="num2" style="color:white"></td>
+                       </tr>
+                    </table>
+                 </h2>
+                 <button onclick="percentage_1()">Calculate</button><br>
+                 Output: <input type="text" id="value1" readonly style="color:white">
+              </div>
+           </div>
         </div>
-        <div id="PercentageCalc" class="percentageCalc">
-          <h2>
-              <table>
-              <tr style="margin-left:auto;margin-right: auto;"><td>Marks Awarded</td><td><b>/</b></td><td>Total Marks</td></tr>
-              <tr><td><input type="number" id="num1" style="color:white"></td><td><b>/</b></td><td><input type="number" id="num2" style="color:white"></td></tr>
-              </table>
-          </h2>
-          <button onclick="percentage_1()">Calculate</button><br>
-          Output: <input type="text" id="value1" readonly style="color:white">
-        </div>
-      </div>
+        <footer id="footer"></footer>
+     </body>
   </div>
-  <footer id="footer"></footer>
-  </body>
-    </div>
-    <script id="importantDates"></script>
-    <script src="../global/data.js"></script>
-    <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
-    <script>
+  <script id="importantDates"></script>
+  <script src="../global/data.js"></script>
+  <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+  <script>
+     function toggleSideContent() {
+       var sideContent = document.querySelector('.sidecontent');
+       var mainContent = document.querySelector('.maincontent');
+       sideContent.style.display = sideContent.style.display === 'none' ? 'block' : 'none';
+       mainContent.style.width="100%";
+     }
+  </script>
+  <script>
       var x = setInterval(function() {
         document.title="DSSTlevel | Main Menu"
         var now = new Date().getTime();
