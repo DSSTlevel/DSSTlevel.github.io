@@ -14,8 +14,9 @@
         text-decoration: none;
         font-family: "Lato", sans-serif;
       }
-      .percentageCalc {width: 480px;background-color: #1c5f7e;padding: 24px;text-align: center;box-shadow: 2px 2px 8px 2px #386176;margin-left: auto;margin-right: auto;color:white
-      }
+      .percentageCalc {width: 75%;background-color: #2d393e;padding: 24px;text-align: center;box-shadow: 2px 2px 8px 2px #1e3845;margin-left: auto;margin-right: auto;color:white;text-align: center;}
+      .percentageCalc button{width:25%;margin-bottom: 25px;height:30px;font-size:large;background-color: slateblue;color:white;}
+
       .title {
           width: 90%;
           background-image:linear-gradient(45deg, rgb(10, 26, 84), rgb(0, 98, 83));
@@ -117,7 +118,15 @@
                 <h1>What is this website?</h1>
                 <div class="content">
                   This is a website that is comprised of notes and textbook content that I have put together for the DSS T-Level at TMC.
-                  A passion 
+                  A project that has been shapen to provide further information to the class of 2023-24.
+                </div>
+              </div>
+              <div class="contentbox">
+                <h1>Insufficient amount of revision resources?</h1>
+                <div class="content">
+                  You can use my own built Python scripts for free that give a more interactive side of revision or you can purchase the dedicated book for DSS and DBS on Amazon!<br>
+                  Scripts: <a onclick="window.open('https:/\/dsstlevel.github.io/Web/html/codingScripts.html', '_blank')">View</a><br>
+                  Book: <a onclick="window.open('https:/\/www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3P5ROKL5A1OLE','_blank')">Purchase</a><br> 
                 </div>
               </div>
               <div class="contentbox">
@@ -127,34 +136,27 @@
                 </div>
               </div>
               <div class="contentbox">
-                <h1>Lol</h1>
+                <h1>Percentage Calculator</h1>
                 <div class="content">
-                  box
+                  <div id="PercentageCalc" class="percentageCalc">
+                    <h2>
+                       <table style="margin-left:auto;margin-right:auto">
+                          <tr style="margin-left:auto;margin-right: auto;">
+                             <td>Marks Awarded</td>
+                             <td><b>/</b></td>
+                             <td>Total Marks</td>
+                          </tr>
+                          <tr>
+                             <td><input type="number" id="num1" style="color:white"></td>
+                             <td><b>/</b></td>
+                             <td><input type="number" id="num2" style="color:white"></td>
+                          </tr>
+                       </table>
+                    </h2>
+                    <button onclick="percentage_1()">Calculate</button><br>
+                    Output: <input type="text" id="value1" readonly style="color:white">
+                 </div>
                 </div>
-              </div>
-              <div class="contentbox">
-                <h1>Lol</h1>
-                <div class="content">
-                  box
-                </div>
-              </div>
-              <div id="PercentageCalc" class="percentageCalc">
-                 <h2>
-                    <table>
-                       <tr style="margin-left:auto;margin-right: auto;">
-                          <td>Marks Awarded</td>
-                          <td><b>/</b></td>
-                          <td>Total Marks</td>
-                       </tr>
-                       <tr>
-                          <td><input type="number" id="num1" style="color:white"></td>
-                          <td><b>/</b></td>
-                          <td><input type="number" id="num2" style="color:white"></td>
-                       </tr>
-                    </table>
-                 </h2>
-                 <button onclick="percentage_1()">Calculate</button><br>
-                 Output: <input type="text" id="value1" readonly style="color:white">
               </div>
            </div>
         </div>
