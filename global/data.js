@@ -94,9 +94,39 @@ else {
  location='https://dsstlevel.github.io/Web/WebsiteClose.html'
 }
 
-document.getElementById('importantDates').innerHTML=["const dateRN=new Date().getDay()",
-"var x = setInterval(function() {var now = new Date().getTime();var countDownDate = new Date('Jul 7, 2023 15:00:00').getTime();var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);",
-"document.getElementById('EoT').innerHTML =  `Unidentified`/*`End of Term\n${days} Days, ${hours}:${minutes}:${seconds}`*/}, 1000);",
-"var x = setInterval(function() {var now = new Date().getTime();var countDownDate = new Date('Sep 7, 2023 00:00:00').getTime();var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);",
-"document.getElementById('EoHT').innerHTML = `End of Half Term<br>${days} Days, ${hours}:${minutes}:${seconds}`}, 1000);", "var x = setInterval(function() {var now = new Date().getTime();var countDownDate = new Date('Sep 09, 2023 11:00:00').getTime();var distance = countDownDate - now;var days = Math.floor(distance / (1000 * 60 * 60 * 24));var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));var seconds = Math.floor((distance % (1000 * 60)) / 1000);",
-"document.getElementById('training').innerHTML = `Training Round<br>${days} Days, ${hours}:${minutes}:${seconds}`}, 1000);"].join('\n')
+document.getElementById('importantDates').innerHTML=`  const dateRN = new Date().getDay();
+setInterval(function() {
+  var now = new Date().getTime();
+  var countDownDate = new Date('Oct 23, 2023 00:00:00').getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById('EoT').innerHTML = "Unidentified"/*"End of Term<br>" + days + " Days, " + hours + ":" + minutes + ":" + seconds*/;
+}, 1000);
+
+setInterval(function() {
+  var now = new Date().getTime();
+  var countDownDate = new Date('Sep 11, 2023 00:00:00').getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById('EoHT').innerHTML = "End of Half Term<br>" + days + " Days, " + hours + ":" + minutes + ":" + seconds;
+}, 1000);
+
+setInterval(function() {
+  var now = new Date().getTime();
+  var countDownDate = new Date('Sep 9, 2023 11:00:00').getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById('training').innerHTML = "Training Round<br>" + days + " Days, " + hours + ":" + minutes + ":" + seconds;
+}, 1000);`
