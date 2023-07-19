@@ -17,7 +17,7 @@
   }
   
   .navbar-link {
-    color: #ffffff;
+    color: white;
     display: block;
     padding:0;
     padding-left: 40px;
@@ -26,7 +26,7 @@
   }
   
   .dropdown-menu {
-    background-color: #fff;
+    background-color: #292d3e;
     display: none;
     list-style-type: none;
     margin: 0;
@@ -38,13 +38,17 @@
   }
   
   .dropdown-link {
-    color: #333;
+    color: #ffffff;
     display: block;
     padding: 5px;
     text-decoration: none;
     font-size: 100%;
   }
   
+.dropdown-link:hover {
+  background-color: rgb(21, 126, 152);
+}
+
   .navbar-item:hover .dropdown-menu {
     display: block;
   }
