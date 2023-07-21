@@ -90,7 +90,7 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
       </li>
     </ul>
   </nav>
-<link rel="stylesheet" href="../global/g.css">
+<link rel="stylesheet" href="https://dsstlevel.github.io/global/g.css">
 <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
   `
 }
