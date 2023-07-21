@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="../global/settings.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="../global/g.css">
     <link rel="icon" type="image/x-icon" href="Images/dsslogo.png">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="refresh" content="500">
     <style>
-      body {
-        background-color: #111;
-        margin: 0;
-        text-decoration: none;
-        font-family: "Lato", sans-serif;
-      }
       .percentageCalc {width: 75%;background-color: #2d393e;padding: 24px;text-align: center;box-shadow: 2px 2px 8px 2px #1e3845;margin-left: auto;margin-right: auto;color:white;text-align: center;}
       .percentageCalc button{width:25%;margin-bottom: 25px;height:30px;font-size:large;background-color: slateblue;color:white;}
 
@@ -33,7 +26,7 @@
           margin: 35px 0;
           background-color:#16181a;
           border-radius: 35px;
-          border-style: inset;
+          border-style: groove;
           border-color:rgb(255, 2, 2);
           padding-top:10px;
           padding-bottom:26px;
@@ -61,7 +54,7 @@
         font-size:larger;
         background-color: rgb(29, 26, 54);
         border-radius: 15px;
-        border-style: inset;
+        border-style: groove;
         border-color: rgb(8, 38, 146);
         color:white;
         font-family: "Arial";
@@ -71,18 +64,16 @@
       
       input[type=number] {width:75%;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:white}
       input[type=text] {width:fit-content;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:greenyellow;}
-
-      .newsbar{padding-top:5px;padding-bottom:5px;background-color: rgb(38, 88, 144);color:white;text-decoration:none;}
-      .newsbar-content{margin-left:auto;margin-right:auto;max-width: 1150px;text-align: center;}
-      .sidecontent{width: 17%;text-align: center;overflow-y: scroll;background-color: rgb(25, 27, 37);color:rgb(255, 255, 255)}
-      .sidecontent a{color:rgb(255, 255, 255);}
-      .sidecontent-seperator{background-color:rgb(109, 35, 35);width:95%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
-      .maincontent{width: 83%; background-color: rgb(12, 13, 14);}
     </style>
   </head>
-  <div id="navigbar"></div>
   <div style="overflow: auto;">
      <body style="color:white;background-color: rgb(0, 0, 0);">
+      <div class="newsbar">
+        <div class="newsbar-content">
+          <marquee>Year 1 is now officially completed! Congratulations everyone! "Smile Always" - Dr Kelman</marquee>
+        </div>
+      </div>
+      <div id="navigbar"></div>
         <div style="display: flex">
            <div class="sidecontent">
               <h2>DSS T-Level Website</h2>
@@ -99,11 +90,6 @@
               <button onclick="toggleSideContent()">Toggle Side Content</button>
            </div>
            <div class="maincontent">
-            <div class="newsbar">
-              <div class="newsbar-content">
-                <marquee>Year 1 is now officially completed! Congratulations everyone! "Smile Always" - Dr Kelman</marquee>
-              </div>
-            </div>
               <div class="title">
                  <h1><img height="100px" src="Images/dsslogo.png"></h1>
               </div>
@@ -303,6 +289,7 @@
         ctx.stroke();
         ctx.rotate(-pos)
       }
+
     </script>
   </body>
 </html>

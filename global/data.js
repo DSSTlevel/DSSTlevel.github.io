@@ -36,7 +36,6 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
   ::-webkit-scrollbar-track {background: black;}
   ::-webkit-scrollbar-thumb {background: rgb(0, 51, 128);}
   ::-webkit-scrollbar-thumb:hover {background: rgb(0, 53, 96);}
-  * {box-sizing: border-box;}
   
   </style>
   <nav class="navbar">
@@ -67,6 +66,9 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
         <a href="https://dsstlevel.github.io" class="navbar-link"><i class="fa fa-home" style="font-size:20px;"></i></a>
       </li>
       <li class="navbar-item">
+        <a class="navbar-link" id='darkmode-icon'><i class="fa fa-moon" style="font-size:20px;"></i></a>
+      </li>
+      <li class="navbar-item">
         <a href="#" class="navbar-link"><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-newspaper"></i></a>
         <ul class="dropdown-menu">
           <li><a href="https://www.netacad.com/portal/learning" target="_blank" class="dropdown-link">Cisco</a></li>
@@ -88,10 +90,29 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
       </li>
     </ul>
   </nav>
+<link rel="stylesheet" href="../global/g.css">
+<script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
   `
 }
 else {
  location='https://dsstlevel.github.io/Web/WebsiteClose.html'
+}
+
+
+const DarkMode = localStorage.getItem("DarkMode");
+if (DarkMode === "true") {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+}
+document.getElementById('darkmode-icon').onclick = function() {
+    const body = document.body;
+    const DarkMode = localStorage.getItem("DarkMode");
+    body.classList.toggle("dark-mode");
+    if (DarkMode==="true") {
+        localStorage.setItem("DarkMode", "false");
+    } else {
+        localStorage.setItem("DarkMode","true");
+    }
 }
 
 document.getElementById('importantDates').innerHTML=`  const dateRN = new Date().getDay();
