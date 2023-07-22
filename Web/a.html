@@ -7,10 +7,18 @@
 
 <!-- Your website content here -->
 
-<audio controls autoplay>
+<audio id="audioPlayer" controls>
     <source src="../login.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+
+<script>
+  // JavaScript to trigger audio playback on page load
+
+    var audioPlayer = document.getElementById("audioPlayer");
+    audioPlayer.play()
+
+</script>
 
 </body>
 </html>
