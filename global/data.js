@@ -1,18 +1,3 @@
-function reloadMain() {
-  if (localStorage.getItem('LegacyMain')==="true" && window.location.pathname=="https://dsstlevel.github.io/") {
-    window.location='https://dsstlevel.github.io/Web/LegacyMain.html'
-  } else {
-    if (window.location.pathname="https://dsstlevel.github.io/") {
-      window.location="https://dsstlevel.github.io/Web/Main.html"
-  
-    }
-  }
-}
-
-if (window.location=="https://dsstlevel.github.io") {
-  reloadMain()
-}
-
 function closeTime() {
   var isTrue=false
   if (new Date().getTime() > new Date('Jun 14, 2023 13:00:00').getTime()&&new Date().getTime() < new Date('Jun 14, 2023 15:00:00').getTime()) var isTrue=true
