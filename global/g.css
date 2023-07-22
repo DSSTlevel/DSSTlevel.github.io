@@ -47,16 +47,25 @@ body {
 
 .navbar {
     background-color: var(--NavigationBar);
-    text-align: center;
   }
   .navbar-list {
     display: inline-flex;
-    list-style-type:none;
+    list-style-type: none;
+    text-align:left;
   }
+  
+  .navbar-list-right {
+    display: inline-flex;
+    list-style-type: none;
+    position:absolute;
+    right: 5px;
+  }
+
   .navbar-item {
     position: relative;
   }
-  .navbar-link {
+  
+  .navbar-list .navbar-link {
     color: var(--NavigationBarLink);
     display: block;
     font-size:24px;
@@ -65,7 +74,18 @@ body {
     padding-right: 40px;
     text-decoration: none;
   }
+
+  .navbar-list-right .navbar-link {
+    color: var(--NavigationBarLink);
+    display: block;
+    font-size:24px;
+    padding:0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+  }
   .dropdown-menu {
+    text-align:center;
     border-radius: 10px;
     background-color: var(--DropdownMenu);
     display: none;
@@ -95,10 +115,10 @@ body {
     display: block;
   }
   
-/* Fix for Info dropdown menu */
+  /*
   .navbar-item:last-child .dropdown-menu {
     left:-100px;
-  }
+  }*/
 
 /*Sections*/
 .inlinetext-padding{padding-top:16px!important;padding-bottom:16px!important}
@@ -119,3 +139,27 @@ body {
 .sidecontent-seperator{background-color:rgb(109, 35, 35);width:95%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
 
 .maincontent{width: 83%; background-color: var(--MainContentBackground); color: var(--MainContentColor)}
+
+.settings-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ad0073;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  width:20%;
+  color:white;
+  padding:15px;
+  margin: 5px
+}
+
+.settings-menu h2{
+  padding: 0;
+  margin: 0;
+  margin-bottom:15px
+}
+
+.settings-menu button{
+  font-size: larger;
+  border-radius: 25px;
+  background-color:rgb(216, 175, 41);
+}

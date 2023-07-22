@@ -1,25 +1,14 @@
-
-document.getElementById("footer").innerHTML = `
-<style>
-body {background-color: #111;}
-/*::-webkit-scrollbar {width:1px}*/
-@media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
-</style>
-<div class="footer-basic">
-  <footer>
-    <ul class="list-inline">
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/index.html">Home</a></li>
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/changelog.html">Changelog</a></li>
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/README.md">About</a></li>
-        <li class="list-inline-item"><a href="#">Top of Page</a></li>
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/html/Sitemap.html">Sitemap</a></li>
-    </ul>
-    <p class="copyright">© DM at TMC</p>
-  </footer>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>function autoRefresh() {window.location = window.location.href;}setInterval('autoRefresh()', 600000);</script>
-`
+function reloadMain() {
+  if (localStorage.getItem('LegacyMain')==="true" && window.location.pathname.includes('index.html')) {
+    window.location='https://dsstlevel.github.io/Web/LegacyMain.html'
+  } else {
+    if (window.location.pathname.includes('index.html')) {
+      window.location="https://dsstlevel.github.io/Web/Main.html"
+  
+    }
+  }
+}
+reloadMain()
 
 function closeTime() {
   var isTrue=false
@@ -63,12 +52,6 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
         </ul>
       </li>
       <li class="navbar-item">
-        <a href="https://dsstlevel.github.io" class="navbar-link"><i class="fa fa-home" style="font-size:20px;"></i></a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" id='darkmode-icon'><i class="fa fa-moon" style="font-size:20px;"></i></a>
-      </li>
-      <li class="navbar-item">
         <a href="#" class="navbar-link"><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-newspaper"></i></a>
         <ul class="dropdown-menu">
           <li><a href="https://www.netacad.com/portal/learning" target="_blank" class="dropdown-link">Cisco</a></li>
@@ -85,22 +68,37 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
         <a href="#" class="navbar-link">Info</a>
         <ul class="dropdown-menu">
           <li><a href="https://dsstlevel.github.io/Web/html/year1" class="dropdown-link">Examination Details</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/altontowers" class="dropdown-link">Alton Towers</a></li>
+          <li><a href="https://dsstlevel.github.io/Web/html/altontowers" class="dropdown-link">Alton Towers</a></li>
         </ul>
       </li>
     </ul>
+    <ul class="navbar-list-right">
+      <li class="navbar-item">
+        <a href="https://dsstlevel.github.io" class="navbar-link"><i class="fa fa-home" style="font-size:20px;"></i></a>
+      </li>
+      <li class="navbar-item">
+        <a class="navbar-link" id='darkmode-icon'><i class="fa fa-moon" style="font-size:20px;"></i></a>
+      </li>
+      <li class="navbar-item">
+        <a class="navbar-link" id="settings-cog-icon"><i class="fa fa-cog" style="font-size:20px;"></i></a>
+      </li>
+    </ul>
   </nav>
-<link rel="stylesheet" href="https://dsstlevel.github.io/global/g.css">
+<link rel="stylesheet" href="../global/g.css">
 <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
-  `
+<div class="settings-menu" id="settings-menu">
+<h2>Settings</h2>
+<a>Legacy Home Page</a><br>
+<button id="legacybutton">Newest</button>
+</div>
+</div>
+`
 }
 else {
  location='https://dsstlevel.github.io/Web/WebsiteClose.html'
 }
 
-
-const DarkMode = localStorage.getItem("DarkMode");
-if (DarkMode === "true") {
+if (localStorage.getItem("DarkMode") === "true") {
     const body = document.body;
     body.classList.toggle("dark-mode");
 }
@@ -114,6 +112,29 @@ document.getElementById('darkmode-icon').onclick = function() {
         localStorage.setItem("DarkMode","true");
     }
 }
+
+var vis = false
+document.getElementById("settings-cog-icon").onclick = function() {
+  if (vis==false) {
+    vis=true
+    document.getElementById("settings-menu").style.display='block'
+  } else {
+    vis=false
+    document.getElementById("settings-menu").style.display='none'
+  }
+}
+
+document.getElementById("legacybutton").onclick = function() {
+  if (localStorage.getItem('LegacyMain')==="true") {
+    localStorage.setItem("LegacyMain","false")
+    window.location="https://dsstlevel.github.io/Web/Main.html"
+  } else {
+    localStorage.setItem("LegacyMain","true")
+    window.location="https://dsstlevel.github.io/Web/LegacyMain.html"
+  }
+}
+
+if (localStorage.getItem("LegacyMain")==="true") {document.getElementById("legacybutton").textContent='Newest'} else {document.getElementById("legacybutton").textContent='Legacy'} 
 
 document.getElementById('importantDates').innerHTML=`  const dateRN = new Date().getDay();
 setInterval(function() {
@@ -151,3 +172,26 @@ setInterval(function() {
 
   document.getElementById('training').innerHTML = "Training Round<br>" + days + " Days, " + hours + ":" + minutes + ":" + seconds;
 }, 1000);`
+
+document.getElementById("footer").innerHTML = `
+<style>
+body {background-color: #111;}
+/*::-webkit-scrollbar {width:1px}*/
+@media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
+</style>
+<div class="footer-basic">
+  <footer>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/index.html">Home</a></li>
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/html/changelog.html">Changelog</a></li>
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/README.md">About</a></li>
+        <li class="list-inline-item"><a href="#">Top of Page</a></li>
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/html/Sitemap.html">Sitemap</a></li>
+    </ul>
+    <p class="copyright">© DM at TMC</p>
+  </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>function autoRefresh() {window.location = window.location.href;}setInterval('autoRefresh()', 600000);</script>
+`
+
