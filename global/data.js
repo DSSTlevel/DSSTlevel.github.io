@@ -1,5 +1,5 @@
 function reloadMain() {
-  if (localStorage.getItem('LegacyMain')==="true" && window.location.pathname=="https://dsstlevel.github.io") {
+  if (localStorage.getItem('LegacyMain')==="true" && window.location.pathname=="https://dsstlevel.github.io/") {
     window.location='https://dsstlevel.github.io/Web/LegacyMain.html'
   } else {
     if (window.location.pathname="https://dsstlevel.github.io/") {
@@ -8,7 +8,6 @@ function reloadMain() {
     }
   }
 }
-reloadMain()
 
 function closeTime() {
   var isTrue=false
