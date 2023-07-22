@@ -1,8 +1,8 @@
 function reloadMain() {
-  if (localStorage.getItem('LegacyMain')==="true" && window.location.pathname.includes('index.html')) {
+  if (localStorage.getItem('LegacyMain')==="true" && window.location.pathname=="https://dsstlevel.github.io") {
     window.location='https://dsstlevel.github.io/Web/LegacyMain.html'
   } else {
-    if (window.location.pathname.includes('index.html')) {
+    if (window.location.pathname="https://dsstlevel.github.io/") {
       window.location="https://dsstlevel.github.io/Web/Main.html"
   
     }
