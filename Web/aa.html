@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .infobox {
+            border-radius: 25px;
+            border-color: rgb(132, 66, 219);
+            box-shadow: 1px 2px 18px 2px #c400c1;
+            width: fit-content;
+            border-style: groove;
+            color: white;
+            margin-top:50px;
+            background-color: rgb(16, 19, 28);
+        }
+    </style>
+</head>
+<body>
+    <div id="navigbar"></div>
+    <div class="infobox">
+        <div>
+            <h2>DSS T-Level Website</h2>
+            <div style="text-align:center;font-size:x-large;color:rgb(38, 0, 255)"><b>End Of Day</b></div>
+            <div style="text-align:center;font-size:x-large;color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</div>
+            <div style="width:100%;margin-left: auto;margin-right: auto;">
+                <canvas id="canvas" width="150"></canvas>
+            </div>
+            <div class="sidecontent-seperator"></div>
+            <div id="EoT">Loading...</div>
+            <div id="EoHT">Loading...</div>
+            <div id="training">Loading...</div>
+            <div class="sidecontent-seperator"></div>
+            <!--<button onclick="toggleSideContent()">Toggle Side Content</button>-->
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div id="importantDates"></div>
+</body>
+<script src="../global/data.js"></script>
+<script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+<script>
+       var x = setInterval(function() {
+        document.title="DSSTlevel | Main Menu"
+        var now = new Date().getTime();
+        var startTime = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 9, 0, 0).getTime(),
+          newd = new Date();
+        if (new Date().getDay() == 2) {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 17, 0, 0).getTime();
+        } else if (new Date().getDay() == 3) {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();
+        } else if (new Date().getDay() == 4) {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 12, 0, 0).getTime();
+        } else if (new Date().getDay() == 5) {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();
+        } else {
+          var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), 15, 0, 0).getTime();
+        }
+        if (now < startTime || now > countDownDate) {
+          document.getElementById("timetableCountdown").innerHTML = "The day hasn't begun yet"
+        } else {
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24)),
+            hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+            seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          if (new Date().getDay() == 2) {document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+            document.title=`DSSTlevel | ${hours}hr ${minutes}m ${seconds}s`;}
+            else if (new Date().getDay() == 3) {document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;document.title=`DSSTlevel | ${hours}hr ${minutes}m ${seconds}s`}
+          else if (new Date().getDay() == 4) {document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;document.title=`DSSTlevel | ${hours}hr ${minutes}m ${seconds}s`}
+          else if (new Date().getDay() == 5) {document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;document.title=`DSSTlevel | ${hours}hr ${minutes}m ${seconds}s`}
+          else {document.getElementById('timetableCountdown').innerHTML = 'Its the Weekend! 😃';}
+          if (distance < 0) {
+            clearInterval(y);
+            document.getElementById("timetableCountdown").innerHTML = "The Day is over";
+            setInterval(function() {}, 5000)
+          }
+        }
+      }, 1000);
+
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      var radius = canvas.height / 2;
+      ctx.translate(radius, radius);
+      radius = radius * 0.90;
+      setInterval(drawClock, 1000);
+
+      function drawClock() {
+        drawFace(ctx, radius);
+        drawNumbers(ctx, radius);
+        drawTime(ctx, radius)
+      }
+
+      function drawFace(ctx, radius) {
+        var grad;
+        ctx.beginPath();
+        ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = "lightgray"; //Background
+        ctx.fill();
+        grad = ctx.createRadialGradient(0, 0, radius * 0.9, 0, 0, radius * 1.05);
+        grad.addColorStop(0, 'black'); //Hands
+        grad.addColorStop(0.5, 'grey'); //InnerRing
+        grad.addColorStop(1, 'black'); //OuterRing
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = radius * 0.1;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+        ctx.fillStyle = 'black'; //Text
+        ctx.fill()
+      }
+
+      function drawNumbers(ctx, radius) {
+        var ang;
+        var num;
+        ctx.font = radius * 0.15 + "Comic Sans MS";
+        ctx.textBaseline = "middle";
+        ctx.textAlign = "center";
+        for (num = 1; num < 13; num++) {
+          ang = num * Math.PI / 6;
+          ctx.rotate(ang);
+          ctx.translate(0, -radius * 0.85);
+          ctx.rotate(-ang);
+          ctx.fillText(num.toString(), 0, 0);
+          ctx.rotate(ang);
+          ctx.translate(0, radius * 0.85);
+          ctx.rotate(-ang)
+        }
+      }
+
+      function drawTime(ctx, radius) {
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        hour = hour % 12;
+        hour = (hour * Math.PI / 6) + (minute * Math.PI / (6 * 60)) + (second * Math.PI / (360 * 60));
+        drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+        minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+        drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+        second = (second * Math.PI / 30);
+        drawHand(ctx, second, radius * 0.9, radius * 0.02)
+      }
+
+      function drawHand(ctx, pos, length, width) {
+        ctx.beginPath();
+        ctx.lineWidth = width;
+        ctx.lineCap = "round";
+        ctx.moveTo(0, 0);
+        ctx.rotate(pos);
+        ctx.lineTo(0, -length);
+        ctx.stroke();
+        ctx.rotate(-pos)
+      }
+</script>
+</html>
