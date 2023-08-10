@@ -60,6 +60,26 @@
         font-weight: bold;
         box-shadow: 1px 2px 8px 2px #1d05bc;
       }
+
+      .infobox {
+          float: right;
+          margin: 1%;
+          border-radius: 25px;
+          border-color: rgb(132, 66, 219);
+          box-shadow: 1px 2px 18px 2px #c400c1;
+          width: fit-content;
+          height: fit-content;
+          border-style: groove;
+          color: white;
+          background-color: rgb(16, 19, 28);
+      }
+
+      .infobox .content {
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+      }
+
       
       input[type=number] {width:75%;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:white}
       input[type=text] {width:fit-content;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:greenyellow;}
@@ -74,21 +94,21 @@
       </div>
       <div id="navigbar"></div>
         <div style="display: flex">
-           <div class="sidecontent">
-              <h2>DSS T-Level Website</h2>
-              <div style="text-align:center;font-size:x-large;color:rgb(38, 0, 255)"><b>End Of Day</b></div>
-              <div style="text-align:center;font-size:x-large;color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</div>
-              <div style="width:100%;margin-left: auto;margin-right: auto;">
-                 <canvas id="canvas" width="150"></canvas>
-              </div>
-              <div class="sidecontent-seperator"></div>
-              <div id="EoT">Loading...</div>
-              <div id="EoHT">Loading...</div>
-              <div id="training">Loading...</div>
-              <div class="sidecontent-seperator"></div>
-              <!--<button onclick="toggleSideContent()">Toggle Side Content</button>-->
-           </div>
-           <div class="maincontent">
+          <div class="maincontent">
+              <div class="infobox">
+                <div class="content">
+                    <h2>DSS T-Level Website</h2>
+                    <div style="text-align:center;font-size:x-large;color:rgb(38, 0, 255)"><b>End Of Day</b></div>
+                    <div style="text-align:center;font-size:x-large;color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</div>
+                    <div style="width:100%;margin-left: auto;margin-right: auto;">
+                        <canvas id="canvas" width="150"></canvas>
+                    </div>
+                    <div class="sidecontent-seperator"></div>
+                    <div id="EoT">Loading...</div>
+                    <div id="EoHT">Loading...</div>
+                    <div id="training">Loading...</div>
+                  </div>
+                </div>
               <div class="title">
                  <h1><img height="100px" src="Images/dsslogo.png"></h1>
               </div>
@@ -159,10 +179,8 @@
   <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
   <script>
      function toggleSideContent() {
-       var sideContent = document.querySelector('.sidecontent');
-       var mainContent = document.querySelector('.maincontent');
+       var sideContent = document.querySelector('.infobox');
        sideContent.style.display = sideContent.style.display === 'none' ? 'block' : 'none';
-       mainContent.style.width="100%";
      }
   </script>
   <script>

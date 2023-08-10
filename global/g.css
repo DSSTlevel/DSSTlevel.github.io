@@ -139,9 +139,9 @@ body {
 .sidecontent{width: 17%;text-align: center;overflow-y: scroll;background-color: var(--SideContentBackground);color: var(--SideContentColor);}
 .sidecontent a{color: var(--SideContentColor);}
 
-.sidecontent-seperator{background-color:rgb(109, 35, 35);width:95%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
+.sidecontent-seperator{background-color:rgb(109, 35, 35);width:90%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
 
-.maincontent{width: 83%; background-color: var(--MainContentBackground); color: var(--MainContentColor)}
+.maincontent{width: 100%; background-color: var(--MainContentBackground); color: var(--MainContentColor)}
 
 .settings-menu {
   display: none;
