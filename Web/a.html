@@ -61,18 +61,23 @@ button:hover {
         const submitButton = document.getElementById('submit-btn');
         const message = document.getElementById('message');
         const contentContainer = document.getElementById('content-container');
-        
         const correctPassword = 'yourpassword';
-        
-        submitButton.addEventListener('click', () => {
+
+        function password() {
             const enteredPassword = passwordInput.value;
-        
             if (enteredPassword === correctPassword) {
                 showProtectedContent();
             } else {
                 message.textContent = 'Incorrect password. Please try again.';
             }
-        });
+        }
+
+        passwordInput.addEventListener("keypress", (event)=>{
+            if (event.key == "Enter") {
+                password()
+            }
+        })
+        submitButton.addEventListener('click', () => {password()})
         
         function showProtectedContent() {
             const passwordContainer = document.querySelector('.password-container');

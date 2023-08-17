@@ -62,8 +62,7 @@
       }
 
       .infobox {
-          float: right;
-          margin: 1%;
+          position: absolute;;
           border-radius: 25px;
           border-color: rgb(132, 66, 219);
           box-shadow: 1px 2px 18px 2px #c400c1;
@@ -79,8 +78,6 @@
           margin-right: auto;
           text-align: center;
       }
-
-      
       input[type=number] {width:75%;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:white}
       input[type=text] {width:fit-content;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:greenyellow;}
     </style>
@@ -95,9 +92,9 @@
       <div id="navigbar"></div>
         <div style="display: flex">
           <div class="maincontent">
-              <div class="infobox">
+              <div class="infobox" id="infobox">
                 <div class="content">
-                    <h2>DSS T-Level Website</h2>
+                    <h2 id="infoboxheader">DSS T-Level Website</h2>
                     <div style="text-align:center;font-size:x-large;color:rgb(38, 0, 255)"><b>End Of Day</b></div>
                     <div style="text-align:center;font-size:x-large;color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</div>
                     <div style="width:100%;margin-left: auto;margin-right: auto;">
@@ -178,12 +175,10 @@
   <script src="../global/data.js"></script>
   <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
   <script>
-     function toggleSideContent() {
-       var sideContent = document.querySelector('.infobox');
-       sideContent.style.display = sideContent.style.display === 'none' ? 'block' : 'none';
-     }
-  </script>
-  <script>
+      function toggleSideContent() {
+         var sideContent = document.querySelector('.infobox');
+         sideContent.style.display = sideContent.style.display === 'none' ? 'block' : 'none';
+      }
       var x = setInterval(function() {
         document.title="DSSTlevel | Main Menu"
         var now = new Date().getTime();
@@ -232,6 +227,7 @@
             output.value=`${percentage}%`
         }
       }
+
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
       var radius = canvas.height / 2;
@@ -306,6 +302,47 @@
         ctx.stroke();
         ctx.rotate(-pos)
       }
+
+      // Make the DIV element draggable:
+dragElement(document.getElementById("infobox"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id)) {
+    document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
     </script>
   </body>
 </html>
