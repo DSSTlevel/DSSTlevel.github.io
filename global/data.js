@@ -115,10 +115,10 @@ document.getElementById("settings-cog-icon").onclick = function() {
 document.getElementById("legacybutton").onclick = function() {
   if (localStorage.getItem('LegacyMain')==="true") {
     localStorage.setItem("LegacyMain","false")
-    window.location="https://dsstlevel.github.io/Web/Main.html"
+    window.location="https://dsstlevel.github.io/Web/Main"
   } else {
     localStorage.setItem("LegacyMain","true")
-    window.location="https://dsstlevel.github.io/Web/LegacyMain.html"
+    window.location="https://dsstlevel.github.io/Web/LegacyMain"
   }
 }
 
@@ -170,11 +170,9 @@ body {background-color: #111;}
 <div class="footer-basic">
   <footer>
     <ul class="list-inline">
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/index.html">Home</a></li>
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/html/changelog.html">Changelog</a></li>
+        <li class="list-inline-item"><a href="https://dsstlevel.github.io/">Home</a></li>
         <li class="list-inline-item"><a href="https://dsstlevel.github.io/README.md">About</a></li>
         <li class="list-inline-item"><a href="#">Top of Page</a></li>
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/Web/html/Sitemap.html">Sitemap</a></li>
     </ul>
     <p class="copyright">© DM at TMC</p>
   </footer>
