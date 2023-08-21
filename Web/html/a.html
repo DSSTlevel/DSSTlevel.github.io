@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSSTlevel | Digital Analysis</title>
+    <link rel="icon" type="image/x-icon" href="../Images/dsslogo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../global/g.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            background-color: black;
+            color: rgb(246, 255, 217);
+            background-image: url('../Images/background3.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .side {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .main {
+            flex: 3;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        .side h3, .main h1, .main h2, .main h3 {
+            border-bottom: 1px solid white;
+            padding-bottom: 10px;
+        }
+
+        .side ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .side li {
+            margin-bottom: 10px;
+        }
+
+        .main p, .main pre {
+            margin: 10px 0;
+        }
+
+        .python, .pseudocode {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .python {
+            background-color: rgb(100, 100, 100);
+            color: orange;
+        }
+
+        .pseudocode {
+            background-color: rgb(89, 89, 89);
+            color: deepskyblue;
+        }
+
+        .flowchart {
+            width: 60%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="navigbar"></div>
+    <div class="container">
+        <div class="side">
+            <h3>Content</h3>
+            <ul>
+                <li><a href="#Algorithms">Algorithms</a></li>
+                <li><a href="#Decomposition">Decomposition</a></li>
+                <li><a href="#PatternRecog">Pattern Recognition</a></li>
+                <li><a href="#Abstraction">Abstraction</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1 id="Algorithms">Algorithms</h1>
+            <p>An algorithm is a set of instructions to solve a problem.</p>
+            <!-- More content about algorithms and their characteristics -->
+            
+            <h2>Computational Thinking</h2>
+            
+            <h3 id="Decomposition">Decomposition</h3>
+            <p>The breaking down of tasks or steps into smaller ones for manageability.</p>
+            <!-- Process details -->
+            
+            <h3 id="PatternRecog">Pattern Recognition</h3>
+            <p>The analysis of decomposed tasks or steps to find patterns in the steps or tasks.</p>
+            <!-- Process details -->
+            
+            <h3 id="Abstraction">Abstraction</h3>
+            <p>Removing or filtering unwanted or unnecessary tasks or steps to focus on the key ones.</p>
+            <!-- Process details -->
+            
+            <h3>Variables, Constants, Pseudocode, and Flowchart</h3>
+            <p>Explanation of variables, constants, pseudocode, and flowchart with code examples.</p>
+            <!-- Code examples and explanations -->
+            
+            <div class="python">
+                <!-- Python code example -->
+            </div>
+            
+            <div class="pseudocode">
+                <!-- Pseudocode example -->
+            </div>
+            
+            <img src="../Images/flowchartDiagram.png" alt="Flowchart Example" class="flowchart">
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="../../global/data.js"></script>
+    <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+</body>
+</html>

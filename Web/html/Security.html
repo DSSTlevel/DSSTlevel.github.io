@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <title>DSSTlevel | Security</title>
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="Images/dsslogo.png">
+    <link rel="stylesheet" href="../../global/g.css">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="refresh" content="500">
-    <link rel="icon" type="image/x-icon" href="../Images/dsslogo.png">
-<style>
-    body {font-family:'Times New Roman', Times, serif;margin:0;background-color:black;color:rgb(246, 255, 217);background-image: url('../Images/background3.png');background-repeat: no-repeat;background-size:cover;}
-        @media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
-        .glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color:snow; /*background-color: rgba(0, 0, 0,0.1);*/;border-radius: 5px;}
-        @keyframes glowWhite {from{text-shadow: 0 0 15px #fff, 0 0 15px #fff}to{text-shadow: 0 0 15px #fff, 0 0 15px #fff}}
-        :root {--bgClrFront: grey;--txtClrFront: black; --bgClrBack: darkgrey; --txtClrBack: black;}
-        .flip-card {perspective: 1000px;height: 300px;width: 250px;}.flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.6s;transform-style: preserve-3d;}.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}.flip-card-front, .flip-card-back {position: absolute;width: 100%;height: 100%;backface-visibility: hidden;}.flip-card-front {background-color: var(--bgClrFront);color: var(--txtClrFront);}.flip-card-back {background-color: var(--bgClrBack);color: var(--txtClrBack);transform: rotateY(180deg);}
-        </style></head>
-<link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="../../global/g.css">
-<div id="navigbar"></div>
-<div style="overflow: auto";>
-<body style="font-size:larger;">
-<div class="row">
-<div class="side">
-<h3>Content</h3>
-<a href="#Threats">Security Threats</a><br>
-<a href="#Defences">Security Defences</a><br>
-</div>
-<div class="main">
-    <h1 id="Threats">Threats</h1>
-    <h2>Main</h2><br>
-    Botnets – Network of privatised computers infected with malicious software and controlled as a group with owners’ acknowledgement<br>
-    DoS – An attack that is meant to force shutdown a machine or networking. This is caused by flooding the network with traffic or sending information that triggers a crash.<br>
-    DDoS – Multiple systems target a single network with a DoS attack<br>
-    <h2>Hacking</h2><br>
-    Cross-site scripting – Hacker stores malicious in the data sent from websites search or contact form.<br>
-    Password-cracking software – Process of recovering passwords from data that has been stored or transmitted by a computer system.<br>
-    SQL-injection – Common attack that uses malicious SQL code to backend database manipulation to access information.<br>
-    <h2>Malware</h2><br>
-    Viruses – Computer code designed to spread from device to device. Self-copying threats are usually designed to damage a device or steal data.<br>
-    Trojans – Disguises itself as legitimate code or software. The attacker is then liable to carry out any action that a legitimate user could perform, e.g., delete files.<br>
-    Worms – Subset of trojan horse malware that can self-replicate from one computer to another without human activation after breaching a system.<br>
-    Remote Access Trojans – Designed to allow an attacker to remotely control an infected computer.<br>
-    Key Loggers – Track activities of a keyboard (e.g., track password inputs).<br>
-    Ransomware – Prevents you from accessing your device and the data stored on it, usually encrypting the files.<br>
-    Spyware – Software that installs itself on the computer and starts monitoring your online behaviour with your acknowledgement.<br>
-    Adware – Unwanted software designed to throw adverts up on your screen. Most often within a web browser.<br>
-    <h2>Malicious spam</h2><br>
-    Phishing – Attacker attempts to trick users into doing “the wrong thing”<br>
-    Spear Phishing – Email or electronic scam targeted towards a specific individual, organisation or business.<br>
-    Smishing – Phishing attack carried out over mobile text messaging.<br>
-    Vishing – Phishing attack carried out over the phone.<br>
-    <h2>Non-Technical Threats</h2>
-    Human Error - Physical human performs invalid tasks that are a risk to security.<br>
-    Malicious Employees - Use their access details to obtain information illegaly mainly for financial and personal reasons.<br>
-    Disguised Criminals - Use social engineering techniques to gain access to buildings.<br>
-    Natural Disasters - Environmental factors (such as volcanoes), that can interrupt/impact systems and networks.<br>
-    <h1 id="Defences">Security Defences</h1>
-    National Cyber Security Centre Cyber Essentials - Guidance for businesses or indiviuals to follow for cyber security.<br>
-    Anti-Viruses/Malware - Programs that are designed to prevent, detect and remove viruses and other forms of malware.<br>
-    Firewalls - Mitigate against threats my examining data packets that are sent through.<br>
-    Instrusion detection and prevention systems - designed to expose any attempts by attackers to overcome security controls to compromise data or other resources.
-    Encryption - Scrambling of data for obscurification and the illegibility to intruders.<br> 
-</div>
-</div>
-</body>
-</div>
-<footer id="footer"></footer>
-<script src="../../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: rgb(13, 15, 16);
+        }
+    </style>
+  </head>
+  <div style="overflow: auto;">
+    <body>
+        <div id="navigbar"></div>
+            <div style="display: flex">
+                <div class="maincontent">
+                    <div class="mainbox">
+                        <div class="sidecontent">
+                            <h3>Content</h3>
+                            <ul>
+                                <li><a href="#Threats">Security Threats</a></li>
+                                <li><a href="#Defences">Security Defences</a></li>
+                            </ul>
+                        </div>
+                        <div class="actualcontent">
+                            <h1 id="Threats">Threats</h1>
+                            <h2>Main</h2>
+                            Botnets – Network of privatised computers infected with malicious software and controlled as a group with owners’ acknowledgement<br>
+                            DoS – An attack that is meant to force shutdown a machine or networking. This is caused by flooding the network with traffic or sending information that triggers a crash.<br>
+                            DDoS – Multiple systems target a single network with a DoS attack<br>
+                            <h2>Hacking</h2>
+                            Cross-site scripting – Hacker stores malicious in the data sent from websites search or contact form.<br>
+                            Password-cracking software – Process of recovering passwords from data that has been stored or transmitted by a computer system.<br>
+                            SQL-injection – Common attack that uses malicious SQL code to backend database manipulation to access information.<br>
+                            <h2>Malware</h2>
+                            Viruses – Computer code designed to spread from device to device. Self-copying threats are usually designed to damage a device or steal data.<br>
+                            Trojans – Disguises itself as legitimate code or software. The attacker is then liable to carry out any action that a legitimate user could perform, e.g., delete files.<br>
+                            Worms – Subset of trojan horse malware that can self-replicate from one computer to another without human activation after breaching a system.<br>
+                            Remote Access Trojans – Designed to allow an attacker to remotely control an infected computer.<br>
+                            Key Loggers – Track activities of a keyboard (e.g., track password inputs).<br>
+                            Ransomware – Prevents you from accessing your device and the data stored on it, usually encrypting the files.<br>
+                            Spyware – Software that installs itself on the computer and starts monitoring your online behaviour with your acknowledgement.<br>
+                            Adware – Unwanted software designed to throw adverts up on your screen. Most often within a web browser.<br>
+                            <h2>Malicious spam</h2>
+                            Phishing – Attacker attempts to trick users into doing “the wrong thing”<br>
+                            Spear Phishing – Email or electronic scam targeted towards a specific individual, organisation or business.<br>
+                            Smishing – Phishing attack carried out over mobile text messaging.<br>
+                            Vishing – Phishing attack carried out over the phone.<br>
+                            <h2>Non-Technical Threats</h2>
+                            Human Error - Physical human performs invalid tasks that are a risk to security.<br>
+                            Malicious Employees - Use their access details to obtain information illegaly mainly for financial and personal reasons.<br>
+                            Disguised Criminals - Use social engineering techniques to gain access to buildings.<br>
+                            Natural Disasters - Environmental factors (such as volcanoes), that can interrupt/impact systems and networks.<br>
+                            <h1 id="Defences">Security Defences</h1>
+                            National Cyber Security Centre Cyber Essentials - Guidance for businesses or indiviuals to follow for cyber security.<br>
+                            Anti-Viruses/Malware - Programs that are designed to prevent, detect and remove viruses and other forms of malware.<br>
+                            Firewalls - Mitigate against threats my examining data packets that are sent through.<br>
+                            Instrusion detection and prevention systems - designed to expose any attempts by attackers to overcome security controls to compromise data or other resources.<br>
+                            Encryption - Scrambling of data for obscurification and the illegibility to intruders.<br> 
+                        </div>
+                    </div>
+                    <div class="rotatethroughbuttons">
+                        <a href="https://dsstlevel.github.io/Web/html/Legislation">⬅ Legislation</a>
+                        <a href="https://dsstlevel.github.io/">🏠</a>
+                        <a href="https://dsstlevel.github.io/Web/html/Data">Data ➡</a>
+                    </div>
+                </div>
+            </div>
+        <div id="footer"></div>
+    </body>
+  </div>
+  <script src="../../global/data.js"></script>
+  <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
 </html>

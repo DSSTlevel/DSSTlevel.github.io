@@ -136,12 +136,43 @@ body {
 .newsbar{padding-top:5px;padding-bottom:5px;background-color: var(--NewsbarBackground);color:var(--NewsbarColor);text-decoration:none;}
 .newsbar-content{margin-left:auto;margin-right:auto;max-width: 1150px;text-align: center;}
 
-.sidecontent{width: 17%;text-align: center;overflow-y: scroll;background-color: var(--SideContentBackground);color: var(--SideContentColor);}
-.sidecontent a{color: var(--SideContentColor);}
-
 .sidecontent-seperator{background-color:rgb(109, 35, 35);width:90%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
-
 .maincontent{width: 100%; background-color: var(--MainContentBackground); color: var(--MainContentColor)}
+
+.mainbox {
+  margin:25px;
+  width:95%;
+  height:fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  border-radius: 25px;
+}
+.mainbox .sidecontent {
+  width:15%;
+  padding: 20px;
+  background-color: rgb(38, 38, 38);
+  color: white;
+}
+.mainbox .actualcontent {
+  width: 85%;
+  padding: 20px;
+  background-color: rgb(25, 25, 25);
+  color: white;
+}
+.sidecontent h3, .actualcontent h1, .actualcontent h2, .actualcontent h3 {
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+.sidecontent ul {
+  list-style: none;
+  font-size: large;
+  padding-left: 0;
+}
+.sidecontent ul li a {
+  color:rgb(162, 216, 215);
+  text-decoration: none;
+}
 
 .settings-menu {
   display: none;
@@ -165,4 +196,20 @@ body {
   font-size: larger;
   border-radius: 25px;
   background-color:rgb(216, 175, 41);
+}
+
+.rotatethroughbuttons {
+  text-align: center;
+  padding-bottom:15px;
+}
+
+.rotatethroughbuttons a {
+  font-size:large;
+  text-decoration: none;
+  background-color: rgb(214, 214, 214);
+  border-style: inset;
+  border-color:blue;
+  color:black;
+  padding: 5px;
+  border-radius: 10px;
 }
