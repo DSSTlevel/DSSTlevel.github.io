@@ -20,11 +20,11 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
         <li class="navbar-item">
             <a href="#" class="navbar-link"><i class="fa-solid fa-bars"> </i><i class="fa-solid fa-a"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="https://dsstlevel.github.io/Web/html/BusinessContext" class="dropdown-link">Business Context</a></li>
-              <li><a href="https://dsstlevel.github.io/Web/html/Culture" class="dropdown-link">Culture</a></li>
-              <li><a href="https://dsstlevel.github.io/Web/html/DigitalEnvironments" class="dropdown-link">Digital Environments</a></li>
-              <li><a href="https://dsstlevel.github.io/Web/html/DiversityandInclusion" class="dropdown-link">Diversity and Inclusion</a></li>
-              <li><a href="https://dsstlevel.github.io/Web/html/BusinessContext" class="dropdown-link">Learning</a></li>
+              <li><a href="https://dsstlevel.github.io/Year1/PaperA/BusinessContext" class="dropdown-link">Business Context</a></li>
+              <li><a href="https://dsstlevel.github.io/Year1/PaperA/Culture" class="dropdown-link">Culture</a></li>
+              <li><a href="https://dsstlevel.github.io/Year1/PaperA/DigitalEnvironments" class="dropdown-link">Digital Environments</a></li>
+              <li><a href="https://dsstlevel.github.io/Year1/PaperA/DiversityandInclusion" class="dropdown-link">Diversity and Inclusion</a></li>
+              <li><a href="https://dsstlevel.github.io/Year1/PaperA/BusinessContext" class="dropdown-link">Learning</a></li>
               <li><a href="#" class="dropdown-link">Planning</a></li>
             </ul>
         </li>
@@ -33,17 +33,17 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
         <ul class="dropdown-menu">
           <li><a href="https://dsstlevel.github.io/Web/html/Testing" class="dropdown-link">Testing</a></li>
           <li><a href="#" class="dropdown-link">Tools</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/Legislation" class="dropdown-link">Legislation</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/Security" class="dropdown-link">Security</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/Data" class="dropdown-link">Data</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/DigitalAnalysis" class="dropdown-link">Digital Analysis</a></li>
+          <li><a href="https://dsstlevel.github.io/Year1/PaperB/Legislation" class="dropdown-link">Legislation</a></li>
+          <li><a href="https://dsstlevel.github.io/Year1/PaperB/Security" class="dropdown-link">Security</a></li>
+          <li><a href="https://dsstlevel.github.io/Year1/PaperB/Data" class="dropdown-link">Data</a></li>
+          <li><a href="https://dsstlevel.github.io/Year1/PaperB/DigitalAnalysis" class="dropdown-link">Digital Analysis</a></li>
         </ul>
       </li>
       <li class="navbar-item">
         <a href="#" class="navbar-link"><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-newspaper"></i></a>
         <ul class="dropdown-menu">
           <li><a href="https://www.netacad.com/portal/learning" target="_blank" class="dropdown-link">Cisco</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/codingScripts" class="dropdown-link">Scripts (Quizzes)</a></li>
+          <li><a href="https://dsstlevel.github.io/Others/codingScripts" class="dropdown-link">Scripts (Quizzes)</a></li>
           <li><a href="https://ncfe.org.uk" target="_blank" class="dropdown-link">NCFE Website</a></li>
           <li><a href="https://www.qualhub.co.uk/qualification-search/qualification-detail/t-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034?login=false&originalUrl=https%3A%2F%2Fwww.qualhub.co.uk.mcas.ms%2Fqualification-search%2Fqualification-detail%2Ft-level-technical-qualification-in-digital-support-services-level-3-delivered-by-5034%3FMcasTsid%3D20892&McasCSRF=2a04a17a9a924bcc526b4bd772189cf149d6804c98bb8c2c08d559e394f185f9" target="_blank" class="dropdown-link">DSS Past Papers</a></li>
           <li><a href="https://www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3P5ROKL5A1OLE" target="_blank" class="dropdown-link">Revision Book</a></li>
@@ -55,8 +55,8 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
       <li class="navbar-item">
         <a href="#" class="navbar-link">Info</a>
         <ul class="dropdown-menu">
-          <li><a href="https://dsstlevel.github.io/Web/html/year1" class="dropdown-link">Examination Details</a></li>
-          <li><a href="https://dsstlevel.github.io/Web/html/altontowers" class="dropdown-link">Alton Towers</a></li>
+          <li><a href="https://dsstlevel.github.io/Others/year1" class="dropdown-link">Examination Details</a></li>
+          <li><a href="https://dsstlevel.github.io/Others/altontowers" class="dropdown-link">Alton Towers</a></li>
         </ul>
       </li>
     </ul>
@@ -83,7 +83,7 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
 `
 }
 else {
- location='https://dsstlevel.github.io/Web/WebsiteClose.html'
+ location='https://dsstlevel.github.io/Others/WebsiteClose.html'
 }
 
 if (localStorage.getItem("DarkMode") === "true") {
@@ -115,10 +115,10 @@ document.getElementById("settings-cog-icon").onclick = function() {
 document.getElementById("legacybutton").onclick = function() {
   if (localStorage.getItem('LegacyMain')==="true") {
     localStorage.setItem("LegacyMain","false")
-    window.location="https://dsstlevel.github.io/Web/Main"
+    window.location="https://dsstlevel.github.io/Main"
   } else {
     localStorage.setItem("LegacyMain","true")
-    window.location="https://dsstlevel.github.io/Web/LegacyMain"
+    window.location="https://dsstlevel.github.io/LegacyMain"
   }
 }
 
