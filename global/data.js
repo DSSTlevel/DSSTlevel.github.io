@@ -31,7 +31,7 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
       <li class="navbar-item">
         <a href="#" class="navbar-link"><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-b"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="https://dsstlevel.github.io/Web/html/Testing" class="dropdown-link">Testing</a></li>
+          <li><a href="https://dsstlevel.github.io/Year1/PaperB/Testing" class="dropdown-link">Testing</a></li>
           <li><a href="#" class="dropdown-link">Tools</a></li>
           <li><a href="https://dsstlevel.github.io/Year1/PaperB/Legislation" class="dropdown-link">Legislation</a></li>
           <li><a href="https://dsstlevel.github.io/Year1/PaperB/Security" class="dropdown-link">Security</a></li>
