@@ -115,10 +115,10 @@ document.getElementById("settings-cog-icon").onclick = function() {
 document.getElementById("legacybutton").onclick = function() {
   if (localStorage.getItem('LegacyMain')==="true") {
     localStorage.setItem("LegacyMain","false")
-    window.location="https://dsstlevel.github.io/Main"
+    window.location="https://dsstlevel.github.io/Home/homepage"
   } else {
     localStorage.setItem("LegacyMain","true")
-    window.location="https://dsstlevel.github.io/LegacyMain"
+    window.location="https://dsstlevel.github.io/Home/legacymain"
   }
 }
 
