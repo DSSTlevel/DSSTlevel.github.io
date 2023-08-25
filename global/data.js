@@ -25,14 +25,14 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
               <li><a href="https://dsstlevel.github.io/Year1/PaperA/DigitalEnvironments" class="dropdown-link">Digital Environments</a></li>
               <li><a href="https://dsstlevel.github.io/Year1/PaperA/DiversityandInclusion" class="dropdown-link">Diversity and Inclusion</a></li>
               <li><a href="https://dsstlevel.github.io/Year1/PaperA/BusinessContext" class="dropdown-link">Learning</a></li>
-              <li><a href="#" class="dropdown-link">Planning</a></li>
+              <li><a href="https://dsstlevel.github.io/Year1/PaperA/Planning" class="dropdown-link">Planning</a></li>
             </ul>
         </li>
       <li class="navbar-item">
         <a href="#" class="navbar-link"><i class="fa-solid fa-bars"></i> <i class="fa-solid fa-b"></i></a>
         <ul class="dropdown-menu">
           <li><a href="https://dsstlevel.github.io/Year1/PaperB/Testing" class="dropdown-link">Testing</a></li>
-          <li><a href="#" class="dropdown-link">Tools</a></li>
+          <li><a href="https://dsstlevel.github.io/Year1/PaperB/Tools" class="dropdown-link">Tools</a></li>
           <li><a href="https://dsstlevel.github.io/Year1/PaperB/Legislation" class="dropdown-link">Legislation</a></li>
           <li><a href="https://dsstlevel.github.io/Year1/PaperB/Security" class="dropdown-link">Security</a></li>
           <li><a href="https://dsstlevel.github.io/Year1/PaperB/Data" class="dropdown-link">Data</a></li>
