@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <title>DSSTlevel | Digital Analysis</title>
+    <meta http-equiv="refresh" content="500">
+    <link rel="icon" type="image/x-icon" href="../Images/dsslogo.png">
+<style>
+    body {font-family:'Times New Roman', Times, serif;margin:0;background-color:black;color:rgb(246, 255, 217);background-image: url('../Images/background3.png');background-repeat: no-repeat;background-size:cover;}
+        @media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
+        .glow {color: #fff;text-align: center;animation: glowWhite 1s ease-in-out infinite alternate; color:snow; /*background-color: rgba(0, 0, 0,0.1);*/;border-radius: 5px;}
+        @keyframes glowWhite {from{text-shadow: 0 0 15px #fff, 0 0 15px #fff}to{text-shadow: 0 0 15px #fff, 0 0 15px #fff}}
+        :root {--bgClrFront: grey;--txtClrFront: black; --bgClrBack: darkgrey; --txtClrBack: black;}
+        .flip-card {perspective: 1000px;height: 300px;width: 250px;}.flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.6s;transform-style: preserve-3d;}.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}.flip-card-front, .flip-card-back {position: absolute;width: 100%;height: 100%;backface-visibility: hidden;}.flip-card-front {background-color: var(--bgClrFront);color: var(--txtClrFront);}.flip-card-back {background-color: var(--bgClrBack);color: var(--txtClrBack);transform: rotateY(180deg);}
+        .python{width:60%;background-color: rgb(100, 100, 100);font-family: 'Courier New', Courier, monospace;border-style:ridge;color:orange}
+        .pseudocode{width:60%;background-color: rgb(89, 89, 89);font-family: 'Courier New', Courier, monospace;border-style:ridge;color:deepskyblue}
+        </style></head>
+<link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="../../global/g.css">
+<div id="navigbar"></div>
+<div style="overflow: auto";>
+<body style="font-size:larger;">
+<div class="row">
+<div class="side">
+<h3>Content</h3>
+<a href="#Algorithms">Algorithms</a><br>
+<a href="#Decomposition">Decomposition</a><br>
+<a href="#PatternRecog">Pattern Recognition</a><br>
+<a href="#Abstraction">Abstraction</a><br>
+</div>
+<div class="main">
+    <h1 id="Algorithms">Algorithms</h1>
+    An algorithm is a set of instructions to solve a problem.
+    <h3>Characteristics</h3>
+    Finiteness - Algorithm should have a limit to steps<br>
+    Unambiguous - Must be clean and precise<br>
+    Inputs and Outputs - Clearly identified, must have 0 or more inputs and 1 output<br>
+    Logical Sequencing - Follow a logical seuqence to complete its steps<br>
+    Iteration - Steps should be repeated until the desired outcome is outputted<br>
+    Selection - Any input should lead to a specified step<br>
+    Independent - Algorithm should be able to run by itself<br>
+    Feasibility - Implemented with specified and defined resources<br>
+    Structured English - Should be legible to all users with or without any programming Knowledge
+    <h2>Computational Thinking</h2>
+    <h3 id="Decomposition">Decomposition</h3>
+    The breaking down of tasks or steps into smaller ones for capability.<br>
+    <br>
+    Process:<br>
+    1. Identify the problems and processes<br>
+    2. Break down the problems into seperate tasks<br>
+    3. Describe the tasks and sub-tasks<br>
+    4. Communicate
+    <h3 id="PatternRecog">Pattern Recognition</h3>
+    The analysis of decomposed tasks or steps to find patterns in the steps or tasks.<br>
+    <br>
+    Process:<br>
+    1. Identify the common elements in prolems or systems<br>
+    2. Identify the common differences in problems or systems<br>
+    3. Identify individual elements in patterns<br>
+    4. Describe the patterns that have been identifed<br>
+    5. Make predictions
+    <h3 id="Abstraction">Abstraction</h3>
+    Removing or filtering unwanted or not needed tasks or steps to focus on the key ones.<br>
+    <br>
+    Process:<br>
+    1. Identify the information needed for the problem<br>
+    2. Carry abstraction filter out on the useless information<br>
+    <br>
+    Variables - Values that can change when assigned with new data<br>
+    <div class="python">
+        #Python<br>
+        #Assigned the variable "x" to 1<br>
+        x=1<br>
+        #The variable "x" is going to be reassigned to the integer 2<br>
+        x=2<br>
+        print(x)<br>
+        #The number 2 will be outputted<br>
+    </div>
+    Constant - Values that NEVER change<br>
+    <div class="python">
+        #Python<br>
+        #Import the module "math"<br>
+        import math<br>
+        #Assign constant "x" to pi value from math module<br>
+        x=math.pi<br>
+        print(x)<br>
+        #Pi will never change as it is a number that never changes<br>
+    </div>
+    Pseudocode - An informal way of writing code for all high-level programming languages (such as Python, C++) to understand and write in their specialist language<br>
+    <div class="pseudocode">
+        #Pseudocode<br>
+        INPUT num<br>
+        newnum = num * 2<br>
+        OUPUT newnum<br>
+    </div>
+    Flowchart - A visual understanding of an algorithm. Consists of symbols connected by lines<br>
+    <img src="../Images/flowwchartDiagram.png" style="width:60%">
+</div>
+</div>
+</body>
+</div>
+<footer id="footer"></footer>
+<script src="../../global/data.js"></script><script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
+</html>
