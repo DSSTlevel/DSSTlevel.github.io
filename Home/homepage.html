@@ -8,7 +8,6 @@
     <style>
       .percentageCalc {width: 75%;background-color: #2d393e;padding: 24px;text-align: center;box-shadow: 2px 2px 8px 2px #1e3845;margin-left: auto;margin-right: auto;color:white;text-align: center;}
       .percentageCalc button{width:25%;margin-bottom: 25px;height:30px;font-size:large;background-color: slateblue;color:white;}
-
       .title {
           width: 90%;
           background-image:linear-gradient(45deg, rgb(10, 26, 84), rgb(0, 98, 83));
@@ -18,112 +17,113 @@
           margin-left: auto;
           margin-right: auto;
           display: flex;
-      }
-      
+      }  
       .contentbox {
-          width: 90%;
-          margin: 35px 0;
-          background-color:#16181a;
-          border-radius: 35px;
-          border-style: groove;
-          border-color:rgb(59, 185, 213);
-          padding-top:10px;
-          padding-bottom:26px;
-          box-shadow: 1px 2px 18px 2px #0498ce;
-          margin-left: auto;
-          margin-right: auto;
-          color:white;
-          min-height:0vh;
+        width: 30%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding:10px;
+        margin: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       }
-      .contentbox h1{
-        padding-left:50px;
-        font-size:x-large;
-        text-align:left;
-        color:gold;
+      .contentbox h3 {
+        color: #333;
+        margin-top:0;
+        margin-bottom: 10px;
       }
-      .contentbox .content{
-        text-align: center;
-        padding-left: 25px;
-        padding-right: 25px;
-        font-size: larger;
+      .contentbox button {
+        background-color: white;
+        border-radius:100px;
+        border-color: pink;
+        border-style: ridge;
+        padding:10px
+      }
+      .bigcontent {
+        display: flex;
+        width:95%;
+        margin-left:auto;
+        margin-right: auto;
+      }
+      .timetable {margin-bottom:25px;display: flex;flex-direction: row;background-color: #191a1e;border-radius: 8px;box-shadow: 0 2px 4px rgba(91, 203, 255, 0.389);overflow: hidden;width:95%;margin-left: auto;margin-right: auto;}
+      .lesson:not(.lesson:last-child) {flex: 1;padding: 16px;border-right: 1px solid #d1d1d1;text-align: center;}
+      .lesson:last-child {flex: 1;padding: 16px;text-align: center;}
+      .lesson .time {font-size: 14px;color: #d7b94b;}
+      .lesson .subject {font-size: 18px;font-weight: bold;margin-top: 8px;color: #ff0000;}
+      .lesson .teacher {font-size: 14px;color: #c5c5c5;}
+      .lesson .room {font-size:12px; color:lightseagreen}
+      .current-lesson {
+          background-color: yellow; /* You can choose any color you prefer */
       }
 
-      .buttons button{
-        padding: 15px;
-        font-size:larger;
-        background-color: rgb(29, 26, 54);
-        border-radius: 15px;
-        border-style: groove;
-        border-color: rgb(8, 38, 146);
-        color:white;
-        font-family: "Arial";
-        font-weight: bold;
-        box-shadow: 1px 2px 8px 2px #1d05bc;
-      }
+      .break {flex: 0.5;padding: 16px;border-right: 1px solid #d1d1d1;text-align: center;}
+      .break .name {font-size: 18px;font-weight: bold;margin-top: 8px;color: rgb(222, 0, 222);}
+      .break .duration {font-size: 14px;margin-top: 8px;color: #a0a0a0;}
+
       input[type=number] {width:75%;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:white}
       input[type=text] {width:fit-content;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:greenyellow;}
     </style>
   </head>
-  <div style="overflow: auto;">
      <body style="color:white;background-color: rgb(0, 0, 0);">
       <div class="newsbar">
         <div class="newsbar-content">
-          <marquee>New homepage content coming soon!</marquee>
+          <marquee>Welcome to DSS T-Level 2023-24! Updated since last year!</marquee>
         </div>
       </div>
-      <!--
-        <div id="EoT">Loading...</div>
-        <div id="EoHT">Loading...</div>
-        <div id="training">Loading...</div>
-      -->
       <div id="navigbar"></div>
-        <div style="display: flex">
-          <div class="maincontent">
-              <div class="title">
-                 <img height="100px" src="../Images/dsslogo.png">
-                 <div style="text-align:center;font-size:large;margin-left:auto;padding-right:50px">
-                    <p style="color:rgb(133, 112, 255)"><b>End Of Day</b></p>
-                    <p style="color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</p>
-                 </div>
-              </div>
-              <div class="contentbox">
-                <h1>Links</h1>
+        <div class="maincontent">
+            <div class="title">
+                <img height="100px" src="../Images/dsslogo.png">
+                <div style="text-align:center;font-size:large;margin-left:auto;padding-right:50px">
+                  <p style="color:rgb(133, 112, 255)"><b>End Of Day</b></p>
+                  <p style="color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</p>
+                </div>
+            </div>
+            <h2 style="padding-left:40px;margin-bottom:0;">N/A</h2>
+            <div class="timetable" id="t">This Feature is still being worked on! Coming Soon!</div>
+            <div class="bigcontent">
+              <div class="contentbox" style="background-color: rgb(71, 71, 164);">
+                <h3>Links</h3>
                 <div class="content">
-                  <div class="buttons" style="text-align:center">
-                    <button onclick='window.open("https:/\/netacad.com", "_blank")'>Cisco Netacad</button>
-                    <button onclick='window.open("https:/\/print.ltegroup.co.uk/user", "_blank")'>TMC Printer</button>
-                    <button onclick='window.open("https:/\/teams.microsoft.com", "_blank")'>MS Teams</button>
-                    <button onclick='window.open("https:/\/studenthub.tmc.ac.uk", "_blank")'>Student Hub</button>
-                    <button onclick='window.open("https:/\/www.tmc.ac.uk/media/filer_public/1b/e9/1be9396f-8969-4de6-9660-97c26bc6dab9/tmc-ucen-term-dates-2023-24.pdf", "_blank")'>Term Dates</button>
-                  </div>
+                  <button onclick='window.open("https:/\/netacad.com", "_blank")'>Cisco Netacad</button>
+                  <button onclick='window.open("https:/\/print.ltegroup.co.uk/user", "_blank")'>TMC Printer</button>
+                  <button onclick='window.open("https:/\/teams.microsoft.com", "_blank")'>MS Teams</button>
+                  <button onclick='window.open("https:/\/studenthub.tmc.ac.uk", "_blank")'>Student Hub</button>
+                  <button onclick='window.open("https:/\/www.tmc.ac.uk/media/filer_public/1b/e9/1be9396f-8969-4de6-9660-97c26bc6dab9/tmc-ucen-term-dates-2023-24.pdf", "_blank")'>Term Dates</button>
                 </div>
               </div>
-              <div class="contentbox">
-                <h1>Insufficient amount of revision resources?</h1>
+              <div class="contentbox" style="background-color: rgb(165, 90, 170);">
+                <h3>Insufficient amount of revision resources?</h3>
                 <div class="content">
                   You can use my own built Python scripts for free that give a more interactive side of revision or you can purchase the dedicated book for DSS and DBS on Amazon!<br>
-                  Scripts: <a onclick="window.open('https:/\/dsstlevel.github.io/Others/codingScripts.html', '_blank')">View</a><br>
-                  Book: <a onclick="window.open('https:/\/www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3P5ROKL5A1OLE','_blank')">Purchase</a><br> 
+                  <button onclick="window.open('https:/\/dsstlevel.github.io/Others/codingScripts.html', '_blank')">Scripts</a></button>
+                  <button onclick="window.open('https:/\/www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3P5ROKL5A1OLE','_blank')">Book</button> 
                 </div>
               </div>
-              <div class="contentbox">
-                <h1>Bored?</h1>
+              <div class="contentbox" style="background-color: rgb(118, 164, 199);">
+                <h3>Important Dates</h3>
                 <div class="content">
-                  <div class="buttons" style="text-align:center">
-                    <button onclick='window.open("https:/\/monkeytype.com", "_blank")'>Monkeytype</button>
-                    <button onclick='window.open("https:/\/uk.pcpartpicker.com", "_blank")'>PC Builder</button>
-                    <button onclick='window.open("https:/\/chess.com", "_blank")'>Chess.com</button>
-                    <button onclick='window.open("https:/\/ridesims.com", "_blank")'>Ride Sims</button>
-                    <button onclick='window.open("https:/\/github.com", "_blank")'>Github</button>
-                  </div>
+                  <div id="EoT">Loading...</div>
+                  <div id="EoHT">Loading...</div>
+                  <div id="training">Loading...</div>
                 </div>
               </div>
-           </div>
-        </div>
+              <div class="contentbox" style="background-color: rgb(103, 81, 156)">
+                <h3>Bored?</h3>
+                <div class="content">
+                  <button onclick='window.open("https:/\/monkeytype.com", "_blank")'>Monkeytype</button>
+                  <button onclick='window.open("https:/\/uk.pcpartpicker.com", "_blank")'>PC Builder</button>
+                  <button onclick='window.open("https:/\/chess.com", "_blank")'>Chess.com</button>
+                  <button onclick='window.open("https:/\/ridesims.com", "_blank")'>Ride Sims</button>
+                  <button onclick='window.open("https:/\/github.com", "_blank")'>Github</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <footer id="footer"></footer>
      </body>
   </div>
   <script id="importantDates"></script>
+  <script src="timetablestuff.js"></script>
   <script src="../global/data.js"></script>
   <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
   <script>
@@ -134,7 +134,7 @@
       var x = setInterval(function() {
         document.title = "DSSTlevel | Main Menu";
         var now = new Date().getTime();
-        var startTime = new Date(new Date().setHours(0, 0, 0)).getTime();
+        var startTime = new Date(new Date().setHours(9, 0, 0)).getTime();
         var newd = new Date();
         var countDownTime;
         switch (newd.getDay()) {
@@ -190,10 +190,10 @@
               var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
               var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-              document.getElementById(elementId).innerHTML = labelText + "<br>" + days + " Days, " + hours + ":" + minutes + ":" + seconds;
+              document.getElementById(elementId).innerHTML = labelText + " - " + days + " Days, " + hours + ":" + minutes + ":" + seconds;
           }, 1000);
       }
-      setCountdown('Oct 23, 2023 00:00:00', 'EoT', 'Unidentified'/*'End of Term'*/);
+      setCountdown('Oct 23, 2023 00:00:00', 'EoT', 'End of Term'/*'End of Term'*/);
       setCountdown('Sep 11, 2023 00:00:00', 'EoHT', 'End of Half Term');
       setCountdown('Sep 9, 2023 11:00:00', 'training', 'Training Round');
     </script>

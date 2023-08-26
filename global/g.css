@@ -16,8 +16,11 @@
   --NewsbarBackground: rgb(0, 178, 254);
   --MainContentColor: black;
   --MainContentBackground: rgb(135, 188, 211);
-  --SideContentColor: rgb(0, 0, 0);
-  --SideContentBackground: rgb(135, 169, 199);
+  --MainBoxColor: black;
+  --MainBoxBackgroundColor: rgb(120, 145, 179);
+  --MainBoxSideContentColor: black;
+  --MainBoxSideContentBackgroundColor: rgb(97, 101, 152); 
+  --MainBoxLineColor: black;
 }
 
 .dark-mode {
@@ -33,8 +36,11 @@
   --NewsbarBackground: rgb(38, 88, 144);
   --MainContentColor: white;
   --MainContentBackground: rgb(12, 13, 14);
-  --SideContentColor: white;
-  --SideContentBackground: rgb(25, 27, 37);
+  --MainBoxColor: white;
+  --MainBoxBackgroundColor: rgb(25,25,25);
+  --MainBoxSideContentColor: white;
+  --MainBoxSideContentBackgroundColor: rgb(38, 38, 38); 
+  --MainBoxLineColor: white;
 }
 
 body {
@@ -136,7 +142,6 @@ body {
 .newsbar{padding-top:5px;padding-bottom:5px;background-color: var(--NewsbarBackground);color:var(--NewsbarColor);text-decoration:none;}
 .newsbar-content{margin-left:auto;margin-right:auto;max-width: 1150px;text-align: center;}
 
-.sidecontent-seperator{background-color:rgb(109, 35, 35);width:90%;height:3px;border-radius: 50px;margin-left: auto;margin-right: auto;}
 .maincontent{width: 100%; background-color: var(--MainContentBackground); color: var(--MainContentColor)}
 
 .mainbox {
@@ -151,17 +156,17 @@ body {
 .mainbox .sidecontent {
   width:15%;
   padding: 20px;
-  background-color: rgb(38, 38, 38);
-  color: white;
+  background-color: var(--MainBoxSideContentBackgroundColor);
+  color: var(--MainBoxSideContentColor);
 }
 .mainbox .actualcontent {
   width: 85%;
   padding: 20px;
-  background-color: rgb(25, 25, 25);
-  color: white;
+  background-color: var(--MainBoxBackgroundColor);
+  color: var(--MainBoxColor);
 }
 .sidecontent h3, .actualcontent h1, .actualcontent h2, .actualcontent h3 {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--MainBoxLineColor);
   padding-bottom: 5px;
 }
 .sidecontent ul {
