@@ -1,7 +1,6 @@
 function closeTime() {
   var isTrue=false
   if (new Date().getTime() > new Date('Jun 14, 2023 13:00:00').getTime()&&new Date().getTime() < new Date('Jun 14, 2023 15:00:00').getTime()) var isTrue=true
-  else if (new Date().getTime() > new Date('Jun 21, 2023 13:00:00').getTime()&&new Date().getTime() < new Date('Jun 21, 2023 15:30:00').getTime()) var isTrue=true
   return isTrue
 }
 
