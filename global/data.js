@@ -49,6 +49,7 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
           <li><a href="https://studenthub.tmc.ac.uk" class="dropdown-link">Student Hub</a></li>
           <li><a href="https://proportal.tmc.ac.uk" class="dropdown-link">ProPortal</a></li>
           <li><a href="https://grofar.com/" class="dropdown-link">GroFar</a></li>
+          <li><a href="https://www.tmc.ac.uk/media/filer_public/1b/e9/1be9396f-8969-4de6-9660-97c26bc6dab9/tmc-ucen-term-dates-2023-24.pdf" class="dropdown-link">Term Dates</a></li>
         </ul>
       </li>
       <li class="navbar-item">

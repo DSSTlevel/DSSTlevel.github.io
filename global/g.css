@@ -93,6 +93,15 @@ body {
     padding-right: 10px;
     text-decoration: none;
   }
+
+  .navbar-link:hover {
+    color:rgb(106, 173, 255);
+    transition:0.3s
+  }
+  .navbar-link:not(.navbar-link:hover) {
+    transition:0.3s
+  }
+
   .dropdown-menu {
     text-align:center;
     border-radius: 10px;

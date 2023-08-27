@@ -19,19 +19,15 @@
           display: flex;
       }  
       .contentbox {
-          width: 90%;
-          margin: 35px 0;
+          width: 25%;
           background-color:#16181a;
           border-radius: 35px;
           border-style: groove;
-          border-color:rgb(59, 185, 213);
-          padding-top:10px;
-          padding-bottom:26px;
-          box-shadow: 1px 2px 18px 2px #0498ce;
+          border-color:rgb(68, 125, 138);
+          box-shadow: 1px 2px 18px 2px #53676e;
           margin-left: auto;
           margin-right: auto;
           color:white;
-          min-height:0vh;
       }
       .contentbox h1{
         padding-left:50px;
@@ -45,9 +41,9 @@
         padding-right: 25px;
         font-size: larger;
       }
-
+      .bigcontent{display:flex;margin-top:15px;margin-bottom: 15px;}
       .buttons button{
-        padding: 15px;
+        padding: 10px;
         font-size:larger;
         background-color: rgb(29, 26, 54);
         border-radius: 15px;
@@ -58,6 +54,8 @@
         font-weight: bold;
         box-shadow: 1px 2px 8px 2px #1d05bc;
       }
+      .buttons button:hover {cursor: pointer;}
+
       .timetable {margin-bottom:25px;display: flex;flex-direction: row;background-color: #191a1e;border-radius: 8px;box-shadow: 0 2px 4px rgba(91, 203, 255, 0.389);overflow: hidden;width:95%;margin-left: auto;margin-right: auto;}
       .lesson:not(.lesson:last-child) {flex: 1;padding: 16px;border-right: 1px solid #d1d1d1;text-align: center;}
       .lesson:last-child {flex: 1;padding: 16px;text-align: center;}
@@ -65,13 +63,34 @@
       .lesson .subject {font-size: 18px;font-weight: bold;margin-top: 8px;color: #ff0000;}
       .lesson .teacher {font-size: 14px;color: #c5c5c5;}
       .lesson .room {font-size:12px; color:lightseagreen}
-      .current-lesson {
-          background-color: yellow; /* You can choose any color you prefer */
-      }
 
       .break {flex: 0.5;padding: 16px;border-right: 1px solid #d1d1d1;text-align: center;}
       .break .name {font-size: 18px;font-weight: bold;margin-top: 8px;color: rgb(222, 0, 222);}
       .break .duration {font-size: 14px;margin-top: 8px;color: #a0a0a0;}
+
+      .ad {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        width: 70%;
+        height: 80px;
+        background: linear-gradient(45deg, rgb(250, 219, 133) 50%, rgb(183, 183, 183) 100%);;
+        color:grey
+      }
+      .ad h1, .ad h2, .ad h3 {margin-top:0;margin-bottom: 0;color:rgb(73, 73, 73)}
+      .ad:hover {cursor: pointer;}
+
+      .seperator {
+        width:95%;
+        border-radius: 25px;
+        height:2px;
+        background-color: rgb(61, 84, 74);
+        margin-left: auto;
+        margin-right:auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
 
       input[type=number] {width:75%;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:white}
       input[type=text] {width:fit-content;font-size: 18px;background-color: rgba(0, 0, 0, 0);border-color:greenyellow;}
@@ -94,40 +113,52 @@
             </div>
             <h2 style="padding-left:40px;margin-bottom:0;">N/A</h2>
             <div class="timetable" id="t">This Feature is still being worked on! Coming Soon!</div>
-            <div class="buttons" style="text-align:center">
-              <button onclick="window.open('https:/\/netacad.com','_blank')">Cisco Netacad</button>
-              <button onclick="window.open('https:/\/print.ltegroup.co.uk/user','_blank')">TMC Printer</button>
-              <button onclick="window.open('https:/\/teams.microsoft.com','_blank')">MS Teams</button>
-              <button onclick="window.open('https:/\/studenthub.tmc.ac.uk','_blank')">Student Hub</button>
-              <button onclick="window.open('https:/\/www.tmc.ac.uk/media/filer_public/1b/e9/1be9396f-8969-4de6-9660-97c26bc6dab9/tmc-ucen-term-dates-2023-24.pdf','_blank')">Term Dates</button>
+            <!--ADVERTISEMENT-->
+            <div class="ad" onclick="window.open('https:/\/bustimes.org','_blank')">
+              <table width="100%">
+                <tr>
+                  <td>
+                    <h3>Having trouble finding buses?</h3>
+                    Bustimes.org will help,<br>
+                    For completely free! 
+                  </td>
+                  <td>
+                    <h1 style="text-align: right;">Bustimes.org</h1>
+                  </td>
+                </tr>
+              </table>
             </div>
-              <div class="contentbox">
-                <h1>What is this website?</h1>
-                <div class="content">
-                  This is a website that is comprised of notes and textbook content that I have put together for the DSS T-Level at TMC.
-                  A project that has been shapen to provide further information to the class of 2023-24.
+              <div class="seperator"></div>
+              <div class="bigcontent">
+                <div class="contentbox">
+                  <h1>What is this website?</h1>
+                  <div class="content">
+                    This is a website that is comprised of notes and textbook content that I have put together for the DSS T-Level at TMC.
+                    A project that has been shapen to provide further information to the class of 2023-24.
+                  </div>
                 </div>
-              </div>
-              <div class="contentbox">
-                <h1>Insufficient amount of revision resources?</h1>
-                <div class="content">
-                  You can use my own built Python scripts for free that give a more interactive side of revision or you can purchase the dedicated book for DSS and DBS on Amazon!<br>
-                  Scripts: <a onclick="window.open('https:/\/dsstlevel.github.io/Web/html/codingScripts.html', '_blank')">View</a><br>
-                  Book: <a onclick="window.open('https:/\/www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&amp;ref_=fplfs&amp;psc=1&amp;smid=A3P5ROKL5A1OLE','_blank')">Purchase</a><br> 
+                <div class="contentbox">
+                  <h1>Insufficient amount of revision resources?</h1>
+                  <div class="content">
+                    You can use my own built Python scripts for free that give a more interactive side of revision or you can purchase the dedicated book for DSS and DBS on Amazon!<br>
+                    Scripts: <a onclick="window.open('https:/\/dsstlevel.github.io/Web/html/codingScripts.html', '_blank')">View</a><br>
+                    Book: <a onclick="window.open('https:/\/www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&amp;ref_=fplfs&amp;psc=1&amp;smid=A3P5ROKL5A1OLE','_blank')">Purchase</a><br> 
+                  </div>
                 </div>
-              </div>
-              <div class="contentbox">
-                <h1>Bored?</h1>
-                <div class="content">
-                  <div class="buttons" style="text-align:center">
-                    <button onclick="window.open('https:/\/monkeytype.com','_BLANK')">Monkeytype</button>
-                    <button onclick="window.open('quot;https:/\/uk.pcpartpicker.com','_blank')">PC Builder</button>
-                    <button onclick="window.open('quot;https:/\/chess.com','_blank')">Chess.com</button>
-                    <button onclick="window.open('quot;https:/\/ridesims.com','_blank')">Ride Sims</button>
-                    <button onclick="window.open('quot;https:/\/github.com','_blank')">Github</button>
+                <div class="contentbox">
+                  <h1>Bored?</h1>
+                  <div class="content">
+                    <div class="buttons" style="text-align:center">
+                      <button onclick="window.open('https:/\/monkeytype.com','_BLANK')">Monkeytype</button>
+                      <button onclick="window.open('https:/\/uk.pcpartpicker.com','_blank')">PC Builder</button>
+                      <button onclick="window.open('https:/\/chess.com','_blank')">Chess.com</button>
+                      <button onclick="window.open('https:/\/ridesims.com','_blank')">Ride Sims</button>
+                      <button onclick="window.open('https:/\/github.com','_blank')">Github</button>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="seperator"></div>
             </div>
           </div>
         <footer id="footer"></footer>
