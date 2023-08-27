@@ -125,23 +125,24 @@ document.getElementById("legacybutton").onclick = function() {
 if (localStorage.getItem("LegacyMain")==="true") {document.getElementById("legacybutton").textContent='Newest'} else {document.getElementById("legacybutton").textContent='Legacy'} 
 
 document.getElementById("footer").innerHTML = `
-<style>
-body {background-color: #111;}
-/*::-webkit-scrollbar {width:1px}*/
-@media screen and (max-width: 600px) {.column {width: 100%;height: auto;}}
-</style>
-<div class="footer-basic">
-  <footer>
-    <ul class="list-inline">
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/">Home</a></li>
-        <li class="list-inline-item"><a href="https://dsstlevel.github.io/README.md">About</a></li>
-        <li class="list-inline-item"><a href="#">Top of Page</a></li>
-    </ul>
-    <p class="copyright">© DM at TMC</p>
-  </footer>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>function autoRefresh() {window.location = window.location.href;}setInterval('autoRefresh()', 600000);</script>
+<footer>
+  <h1 style="color:rgb(0, 160, 205)">DSS T-Level Website</h1>
+  <div class="bigfootercontent">
+      <ul>
+          <li><h2>Key stuff</h2></li>
+          <li><a href="https://dsstlevel.github.io/">Home</a></li>
+          <li><a href="https://dsstlevel.github.io/README.md">About</a></li>
+          <li><a href="https://dsstlevel.github.io/LICENSE.md">Website License</a></li>
+      </ul>
+      <ul>
+          <li><h2>Off-Topic</h2></li>
+          <li><a href="https://dsstlevel.github.io/Others/altontowers">Alton Towers</a></li>
+          <li><a href="https://dsstlevel.github.io/Images/OGLook.png">Original Look</a></li>
+          <li><a href="https://dsstlevel.github.io/Others/codingScripts">Coding Scripts</a></li>
+          <li><a href="#">Top of the page</a></li>
+      </ul>
+  </div>
+</footer>
 `
 
 

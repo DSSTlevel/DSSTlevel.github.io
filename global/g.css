@@ -1,7 +1,5 @@
-.list-unstyled{padding-left:0;list-style:none}.list-inline{padding-left:0;list-style:none}.list-inline-item{display:inline-block}.list-inline-item:not(:last-child){margin-right:.5rem}
 :root {--bgClrFront: grey;--txtClrFront: black; --bgClrBack: darkgrey; --txtClrBack: black;}
 .flip-card {perspective: 1000px;height: 300px;width: 250px;}.flip-card-inner {position: relative;width: 100%;height: 100%;text-align: center;transition: transform 0.6s;transform-style: preserve-3d;}.flip-card:hover .flip-card-inner {transform: rotateY(180deg);}.flip-card-front, .flip-card-back {position: absolute;width: 100%;height: 100%;backface-visibility: hidden;}.flip-card-front {background-color: var(--bgClrFront);color: var(--txtClrFront);}.flip-card-back {background-color: var(--bgClrBack);color: var(--txtClrBack);transform: rotateY(180deg);}
-.footer-basic {padding:8px 0;background-color: #111;color: #f1f1f1;}.footer-basic ul {padding:0;list-style:none;text-align:center;font-size:18px;line-height:1;bottom:0;}.footer-basic li {padding:0 10px;}.footer-basic ul a {color:inherit;text-decoration:none;opacity:0.8;}.footer-basic ul a:hover {opacity:1;}.footer-basic .copyright {margin-top:11px;text-align:center;font-size:13px;color:#aaa;margin-bottom: 15px;}
 
 :root {
   --MainBackground: rgb(255, 255, 255);
@@ -21,6 +19,10 @@
   --MainBoxSideContentColor: black;
   --MainBoxSideContentBackgroundColor: rgb(97, 101, 152); 
   --MainBoxLineColor: black;
+  --FooterBackgroundColor1: rgb(73, 121, 197); 
+  --FooterBackgroundColor2: rgb(81, 94, 117);
+  --FooterColor: rgb(26, 27, 30);
+  --FooterLink1: rgb(9, 15, 16);
 }
 
 .dark-mode {
@@ -41,6 +43,10 @@
   --MainBoxSideContentColor: white;
   --MainBoxSideContentBackgroundColor: rgb(38, 38, 38); 
   --MainBoxLineColor: white;
+  --FooterBackgroundColor1: rgb(23, 17, 17); 
+  --FooterBackgroundColor2: rgb(13, 12, 31);
+  --FooterColor: white;
+  --FooterLink1: beige;
 }
 
 body {
@@ -226,4 +232,40 @@ body {
   color:black;
   padding: 5px;
   border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  bottom: 0;
+  max-width: 100%;
+  background: linear-gradient(4deg, var(--FooterBackgroundColor1) 50%, var(--FooterBackgroundColor2) 50%);
+  color: var(--FooterColor);
+  margin-top: 5px;
+  padding: 15px;
+}
+footer h3, footer h1, footer, h2 {
+  margin: 0;
+}
+footer .bigfootercontent {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+footer ul {
+  padding-right: 50px;
+  list-style: none;
+  font-size: large;
+  padding-left: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+footer ul a {
+  text-decoration: none;
+  color: var(--FooterLink1);
+  font-family: 'Comic Sans MS';
+  font-size: 14px;
+}
+footer ul h2 {
+  font-size: 20px
 }
