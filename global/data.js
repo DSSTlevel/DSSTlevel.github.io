@@ -4,7 +4,7 @@ function closeTime() {
   return isTrue
 }
 
-var WebsiteStatus=false//False = Open, True = Closed
+var WebsiteStatus=true//False = Open, True = Closed
 if ((closeTime()===false&&WebsiteStatus===false)) {
   document.getElementById("navigbar").innerHTML = `
   <style>
@@ -83,7 +83,7 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
 `
 }
 else {
- location='https://dsstlevel.github.io/Others/WebsiteClose.html'
+ location='https://dsstlevel.github.io/'
 }
 
 if (localStorage.getItem("DarkMode") === "true") {
