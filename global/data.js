@@ -83,7 +83,9 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
 `
 }
 else {
- location='https://dsstlevel.github.io/'
+  if (location != "https://dsstlevel.github.io/Home/homepage") {
+    location='https://dsstlevel.github.io/'
+  }
 }
 
 if (localStorage.getItem("DarkMode") === "true") {
