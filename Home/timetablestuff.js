@@ -9,7 +9,7 @@ const CurrentDate = new Date().getDay()
 */
 
 switch (CurrentDate) {
-    case 6:
+    case 1:
         document.getElementById("timetable").innerHTML = `
         <div class="lesson">
             <div class="subject">Lesson 1</div>
