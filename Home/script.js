@@ -1,7 +1,9 @@
+
 function toggleSideContent() {
     var sideContent = document.querySelector('.infobox');
     sideContent.style.display = sideContent.style.display === 'none' ? 'block' : 'none';
  }
+ 
  var x = setInterval(function() {
    document.title = "DSSTlevel | Main Menu";
    var now = new Date().getTime();
