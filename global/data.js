@@ -4,7 +4,7 @@ function closeTime() {
   return isTrue
 }
 
-var WebsiteStatus=true//False = Open, True = Closed
+var WebsiteStatus=false//False = Open, True = Closed
 if ((closeTime()===false&&WebsiteStatus===false)) {
   document.getElementById("navigbar").innerHTML = `
   <style>
@@ -50,12 +50,6 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
           <li><a href="https://proportal.tmc.ac.uk" class="dropdown-link">ProPortal</a></li>
           <li><a href="https://grofar.com/" class="dropdown-link">GroFar</a></li>
           <li><a href="https://www.tmc.ac.uk/media/filer_public/1b/e9/1be9396f-8969-4de6-9660-97c26bc6dab9/tmc-ucen-term-dates-2023-24.pdf" class="dropdown-link">Term Dates</a></li>
-        </ul>
-      </li>
-      <li class="navbar-item">
-        <a href="#" class="navbar-link">Info</a>
-        <ul class="dropdown-menu">
-          <li><a href="https://dsstlevel.github.io/Others/year1" class="dropdown-link">Examination Details</a></li>
           <li><a href="https://dsstlevel.github.io/Others/altontowers" class="dropdown-link">Alton Towers</a></li>
         </ul>
       </li>
@@ -84,7 +78,7 @@ if ((closeTime()===false&&WebsiteStatus===false)) {
 }
 else {
   if (location != "https://dsstlevel.github.io/Home/homepage") {
-    location='https://dsstlevel.github.io/'
+    location='https://dsstlevel.github.io/Others/WebsiteClose'
   }
 }
 

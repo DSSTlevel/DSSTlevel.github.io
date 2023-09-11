@@ -1,0 +1,159 @@
+.percentageCalc {width: 75%;background-color: #2d393e;padding: 24px;text-align: center;box-shadow: 2px 2px 8px 2px #1e3845;margin-left: auto;margin-right: auto;color:white;text-align: center;}
+.percentageCalc button{width:25%;margin-bottom: 25px;height:30px;font-size:large;background-color: slateblue;color:white;}
+.title {
+    width: 90%;
+    background-image:linear-gradient(45deg, rgb(10, 26, 84), rgb(0, 98, 83));
+    padding: 15px;
+    box-shadow: 2px 2px 8px 2px #000000;
+    margin-bottom:20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}  
+
+.title p {
+    margin-top:20px;
+    font-size:30px;
+}  
+
+.contentbox {
+    width: 90%;
+    background-color:#16181a;
+    border-radius: 35px;
+    border-style: groove;
+    border-color:rgb(205, 45, 80);
+    box-shadow: 1px 2px 18px 2px #3d0000;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding:20px;
+}
+.contentbox h1{
+  padding-left:50px;
+  font-size:x-large;
+  text-align:left;
+  color:gold;
+}
+.contentbox .content{
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: larger;
+}
+.buttons button{
+  padding: 10px;
+  font-size:larger;
+  background-color: rgb(29, 26, 54);
+  border-radius: 15px;
+  border-style: groove;
+  border-color: rgb(8, 38, 146);
+  color:white;
+  font-family: "Arial";
+  font-weight: bold;
+  box-shadow: 1px 2px 8px 2px #1d05bc;
+}
+.buttons button:hover {cursor: pointer;}
+
+.timetable {margin-bottom:25px;display: flex;flex-direction: row;background-color: #191a1e;border-radius: 8px;box-shadow: 0 2px 4px rgba(91, 203, 255, 0.389);overflow: hidden;width:95%;margin-left: auto;margin-right: auto;}
+.lesson:not(.lesson:last-child) {flex: 1;padding: 16px;border-right: 1px solid #d1d1d1;text-align: center;}
+.lesson:last-child {flex: 1;padding: 16px;text-align: center;}
+.lesson .time {font-size: 14px;color: #d7b94b;}
+.lesson .subject {font-size: 18px;font-weight: bold;margin-top: 8px;color: #ff0000;}
+.lesson .teacher {font-size: 14px;color: #c5c5c5;}
+.lesson .room {font-size:12px; color:lightseagreen}
+
+.break {flex: 0.5;padding: 16px;border-right: 1px solid #d1d1d1;text-align: center;}
+.break .name {font-size: 18px;font-weight: bold;margin-top: 8px;color: rgb(222, 0, 222);}
+.break .duration {font-size: 14px;margin-top: 8px;color: #a0a0a0;}
+
+.ad {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 70%;
+  height: 80px;
+}
+.ad h1, .ad h2, .ad h3 {
+    margin-top:0;
+    margin-bottom: 0;
+    color:rgb(73, 73, 73)
+}
+
+.ad:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 8px 2px #564c4c;
+    transition:0.2s;
+}
+
+.seperator {
+  width:95%;
+  border-radius: 25px;
+  height:10px;
+  background-color: rgb(61, 84, 74);
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+input[type=number] {
+    width:45%;
+    font-size: 18px;
+    background-color:rgba(0, 0, 0, 0);
+    border-color:white
+}
+
+input[type=text] {
+    width:fit-content;
+    font-size: 18px;
+    background-color:rgba(0, 0, 0, 0)
+    ;border-color:greenyellow;
+}
+
+.notification {
+          position: fixed;
+          background: linear-gradient(45deg, rgb(75, 110, 107), rgb(90, 96, 78)); 
+          color: #fff; 
+          border-color:rgb(0, 255, 0);
+          border-radius: 10px;
+          border-style: ridge;
+          border-width: 1px;
+          padding: 20px;
+          left:10%;
+          top:100px;
+          width:75%;
+          text-align:center;
+          font-family: "Comic Sans MS";
+}
+
+/* Container for game divs */
+.gamebigcontent {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border-color: rgb(126, 137, 71);
+  border-style: ridge;
+  display: flex;
+  flex-wrap: wrap; /* Wrap game divs onto new lines */
+  justify-content: space-between; /* Distribute game divs evenly */
+}
+
+/* Individual game divs */
+.game {
+  flex: 50%; /* Equal width for all game divs */
+  max-width: calc(50% - 30px); /* Limit width to 50% with margin */
+  margin: 10px;
+  border-radius: 10px;
+  border-color: blue;
+  background-color: rgb(47, 47, 47);
+  border-style: ridge;
+  text-align: center;
+}
