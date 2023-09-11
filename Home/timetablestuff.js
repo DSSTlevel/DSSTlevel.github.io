@@ -15,7 +15,7 @@ switch (CurrentDate) {
             <div class="subject">Lesson 1</div>
             <div class="teacher">T. D</div>
             <div class="time">9:00AM - 10:30AM (1.5)</div>
-            <div class="room">CCM210</div>
+            <div class="room">CCM258</div>
         </div>
         <div class="break">
             <div class="name">Break</div>
@@ -25,7 +25,7 @@ switch (CurrentDate) {
             <div class="subject">Lesson 2</div>
             <div class="teacher">T. D</div>
             <div class="time">10:45AM - 12:15AM (1.5)</div>
-            <div class="room">CCM210</div>
+            <div class="room">CCM258</div>
         </div>
         <div class="break">
             <div class="name">Lunch</div>
@@ -35,7 +35,7 @@ switch (CurrentDate) {
             <div class="subject">Lesson 3</div>
             <div class="teacher">A. M</div>
             <div class="time">13:00PM - 14:45PM (1.75)</div>
-            <div class="room">CCM210</div>
+            <div class="room">CCM258</div>
         </div>
         <div class="break">
             <div class="name">Break</div>
@@ -45,7 +45,7 @@ switch (CurrentDate) {
             <div class="subject">Lesson 4</div>
             <div class="teacher">A. M</div>
             <div class="time">15:00PM - 16:45PM (1.75)</div>
-            <div class="room">CCM210</div>
+            <div class="room">CCM258/div>
         </div>
         `
         break;
