@@ -2,12 +2,127 @@
 <html>
   <head>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="decor.css">
     <link rel="icon" type="image/x-icon" href="../Images/dsslogo.png">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="refresh" content="500">
+    <style>
+      .percentageCalc {width: 75%;background-color: #2d393e;padding: 24px;text-align: center;box-shadow: 2px 2px 8px 2px #1e3845;margin-left: auto;margin-right: auto;color:white;text-align: center;}
+      .percentageCalc button{width:25%;margin-bottom: 25px;height:30px;font-size:large;background-color: slateblue;color:white;}
+      .title {
+          width: 90%;
+          background-image:linear-gradient(45deg, rgb(10, 26, 84), rgb(0, 98, 83));
+          padding: 15px;
+          box-shadow: 2px 2px 8px 2px #000000;
+          margin: 12px 0;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+      }  
+      .contentbox {
+          width: 25%;
+          background-color:#16181a;
+          border-radius: 35px;
+          border-style: groove;
+          border-color:rgb(68, 125, 138);
+          box-shadow: 1px 2px 18px 2px #53676e;
+          margin-left: auto;
+          margin-right: auto;
+          color:white;
+      }
+      .contentbox h1{
+        padding-left:50px;
+        font-size:x-large;
+        text-align:left;
+        color:gold;
+      }
+      .contentbox .content{
+        text-align: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: larger;
+      }
+      .bigcontent{display:flex;margin-top:15px;margin-bottom: 15px;}
+      .buttons button{
+        padding: 10px;
+        font-size:larger;
+        background-color: rgb(29, 26, 54);
+        border-radius: 15px;
+        border-style: groove;
+        border-color: rgb(8, 38, 146);
+        color:white;
+        font-family: "Arial";
+        font-weight: bold;
+        box-shadow: 1px 2px 8px 2px #1d05bc;
+      }
+      .buttons button:hover {cursor: pointer;}
+
+      .timetable {margin-bottom:25px;display: flex;flex-direction: row;background-color: #191a1e;border-radius: 8px;box-shadow: 0 2px 4px rgba(91, 203, 255, 0.389);overflow: hidden;width:95%;margin-left: auto;margin-right: auto;}
+      .lesson:not(.lesson:last-child) {flex: 1;padding: 16px;border-right: 1px solid #d1d1d1;text-align: center;}
+      .lesson:last-child {flex: 1;padding: 16px;text-align: center;}
+      .lesson .time {font-size: 14px;color: #d7b94b;}
+      .lesson .subject {font-size: 18px;font-weight: bold;margin-top: 8px;color: #ff0000;}
+      .lesson .teacher {font-size: 14px;color: #c5c5c5;}
+      .lesson .room {font-size:12px; color:lightseagreen}
+
+      .break {flex: 0.5;padding: 16px;border-right: 1px solid #d1d1d1;text-align: center;}
+      .break .name {font-size: 18px;font-weight: bold;margin-top: 8px;color: rgb(222, 0, 222);}
+      .break .duration {font-size: 14px;margin-top: 8px;color: #a0a0a0;}
+
+      .ad {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        width: 70%;
+        height: 80px;
+        background: linear-gradient(45deg, rgb(250, 219, 133) 50%, rgb(183, 183, 183) 100%);;
+        color:grey
+      }
+      .ad h1, .ad h2, .ad h3 {margin-top:0;margin-bottom: 0;color:rgb(73, 73, 73)}
+      .ad:hover {cursor: pointer;box-shadow: 1px 2px 8px 2px #564c4c;transition:0.2s;}
+
+      .seperator {
+        width:95%;
+        border-radius: 25px;
+        height:2px;
+        background-color: rgb(61, 84, 74);
+        margin-left: auto;
+        margin-right:auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      input[type=number] {width:75%;font-size: 18px;background-color:rgba(0, 0, 0, 0);border-color:white}
+      input[type=text] {width:fit-content;font-size: 18px;background-color:rgba(0, 0, 0, 0);border-color:greenyellow;}
+      .title p {
+        margin-top:20px;
+        font-size:30px;
+      }
+
+      .notification {
+                position: fixed;
+                background: linear-gradient(45deg, rgb(75, 110, 107), rgb(90, 96, 78)); /* Blue background color */
+                color: #fff; /* White text color */
+                border-color:rgb(0, 255, 0);
+                border-radius: 10px;
+                border-style: ridge;
+                border-width: 1px;
+                padding: 20px;
+                left:10%;
+                top:100px;
+                width:75%;
+                text-align:center;
+                font-family: "Comic Sans MS";
+            }
+    </style>
   </head>
-     <body>
+     <body style="color:white;background-color: rgb(0, 0, 0);">
+      <div class="notification">
+        <h2>The DSS T-Level website will reopen on the 11th September</h2>
+        <p>This is to prepare for some new features to come into the new year!</p>
+        <div style="color:rgb(0, 170, 255);font-size: xx-large; font-family: 'Courier' " id="EoHT"></div>
+      </div>
+      <!--
       <div class="newsbar">
         <div class="newsbar-content">
           <marquee>Welcome to DSS T-Level 2023-24! Updated since last year!</marquee>
@@ -15,17 +130,18 @@
       </div>
       <div id="navigbar"></div>
         <div class="maincontent">
+            
             <div class="title">
-              <img height="100px" src="../Images/dsslogo.png">
-              <div style="text-align:center;font-size:large;margin-left:auto;padding-right:50px">
-                <p style="color:rgb(133, 112, 255)"><b>End Of the Day</b></p>
-                <p style="color:rgb(255, 0, 115)" id="timetableCountdown">Loading...</p>
-              </div>
+                <img height="100px" src="../Images/dsslogo.png">
+                <div style="text-align:center;font-size:large;margin-left:auto;padding-right:50px">
+                  <p style="color:rgb(133, 112, 255)"><b>End Of Day</b></p>
+                  <p style="color:rgb(255, 0, 115)" id="timetableCountdow">Loading...</p>
+                </div>
             </div>
-            <h1 style="padding-left:40px;margin-bottom:0;"><span id="timeofdaystate"></span>. Here is today's timetable:</h1>
-            <div class="timetable" id="timetable"></div>
-            <!--ADVERTISEMENT-->
-            <div class="ad" onclick="window.open('https:/\/bustimes.org','_blank')" style="background: linear-gradient(45deg, rgb(250, 219, 133) 50%, rgb(183, 183, 183) 100%);color:grey">
+            <h2 style="padding-left:40px;margin-bottom:0;">N/A</h2>
+            <div class="timetable" id="t">This Feature is still being worked on! Coming Soon!</div>
+            ADVERTISEMENT
+            <div class="ad" onclick="window.open('https:/\/bustimes.org','_blank')">
               <table width="100%">
                 <tr>
                   <td>
@@ -33,149 +149,126 @@
                     Bustimes.org will help,<br>
                     For completely free! 
                   </td>
-                  <td style="text-align: right;">
-                    <h1>Bustimes.org</h1>
-                    <p style="font-size:x-small;padding-top:15px;">ADVERTISEMENT</p>
+                  <td>
+                    <h1 style="text-align: right;">Bustimes.org</h1>
                   </td>
                 </tr>
               </table>
             </div>
-              <div class="contentbox">
-                <h1>What is this website?</h1>
-                <div class="content">
-                  This is a website that is comprised of notes and textbook content that I have put together for the DSS T-Level at TMC.
-                  A project that has been shapen to provide further information to the class of 2023-24.
-                </div>
-              </div>
-              <div class="contentbox">
-                <h1>Insufficient amount of revision resources?</h1>
-                <div class="content">
-                  You can use my own built Python scripts for free that give a more interactive side of revision or you can purchase the dedicated book for DSS and DBS on Amazon!<br>
-                  Scripts: <a onclick="window.open('https:/\/dsstlevel.github.io/Others/codingScripts', '_blank')">View</a><br>
-                  Book: <a onclick="window.open('https:/\/www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&amp;ref_=fplfs&amp;psc=1&amp;smid=A3P5ROKL5A1OLE','_blank')">Purchase</a><br> 
-                </div>
-              </div>
-              <div class="contentbox">
-                <h1>Important Dates</h1>
-                <div class="content">
-                  <table width="100%">
-                    <tr>
-                      <td>
-                        <div id="EoT"></div>
-                        <!--<div id="EoHT"></div>-->
-                        <div id="training"></div>
-                      </td>
-                      <td>
-                        End of Term - 23rd October 2023
-                        <!-- End of Half Term - -->
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
               <div class="seperator"></div>
-              <div class="gamebigcontent">
-                <div class="game">
-                  <h2>Guess the number</h2>
-                  <input type="number" id="guess" min="1" max="100" style="color: red">
-                  <br>
-                  <button onclick="checkGuess()" id="sbmt">Submit</button>
-                  <button onclick="window.location.reload()" id="sbmt">Refresh</button>
-                  <p id="message">Try guessing!</p>
-                  <p>Attempts: <span id="attempts">0</span></p>
-                </div>
-                <div class="game">
-                  <h2>Random Stuff</h2>
-                  <div class="buttons" style="text-align:center">
-                    <br>
-                    <button onclick="window.open('https:/\/monkeytype.com','_BLANK')">Monkeytype</button>
-                    <button onclick="window.open('https:/\/uk.pcpartpicker.com','_blank')">PC Builder</button>
-                    <button onclick="window.open('https:/\/ridesims.com','_blank')">Ride Sims</button>
-                    <button onclick="window.open('https:/\/spotify.com','_blank')">Spotify</button>
-                    <button onclick="window.open('https:/\/bbc.co.uk/iplayer','_blank')">BBC Iplayer</button>
-                    <button onclick="window.open('https:/\/disneyplus.com','_blank')">Disney+</button>
+              <div class="bigcontent">
+                <div class="contentbox">
+                  <h1>What is this website?</h1>
+                  <div class="content">
+                    This is a website that is comprised of notes and textbook content that I have put together for the DSS T-Level at TMC.
+                    A project that has been shapen to provide further information to the class of 2023-24.
                   </div>
                 </div>
-                <div class="game">
-                  <div id="PercentageCalc" class="percentageCalc">
-                    <h2>Marks Awarded / Total Marks</h2>
-                    <div>
-                      <input type="number" id="num1" style="color:white"> /
-                      <input type="number" id="num2" style="color:white">
+                <div class="contentbox">
+                  <h1>Insufficient amount of revision resources?</h1>
+                  <div class="content">
+                    You can use my own built Python scripts for free that give a more interactive side of revision or you can purchase the dedicated book for DSS and DBS on Amazon!<br>
+                    Scripts: <a onclick="window.open('https:/\/dsstlevel.github.io/Web/html/codingScripts.html', '_blank')">View</a><br>
+                    Book: <a onclick="window.open('https:/\/www.amazon.co.uk/Digital-Level-Support-Services-Business/dp/1398346799?source=ps-sl-shoppingads-lpcontext&amp;ref_=fplfs&amp;psc=1&amp;smid=A3P5ROKL5A1OLE','_blank')">Purchase</a><br> 
+                  </div>
+                </div>
+                <div class="contentbox">
+                  <h1>Bored?</h1>
+                  <div class="content">
+                    <div class="buttons" style="text-align:center">
+                      <button onclick="window.open('https:/\/monkeytype.com','_BLANK')">Monkeytype</button>
+                      <button onclick="window.open('https:/\/uk.pcpartpicker.com','_blank')">PC Builder</button>
+                      <button onclick="window.open('https:/\/chess.com','_blank')">Chess.com</button>
+                      <button onclick="window.open('https:/\/ridesims.com','_blank')">Ride Sims</button>
+                      <button onclick="window.open('https:/\/github.com','_blank')">Github</button>
                     </div>
-                    <button onclick="percentage_1()">Calculate</button><br>
-                    Output: <input type="text" id="value1" readonly style="color:white">
                   </div>
-                </div>                   
-              </div>      
+                </div>
+              </div>
               <div class="seperator"></div>
-              <div class="contentbox">
-                <h1>Examination Papers</h1>
-                <div class="content">
-                  <table width="100%">
-                    <tr>
-                      <th style="color: aquamarine;">Paper A</th>
-                      <th style="color: aquamarine">Paper B</th>
-                    </tr>
-                    <tr>
-                      <td>
-                        Date: N/A<br>
-                        Marks: 100<br>
-                        Bonus Marks: 6 (QWC)<br>
-                        Total: 106<br>
-                        Time: 2hours<br>
-                        Content:<br>
-                        -Business Context<br>
-                        -Culture<br>
-                        -Digital Environments<br>
-                        -Diversity and Inclusion<br>
-                        -Learning<br>
-                        -Planning
-                      </td>
-                      <td>
-                        Date: N/A<br>
-                        Marks: 125<br>
-                        Bonus Marks: 6 (QWC)<br>
-                        Total: 131<br>
-                        Time: 2hours 30minutes<br>
-                        Content:<br>
-                        -Testing<br>
-                        -Tools<br>
-                        -Legislation<br>
-                        -Security<br>
-                        -Data<br>
-                        -Digital analysis
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="contentbox">
-                <h1>Old look</h1>
-                <div class="content">
-                  <img src="../Images/OGLook.png" width="100%", height="50%">
-                </div>
-              </div>
-              <div class="contentbox">
-                <h1>Upcoming events:</h1>
-                <div class="content">
-                  No events are current listed.
-                </div>
-              </div>
-              <div class="contentbox">
-                <h1>Have anything to suggest?</h1>
-                <div class="content">
-                  You know where I am! Just give me an idea, and I'll try my best to see what I can do to make this better!
-                </div>
-              </div>
+            </div>
           </div>
-        </div>
-        <footer id="footer"></footer>
+        <footer id="footer"></footer>-->
      </body>
   </div>
-  <script src="timetablestuff.js"></script>
+  <!--<script id="importantDates"></script>
+  <script src="timetablestuff.js"></script>-->
   <script src="../global/data.js"></script>
   <script src="https://kit.fontawesome.com/b457945b5f.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script>
+      function toggleSideContent() {
+         var sideContent = document.querySelector('.infobox');
+         sideContent.style.display = sideContent.style.display === 'none' ? 'block' : 'none';
+      }
+      var x = setInterval(function() {
+        document.title = "DSSTlevel | Main Menu";
+        var now = new Date().getTime();
+        var startTime = new Date(new Date().setHours(9, 0, 0)).getTime();
+        var newd = new Date();
+        var countDownTime;
+        switch (newd.getDay()) {
+            case 1: //Monday
+            case 2: //Tuesday
+                countDownTime = 16, 45, 0;
+                break;
+            case 3: //Wednesday
+                countDownTime = 15, 0, 0;
+                break;
+            case 5: //Friday
+                countDownTime = 12, 15, 0;
+                break;
+            default: //Every Other Day + Weekends
+                countDownTime = 0, 0, 0;
+                break;
+        }
+        var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), countDownTime).getTime();
+        if (now < startTime || now > countDownDate) {
+            document.getElementById("timetableCountdown").innerHTML = "The day hasn't begun yet";
+        } else {
+            var distance = countDownDate - now;
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("timetableCountdown").innerHTML = `${hours}hr ${minutes}m ${seconds}s`;
+            document.title = `DSSTlevel | ${hours}hr ${minutes}m ${seconds}`;
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timetableCountdown").innerHTML = "The Day is over";
+                setInterval(function() {}, 5000);
+            }
+        }
+      }, 1000);
+      function percentage_1() {
+          const num1 = document.getElementById("num1").value
+          const num2 = document.getElementById("num2").value
+          const output = document.getElementById("value1")
+          percentage = Math.round((num1/num2)*100)
+          if (num1 > num2) {
+            return alert('Your marks awarded cant be higher than the total marks')
+          } else {
+            output.value=`${percentage}%`
+        }
+      }
+      function setCountdown(targetDate, elementId, labelText) {
+          setInterval(function() {
+              var now = new Date().getTime();
+              var countDownDate = new Date(targetDate).getTime();
+              var distance = countDownDate - now;
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              document.getElementById(elementId).innerHTML = labelText + " - " + days + " Days, " + hours + ":" + minutes + ":" + seconds;
+          }, 1000);
+      }
+      setCountdown('Oct 23, 2023 00:00:00', 'EoT', 'End of Term'/*'End of Term'*/);
+      setCountdown('Sep 11, 2023 09:00:00', 'EoHT', 'End of Half Term');
+      setCountdown('Sep 9, 2023 11:00:00', 'training', 'Training Round');
+
+    setInterval(function() {
+      window.location.reload();
+    }, 120000); 
+    </script>
   </body>
 </html>
