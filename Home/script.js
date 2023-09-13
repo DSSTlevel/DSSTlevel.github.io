@@ -12,6 +12,8 @@ function toggleSideContent() {
    var countDownTime;
    switch (newd.getDay()) {
        case 1: //Monday
+           countDownTime = 16, 45, 0;
+           break;
        case 2: //Tuesday
            countDownTime = 16, 45, 0;
            break;

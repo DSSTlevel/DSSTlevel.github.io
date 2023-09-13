@@ -55,7 +55,7 @@ switch (CurrentDate) {
             <div class="subject">Tutorial</div>
             <div class="teacher">A. W</div>
             <div class="time">9:30AM - 11:00AM (1.5)</div>
-            <div class="room">TBC</div>
+            <div class="room">CCM258</div>
         </div>
         <div class="break">
             <div class="name">Break</div>
@@ -65,7 +65,7 @@ switch (CurrentDate) {
             <div class="subject">Employability</div>
             <div class="teacher">C. G</div>
             <div class="time">11:15AM - 12:15AM (1)</div>
-            <div class="room">TBC</div>
+            <div class="room">CCM258</div>
         </div>
         <div class="break">
             <div class="name">Lunch</div>
