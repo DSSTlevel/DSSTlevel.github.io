@@ -10,24 +10,22 @@ function toggleSideContent() {
    var startTime = new Date(new Date().setHours(9, 0, 0)).getTime();
    var newd = new Date();
    var countDownTime;
-   switch (newd.getDay()) {
-       case 1: //Monday
-           countDownTime = 16, 45, 0;
-           break;
-       case 2: //Tuesday
-           countDownTime = 16, 45, 0;
-           break;
-       case 3: //Wednesday
-           countDownTime = 15, 0, 0;
-           break;
-       case 5: //Friday
-           countDownTime = 12, 15, 0;
-           break;
-       default: //Every Other Day + Weekends
-           countDownTime = 0, 0, 0;
-           break;
+   switch (new Date().getDay()) {
+    case 1: // Monday
+    case 2: // Tuesday
+        countDownTime = { hours: 16, minutes: 45, seconds: 0 };
+        break;
+    case 3: // Wednesday
+        countDownTime = { hours: 15, minutes: 0, seconds: 0 };
+        break;
+    case 5: // Friday
+        countDownTime = { hours: 12, minutes: 15, seconds: 0 };
+        break;
+    default: // Every Other Day + Weekends
+        countDownTime = { hours: 0, minutes: 0, seconds: 0 };
+        break;
    }
-   var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), countDownTime).getTime();
+   var countDownDate = new Date(newd.getFullYear(), newd.getMonth(), newd.getDate(), countDownTime.hours, countDownTime. minutes, countDownTime.seconds).getTime();
    if (now < startTime || now > countDownDate) {
        document.getElementById("timetableCountdown").innerHTML = "The day hasn't begun yet";
    } else {
