@@ -53,18 +53,8 @@ switch (CurrentDate) {
         document.getElementById("timetable").innerHTML = `
         <div class="lesson">
             <div class="subject">Tutorial</div>
-            <div class="teacher">A. W</div>
-            <div class="time">9:30AM - 11:00AM (1.5)</div>
-            <div class="room">CCM258</div>
-        </div>
-        <div class="break">
-            <div class="name">Break</div>
-            <div class="duration">15 Minutes</div>
-        </div>
-        <div class="lesson">
-            <div class="subject">Employability</div>
             <div class="teacher">C. G</div>
-            <div class="time">11:15AM - 12:15AM (1)</div>
+            <div class="time">10:45AM - 12:15PM (1)</div>
             <div class="room">CCM258</div>
         </div>
         <div class="break">
@@ -104,7 +94,7 @@ switch (CurrentDate) {
         <div class="lesson">
             <div class="subject">Lesson 2</div>
             <div class="teacher">A. M</div>
-            <div class="time">10:45AM - 12:15AM (1.5)</div>
+            <div class="time">10:45AM - 12:15PM (1.5)</div>
             <div class="room">CCM210</div>
         </div>
         <div class="break">
@@ -144,7 +134,7 @@ switch (CurrentDate) {
         <div class="lesson">
             <div class="subject">Lesson 2</div>
             <div class="teacher">D. T</div>
-            <div class="time">10:45AM - 12:15AM (1.5)</div>
+            <div class="time">10:45AM - 12:15PM (1.5)</div>
             <div class="room">CCM210</div>
         </div>
         `
