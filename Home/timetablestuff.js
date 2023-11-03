@@ -53,8 +53,8 @@ switch (CurrentDate) {
         document.getElementById("timetable").innerHTML = `
         <div class="lesson">
             <div class="subject">Tutorial</div>
-            <div class="teacher">C. G</div>
-            <div class="time">10:45AM - 12:15PM (1)</div>
+            <div class="teacher">A. W</div>
+            <div class="time">10:45AM - 12:15PM (1.5)</div>
             <div class="room">CCM258</div>
         </div>
         <div class="break">
