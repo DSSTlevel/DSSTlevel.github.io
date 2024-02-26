@@ -33,7 +33,7 @@ switch (CurrentDate) {
         </div>
         <div class="lesson">
             <div class="subject">Lesson 3</div>
-            <div class="teacher">A. M</div>
+            <div class="teacher">L. P</div>
             <div class="time">13:45PM - 14:45PM (1)</div>
             <div class="room">Online</div>
         </div>
@@ -43,7 +43,7 @@ switch (CurrentDate) {
         </div>
         <div class="lesson">
             <div class="subject">Lesson 4</div>
-            <div class="teacher">A. M</div>
+            <div class="teacher">L. P</div>
             <div class="time">15:00PM - 16:45PM (1.75)</div>
             <div class="room">Online</div>
         </div>
@@ -63,7 +63,7 @@ switch (CurrentDate) {
         </div>
         <div class="lesson">
             <div class="subject">Lesson 3</div>
-            <div class="teacher">A. M</div>
+            <div class="teacher">L. P</div>
             <div class="time">13:00PM - 14:45PM (1.75)</div>
             <div class="room">CCM205</div>
         </div>
@@ -73,7 +73,7 @@ switch (CurrentDate) {
         </div>
         <div class="lesson">
             <div class="subject">Lesson 4</div>
-            <div class="teacher">A. M</div>
+            <div class="teacher">L. P</div>
             <div class="time">15:00PM - 16:45PM (1.75)</div>
             <div class="room">CCM205</div>
         </div>
@@ -83,7 +83,7 @@ switch (CurrentDate) {
         document.getElementById("timetable").innerHTML = `
         <div class="lesson">
             <div class="subject">Lesson 1</div>
-            <div class="teacher">A. M</div>
+            <div class="teacher">L. P</div>
             <div class="time">9:00AM - 10:30AM (1.5)</div>
             <div class="room">CCM210</div>
         </div>
@@ -93,7 +93,7 @@ switch (CurrentDate) {
         </div>
         <div class="lesson">
             <div class="subject">Lesson 2</div>
-            <div class="teacher">A. M</div>
+            <div class="teacher">L. P</div>
             <div class="time">10:45AM - 12:15PM (1.5)</div>
             <div class="room">CCM210</div>
         </div>
@@ -103,7 +103,7 @@ switch (CurrentDate) {
         </div>
         <div class="lesson">
             <div class="subject">Lesson 3</div>
-            <div class="teacher">A. M</div>
+            <div class="teacher">L. P</div>
             <div class="time">13:00PM - 15:00PM (2)</div>
             <div class="room">CCM204</div>
         </div>
