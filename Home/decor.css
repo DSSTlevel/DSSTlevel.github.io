@@ -110,8 +110,8 @@ input[type=number] {
 input[type=text] {
     width:fit-content;
     font-size: 18px;
-    background-color:rgba(0, 0, 0, 0)
-    ;border-color:greenyellow;
+    background-color:rgba(0, 0, 0, 0);
+    border-color:greenyellow;
 }
 
 .notification {

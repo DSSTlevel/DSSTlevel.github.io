@@ -67,9 +67,8 @@ function toggleSideContent() {
      }, 1000);
  }
 
- setCountdown('Oct 23, 2023 00:00:00', 'EoT', 'End of Term');
+ setCountdown('Mar 27, 2024 09:00:00', 'EoT', 'End of Term');
  // setCountdown('Sep 11, 2023 00:00:00', 'EoHT', 'End of Half Term');
- setCountdown('Sep 29, 2023 11:00:00', 'training', 'Training Round');
 
  const RandNum = Math.floor(Math.random() * 100) + 1;
  let attempts = 0;
